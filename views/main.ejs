@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/static/css/style.css">
     <title>낚당!</title>
+    <!-- 타이틀 옆 아이콘 입니다! -->
     <link href="/static/image/icon.png" rel="shortcut icon" type="image/x-icon">
  
 </head>
@@ -34,10 +35,10 @@
             <a class="nav-link"  href="#four" onclick="change(this)">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="/loginForm.ejs">Login</a>
+            <a class="nav-link"  href="/loginForm">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="/joinForm.ejs">Join</a>
+            <a class="nav-link"  href="/joinForm">Join</a>
           </li>
           <li class="nav-item">
             <a class="nav-link"  href="/ddd">Free</a>
@@ -130,6 +131,7 @@
   
   
 <script>
+  // 클릭시 div 이동하는 함수 입니다.
   function change(obj){ 
     if(obj.id=="w"){
       $("nav").removeClass("change")
@@ -139,9 +141,6 @@
       $("nav").addClass("change")
       $(".logoimg").attr("src","/static/image/logo1.png");
     }
-    
-    
-
-
   }
+
 </script>

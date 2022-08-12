@@ -1,0 +1,33 @@
+/* 네비 css */
+nav{
+    position: fixed !important;
+    z-index: 1;
+    width: 100%;
+    background-image: url("/static/image/f42.jpeg") !important;
+    background-size: cover !important;
+}
+
+nav a{
+    
+        font-size: 20px !important;
+        font-family: 'Pretendard-Regular';
+        color: white !important;
+    
+}
+ 
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logoimg{
+
+    width: 50px;
+    height: 50px;
+}
+.logoFont{
+    font-size: 50px;
+}
