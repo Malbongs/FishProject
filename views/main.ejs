@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>낚당!</title>
+    <link href="/static/image/icon.png" rel="shortcut icon" type="image/x-icon">
+ 
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" id="w" onclick="change(this)" href="#main"><img class="logoimg" src="/static/image/logo.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link"  href="#one" onclick="change(this)">Fishing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="#two" onclick="change(this)">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="#three" onclick="change(this)">See/wave</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="#four" onclick="change(this)">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/loginForm.ejs">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/joinForm.ejs">Join</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/ddd">Free</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
+
+
+  <div class="div1" id="main">
+    <div class="div2">
+    <p class="logoFont"><b>낚당!</b></p>
+      당신의 낚시 파트너
+  </div>
+   </div>
+    
+  <div class="part1" id="one">
+    <!-- 카드 묶음 -->
+    <div class="cards">
+      <!-- 첫번째 카드 -->
+      <div class="cad">
+        <div class="card" style="width: 18rem;">
+          <img src="/static/image/s1.jpeg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">원투 낚시</h5>
+            <p class="card-text">원투대로 멀리 던져 놓고 낚시대의 휨새를 보면서 하는 낚시 중 하나이며 초보자가 접근하기 쉽습니다.</p>
+            <a href="https://www.youtube.com/watch?v=yZ_QYbfHKGg" class="btn btn-dark">관련 동영상보기</a>
+          </div>
+        </div>
+      </div>
+      <!-- 두번째 카드 -->
+      <div class="cad">
+        <div class="card" style="width: 18rem;">
+          <img src="/static/image/s2.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">루어 낚시</h5>
+            <p class="card-text">가짜 미끼를 이용하여 하는 낚시이며, 실제 물고기와 같은 루어를 사용 하여 하는 낚시 입니다.</p>
+            <a href="https://www.youtube.com/watch?v=_mbTv2JV8zA" class="btn btn-dark">관련 동영상보기</a>
+          </div>
+        </div>
+      </div>
+      <!-- 세번째 카드 -->
+      <div class="cad">
+        <div class="card" style="width: 18rem;">
+          <img src="/static/image/s3.jpeg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">찌 낚시</h5>
+            <p class="card-text">어신(魚信) 즉, 물고기의 입질을 간파하게 해 주는 찌를 사용하는 낚시 형태입니다.구멍 찌를 주로 사용합니다.</p>
+            <a href="https://www.youtube.com/watch?v=TGagjB5-f8w&t=142s" class="btn btn-dark">관련 동영상보기</a>
+          </div>
+        </div>
+      </div>
+      <!-- 네번째 카드 -->
+      <div class="cad">
+        <div class="card" style="width: 18rem;">
+          <img src="/static/image/s4.jpeg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">선상 낚시</h5>
+            <p class="card-text">배위에서 시행하는 낚시로,대상 어종에 따라 감성돔,농어,광어 등등 수많은 종류가 있습니다.</p>
+            <a href="https://www.youtube.com/watch?v=bwGe6Mua91Q" class="btn btn-dark">관련 동영상보기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+
+  </div>
+
+
+
+  <div class="part2" id="two">    
+  </div>
+
+
+
+  <div class="part3" id="three">    
+  </div>
+
+
+
+  <div class="part4" id="four">    
+  </div>
+  
+  
+<script>
+  function change(obj){ 
+    if(obj.id=="w"){
+      $("nav").removeClass("change")
+      $(".logoimg").attr("src","/static/image/logo.png");
+    }
+    else{
+      $("nav").addClass("change")
+      $(".logoimg").attr("src","/static/image/logo1.png");
+    }
+    
+    
+
+
+  }
+</script>
