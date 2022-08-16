@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    font-family: 'SUIT-Medium';
+}
+body {
+    margin: 0;
+}
+
+.wrap {
+    text-align: center;
+    width: 520px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+.loginFont {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 25px;
+    color: #65AAB5;
+}
+.idDiv {
+    display: flex;
+    justify-content: space-between;
+}
+.idBtn {
+    height: 54px;
+    width: 60px;
+    font-size: 11px;
+    margin-left: 8px;
+    padding: 0;
+    background-color: #65AAB5;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+.idBtn:hover {
+    cursor: pointer;
+}
+.input {
+    height: 54px;
+    width: 100%;
+    border: 1px solid #65AAB5;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.button {
+    height: 54px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+}
+.button:hover {
+    cursor: pointer;
+}
+.signupBtn {
+    margin-top: 20px;
+    background-color: #65AAB5;
+    margin-bottom: 10px;
+    color: white;
+}
+.signupBtn:hover {
+    background-color: transparent;
+    color: #65AAB5;
+    border: 1px solid #65AAB5;
+}
+.loginBtn {
+    margin-top: 20px;
+    background-color: #65AAB5;
+    margin-bottom: 10px;
+    color: white;
+}
+.loginBtn:hover {
+    background-color: transparent;
+    color: #65AAB5;
+    border: 1px solid #65AAB5;
+}
+.joinBtn {
+    background-color: transparent;
+    margin-bottom: 10px;
+    border: 1px solid #65AAB5;
+    color: #65AAB5;
+}
+.joinBtn:hover {
+    background-color: #65AAB5;
+    color: white;
+    border: none;
+}
+.kakaoBtn {
+    background-color: #FAE100;
+    color: #3C1D1E;
+}
+.ocean { 
+    height: 5%;
+    width:100%;
+    position:absolute;
+    bottom: 0;
+    left:0;
+    background: #015871;
+    z-index: 0;
+}
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+}
+.wave:nth-of-type(2) {
+    top: -175px;
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
+}
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -1600px;
+    }
+}
+@keyframes swell {
+    0%, 100% {
+        transform: translate3d(0,-25px,0);
+    }
+    50% {
+        transform: translate3d(0,5px,0);
+    }
+}
