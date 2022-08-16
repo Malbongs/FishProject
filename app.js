@@ -26,6 +26,7 @@ app.get("/ddd",(req,res)=>{
     res.render("ddd.ejs");
 })
 
+//main으로 이동
 app.get("/main",(req,res)=>{
     res.render("main");
 })

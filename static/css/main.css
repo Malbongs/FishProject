@@ -1,5 +1,10 @@
 body{
     margin: 0px;
+}
+
+.body-wrap {
+    min-height: 100vh;
+    position: relative;
 
 }
 /* scrollbar */
@@ -26,6 +31,12 @@ nav{
     z-index: 1;
     width: 100%;
 }
+
+nav *{
+    font-size: 15px !important;
+    font-family: 'HallymGothic-Regular';
+    color: white !important;
+}
  
 .change{
     background-color: white !important;
@@ -44,9 +55,7 @@ nav{
 }
 /* 메인페이지 */
 .div1{ 
-    position: absolute;
-    margin: 0;
-    top: 0%;
+   
     width: 100%;
     height: 800px;
     animation-name: div1;
@@ -77,7 +86,7 @@ nav{
     }
 
     .div2{
-        font-family: 'Pretendard-Regular';
+        font-family: 'HallymGothic-Regular';
         position: absolute;
         top:  350px;
         left: 45%;
@@ -92,32 +101,81 @@ nav{
 
     /* 첫번째 화면 */
     .part1{
-        position: absolute;
-        margin: 0;
-        top: 800px;
+       
         width: 100%;
         height: 800px;
-        font-family: 'Pretendard-Regular' !important;
-        
+        font-family: 'HallymGothic-Regular' !important;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url('/static/image/vison.jpeg');
+        background-size: cover;
+
+  
       
     }
+    h1{
+        font-weight: bold;
+        position: relative;
+        top: 100px;
+        text-align: center;
+        color: white;
+        font-size: 80px;
+    }
+   
+    .vison{
+        
+        position:relative;
+        top: 300px;
+        text-align: center;
+        color: white;
+        font-size: 30px;
+    }
+ 
+    list{
+        font-family: 'HallymGothic-Regular';
+        margin: 0 20px;
+    }
+
+
+
 
    
     /* 두번째 화면 */
     .part2{
-        position: absolute;
-        margin: 0;
-        top: 1600px;
+       text-align: center;
         width: 100%;
         height: 800px;
-        background-color: red;
+        background-image: url('/static/image/fish.jpeg');
+        background-size: cover;
+        z-index: -1;
+
         
     }
+
+    .box2{ 
+        border-radius: 3%;
+        display: inline-block;
+        margin-top: 120px;
+        width : 80%;
+        height : 60%;
+        background-color: white;
+        box-shadow: 5px 5px 5px;
+       
+    }
+
+    .box3{ 
+        border-radius: 3%;
+        display: inline-block;
+        margin-top: 50px;
+        width : 90%;
+        height : 80%;
+        background-color: black;
+        box-shadow: 5px 5px 5px;
+       
+    }
+
+
     /* 세번째 화면 */
     .part3{
-        position: absolute;
-        margin: 0;
-        top: 2400px;
+        
         width: 100%;
         height: 800px;
         background-color: yellow;
@@ -125,9 +183,7 @@ nav{
     }
     /* 네번째 화면 */
     .part4{
-        position: absolute;
-        margin: 0;
-        top: 3200px;
+
         width: 100%;
         height: 800px;
         background-color: green;
@@ -137,35 +193,20 @@ nav{
     
 
 
-    a{
-        font-size: 20px !important;
-        font-family: 'Pretendard-Regular';
-        color: white !important;
-    }
+    
     
     /* 폰트 */
     @font-face {
-        font-family: 'Pretendard-Regular';
-        src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-        font-weight: 400;
-        font-style: normal;
+       
+            font-family: 'HallymGothic-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        
+           
+            
     }
 
 
-
-    /* 첫번째 카드 */
 
    
-    .cards{ 
-        
-        display: flex;
-        margin: 180px 50px;
-        justify-content: space-between;
-
-    }
-    .cad{
-        width: 23%;
-        height: 550px;
-        
-        
-    }

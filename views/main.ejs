@@ -6,33 +6,37 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>낚당!</title>
     <!-- 타이틀 옆 아이콘 입니다! -->
     <link href="/static/image/icon.png" rel="shortcut icon" type="image/x-icon">
- 
+    <link rel="stylesheet" href="/static/css/footer.css">
 </head>
 
 <body>
+  <div class="body-wrap">
+
+
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" id="w" onclick="change(this)" href="#main"><img class="logoimg" src="/static/image/logo.png"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div id="nav-content" class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link"  href="#one" onclick="change(this)">Fishing</a>
+            <a class="nav-link"   href="#one" onclick="change(this)">Vison</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="#two" onclick="change(this)">About</a>
+            <a class="nav-link"  href="#two" onclick="change(this)">Fish</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="#three" onclick="change(this)">See/wave</a>
+            <a class="nav-link"  href="#three" onclick="change(this)">Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="#four" onclick="change(this)">News</a>
+            <a class="nav-link"  href="#four" onclick="change(this)">Media</a>
           </li>
           <li class="nav-item">
             <a class="nav-link"  href="/loginForm">Login</a>
@@ -40,14 +44,7 @@
           <li class="nav-item">
             <a class="nav-link"  href="/joinForm">Join</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link"  href="/ddd">Free</a>
-          </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </nav>
@@ -62,61 +59,34 @@
    </div>
     
   <div class="part1" id="one">
-    <!-- 카드 묶음 -->
-    <div class="cards">
-      <!-- 첫번째 카드 -->
-      <div class="cad">
-        <div class="card" style="width: 18rem;">
-          <img src="/static/image/s1.jpeg" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">원투 낚시</h5>
-            <p class="card-text">원투대로 멀리 던져 놓고 낚시대의 휨새를 보면서 하는 낚시 중 하나이며 초보자가 접근하기 쉽습니다.</p>
-            <a href="https://www.youtube.com/watch?v=yZ_QYbfHKGg" class="btn btn-dark">관련 동영상보기</a>
-          </div>
-        </div>
-      </div>
-      <!-- 두번째 카드 -->
-      <div class="cad">
-        <div class="card" style="width: 18rem;">
-          <img src="/static/image/s2.png" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">루어 낚시</h5>
-            <p class="card-text">가짜 미끼를 이용하여 하는 낚시이며, 실제 물고기와 같은 루어를 사용 하여 하는 낚시 입니다.</p>
-            <a href="https://www.youtube.com/watch?v=_mbTv2JV8zA" class="btn btn-dark">관련 동영상보기</a>
-          </div>
-        </div>
-      </div>
-      <!-- 세번째 카드 -->
-      <div class="cad">
-        <div class="card" style="width: 18rem;">
-          <img src="/static/image/s3.jpeg" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">찌 낚시</h5>
-            <p class="card-text">어신(魚信) 즉, 물고기의 입질을 간파하게 해 주는 찌를 사용하는 낚시 형태입니다.구멍 찌를 주로 사용합니다.</p>
-            <a href="https://www.youtube.com/watch?v=TGagjB5-f8w&t=142s" class="btn btn-dark">관련 동영상보기</a>
-          </div>
-        </div>
-      </div>
-      <!-- 네번째 카드 -->
-      <div class="cad">
-        <div class="card" style="width: 18rem;">
-          <img src="/static/image/s4.jpeg" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">선상 낚시</h5>
-            <p class="card-text">배위에서 시행하는 낚시로,대상 어종에 따라 감성돔,농어,광어 등등 수많은 종류가 있습니다.</p>
-            <a href="https://www.youtube.com/watch?v=bwGe6Mua91Q" class="btn btn-dark">관련 동영상보기</a>
-          </div>
-        </div>
-      </div>
+    <div>
+      <h1>Vison</h1>
     </div>
-    
-  
+      <ul class="vison">
+        <list>
+          빠른 정보 
+        </list>
+        <list>
+          월별 낚시 어종 리스트
+        </list>
+        <list>
+          자사 운영 쇼핑몰
+        </list>
+        <list>
+         커뮤니티
+        </list>
+      </ul>
 
   </div>
 
 
 
-  <div class="part2" id="two">    
+  <div class="part2" id="two">
+    <div class="box2">
+      <div class="box3">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rA04czNV7GI?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
   </div>
 
 
@@ -130,17 +100,26 @@
   </div>
   
   
+
+  </div>
+  <%-include("footer.ejs")%>
+
 <script>
   // 클릭시 div 이동하는 함수 입니다.
   function change(obj){ 
     if(obj.id=="w"){
       $("nav").removeClass("change")
       $(".logoimg").attr("src","/static/image/logo.png");
+      }
+      else{
+        $("nav").addClass("change")
+        $(".logoimg").attr("src","/static/image/logo1.png");
+          }
     }
-    else{
-      $("nav").addClass("change")
-      $(".logoimg").attr("src","/static/image/logo1.png");
-    }
-  }
+
+
+   
+
+
 
 </script>
