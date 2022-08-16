@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/boardSub.css">
+  <title>루낚게</title>
+</head>
+
+<body style="background-color: #EBEDF3;">
+  <!-- 네비바 인클루드 입니다. -->
+  <%-include("nav.ejs")%>
+
+  <div class="article">
+    <div class="articleTop">
+      <a class="back" href="/board">
+        본문으로 </a>
+    </div>
+    <br>
+    <h1>루어낚시 게시판</h1>
+    <br>
+    <section class="boardList">
+      <span class="badge text-bg-light">공지</span>
+      공지사항
+    </section>
+    <br>
+    <section class="boardList">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>날짜</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=1; i<13; i++) { %>
+          <tr onclick="location.href='/boardInner'" style="cursor: pointer;">
+            <td>
+              <%=i%>
+            </td>
+            <td>
+              테스트<%=i%>
+            </td>
+            <td>관리자</td>
+            <td>08. 16</td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </section>
+    <div class="search">
+      <select name="searchType" id="">
+        <option value="title">제목</option>
+        <option value="titleAndContent">제목 + 내용</option>
+        <option value="name">글쓴이</option>
+      </select>
+      <input type="text">
+      <button type="button" class="btn btn-light">검색</button>
+    </div>
+
+    <br>
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</body>
+
+</html>

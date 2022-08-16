@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/boardSub.css">
+  <title>루낚게</title>
+</head>
+
+<body style="background-color: #EBEDF3;">
+  <!-- 네비바 인클루드 입니다. -->
+  <%-include("nav.ejs")%>
+
+  <div class="article">
+    <div class="articleTop">
+      <a class="back" href="/boardLure">
+        목록으로 </a>
+    </div>
+    <br>
+    <div class="item">
+      <div class="info">
+        <div class="infoTitle">
+          테스트페이지
+        </div>
+        <div class="etc">
+          <div class="writer">관리자 admin 22. 08. 16</div>
+          <button type="button" class="report btn btn-outline-danger">신고</button>
+        </div>
+      </div>
+      <div class="content">
+        루어 낚시는 지렁이 등 날 미끼가 아닌 인조 미끼를 사용하는 낚시를 말한다. 릴 낚시로 루어를 멀리 던진 후 릴을 감으면서 루어를 헤엄치듯 움직여 고기를 유인한다. 스푼 루어, 곤충·피라미 등의 이미테이션 루어가 있지만 스피닝이 보편적이다.
+      </div>
+      <div class="listAndEdit">
+        <div class="list">
+          <button type="button" class="btn btn-light" onclick="location.href='/boardLure'">목록</button>
+        </div>
+        <div class="edit">
+          <button type="button" class="btn btn-light">공유</button>
+          <button type="button" class="btn btn-light">추천</button>
+        </div>
+      </div>
+      <div class="commentsTitle">
+        댓글
+      </div>
+      <div class="newComment">
+        <div class="nameAndPassword">
+          <textarea class="form-control" placeholder="닉네임" id="floatingTextarea2" style="width: 49%; height: 40px"></textarea>
+          <label for="floatingTextarea2"></label>
+          <textarea class="form-control" placeholder="비밀번호" id="floatingTextarea2" style="width: 49%; height: 40px"></textarea>
+          <label for="floatingTextarea2"></label>
+        </div>
+        <div class="comment">
+          <textarea class="form-control" placeholder="댓글을 작성해주세요." id="floatingTextarea2" style="width: 100%; height: 100px"></textarea>
+          <label for="floatingTextarea2"></label>
+          <div class="commentBtn"><button type="button" class="btn btn-secondary">작성</button></div>
+
+        </div>
+      </div>
+    </div>
+    <br>
+    <section class="boardList">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>날짜</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=1; i<5; i++) { %>
+          <tr onclick="location.href='/boardInner'" style="cursor: pointer;">
+            <td>
+              <%=i%>
+            </td>
+            <td>
+              테스트<%=i%>
+            </td>
+            <td>관리자</td>
+            <td>08. 16</td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</body>
+
+</html>

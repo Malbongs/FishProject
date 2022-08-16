@@ -26,10 +26,17 @@ app.get("/board", (req, res) => {
     res.render("board.ejs");
 })
 
+app.get("/boardLure", (req, res) => {
+    res.render("boardLure.ejs");
+})
+
+app.get("/boardInner", (req, res) => {
+    res.render("boardInner.ejs");
+})
+
 app.get("/main", (req, res) => {
     res.render("main");
 })
-
 
 app.listen(port, () => {
     console.log("server open:", port);

@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Pretendard-Regular';
+}
+
+a {
+    text-decoration: none !important
+}
+
+a:hover {
+    text-decoration: none !important
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.article>.boardList,
+h1,
+.item {
+    padding: 20px;
+    background-color: white;
+    width: 70%;
+    border-radius: 12px;
+}
+
+.article>h1 {
+    font-size: 2em;
+}
+
+.search {
+    width: auto;
+    justify-content: center;
+}
+
+.article>.articleTop {
+    width: 70%;
+}
+
+.articleTop>.back {
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    width: 10%;
+    font-size: 15px;
+    height: auto;
+    border-radius: 12px;
+    color: black;
+}
+
+.item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info {
+    width: 100%;
+}
+
+.infoTitle {
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+.etc>.writer {
+    color: rgb(165, 164, 164);
+}
+
+.etc {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 0.1px solid gray;
+}
+
+.etc>.report {
+    right: 0%;
+}
+
+.content {
+    height: 400px;
+    font-size: 20px;
+}
+
+.listAndEdit {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.commentsTitle {
+    width: 100%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.newComment {
+    width: 100%;
+}
+
+.nameAndPassword {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.commentBtn {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
