@@ -1,0 +1,268 @@
+body{
+    margin: 0px;
+}
+
+.body-wrap {
+    min-height: 100vh;
+    position: relative;
+
+}
+/* scrollbar */
+/* .box{
+
+    overflow: auto;
+    word-break: break-all;
+}
+.box::-webkit-scrollbar{
+    width: 8px;
+}
+.box::-webkit-scrollbar-track{
+    background-color: aqua;
+}
+.box ::-webkit-scrollbar-thumb{
+    background-color: white;
+} */
+
+
+
+/* 네비 css */
+nav{
+    position: fixed !important;
+    z-index: 1;
+    width: 100%;
+}
+
+nav *{
+    font-size: 15px !important;
+    font-family: 'HallymGothic-Regular';
+    color: white !important;
+}
+ 
+.change{
+    background-color: white !important;
+}
+.change a{
+    color: black !important;
+}
+
+.logoimg{
+
+    width: 50px;
+    height: 50px;
+}
+.logoFont{
+    font-size: 50px;
+}
+/* 메인페이지 */
+.div1{ 
+   
+    width: 100%;
+    height: 800px;
+    animation-name: div1;
+    animation-duration: 20s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    background-size: cover;
+    z-index: -1;
+    }
+
+    @keyframes div1{
+        0%{
+            background-image: url('/static/image/f1.jpeg');
+
+        }
+        25%{
+            background-image: url('/static/image/f2.jpeg');
+        }
+        50%{
+            background-image: url('/static/image/f3.jpeg');
+        }
+        75%{
+            background-image: url('/static/image/f4.jpeg');
+        }
+        100%{
+            background-image: url('/static/image/f5.jpeg');
+        }
+    }
+
+    .div2{
+        font-family: 'HallymGothic-Regular';
+        position: absolute;
+        top:  350px;
+        left: 45%;
+        font-size: 30px;
+        align-content: center;
+        color: white
+
+     
+    }
+
+    /* 화면구현 */
+
+    /* 첫번째 화면 */
+    .part1{
+       
+        width: 100%;
+        height: 800px;
+        font-family: 'HallymGothic-Regular' !important;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url('/static/image/vison.jpeg');
+        background-size: cover;
+
+  
+      
+    }
+    h1{
+        font-weight: bold;
+        position: relative;
+        top: 100px;
+        text-align: center;
+        color: white;
+        font-size: 80px;
+    }
+   
+    .vison{
+        
+        position:relative;
+        top: 300px;
+        text-align: center;
+        color: white;
+        font-size: 30px;
+    }
+ 
+    list{
+        font-family: 'HallymGothic-Regular';
+        margin: 0 20px;
+    }
+
+
+
+
+   
+    /* 두번째 화면 */
+    .part2{
+       text-align: center;
+        width: 100%;
+        height: 800px;
+        background-image: url('/static/image/fish.jpeg');
+        background-size: cover;
+        z-index: -1;
+
+        
+    }
+
+    .box2{ 
+        border-radius: 3%;
+        display: inline-block;
+        margin-top: 120px;
+        width : 80%;
+        height : 60%;
+        background-color: white;
+        box-shadow: 5px 5px 5px;
+       
+    }
+
+    .box3{ 
+        border-radius: 3%;
+        display: inline-block;
+        margin-top: 50px;
+        width : 90%;
+        height : 80%;
+        box-shadow: 5px 5px 5px;
+       
+    }
+
+    /* 세번째 화면 */
+    .part3{
+        text-align: center;
+        width: 100%;
+        height: 800px;
+        
+    }
+
+    .shop{
+        display: inline-block;
+        margin-top: 100px;
+        width: 90%;
+        height : 70%;
+        overflow: hidden;
+    }
+    .shop img{
+        padding: 10px;
+        width: 100%;
+        height: 35%;
+
+    }
+    .shop img:hover{
+
+        cursor: pointer;
+        transform: scale(1.2);
+        transition: all 0.2s linear;
+       
+
+    }
+
+
+
+    /* 네번째 화면 */
+    .part4{
+        width: 100%;
+        height: 600px;
+     }
+
+     .news{
+        font-family: 'HallymGothic-Regular' ;
+        font-weight: 1000;
+        color: black;
+        font-size: 50px;
+        margin: 150px 30px;
+        position: absolute;
+
+     }
+     .news:hover{
+        cursor: pointer;
+        
+     }
+
+     .videos{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        
+     }
+   
+    .media{
+        margin: 250px 30px;
+        width: 33%;
+        height: 40%;
+        background-color: white;
+        
+    }
+    
+    
+    .tag{
+        margin-top: 10px;
+        font-family: 'HallymGothic-Regular' ;
+        color: black;
+        font-size: 17px;
+        position: absolute;
+    }   
+
+    .tag p {
+        color: gray;
+        font-size: 13px;
+    }
+    /* 폰트 */
+    @font-face {
+       
+            font-family: 'HallymGothic-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        
+           
+            
+    }
+
+
+
+   
