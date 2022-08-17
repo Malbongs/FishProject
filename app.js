@@ -1,7 +1,8 @@
-const express = require("express"); //express 모델 불러오기 
-const app = express();   //app 에 담기
+const express = require("express"); //express 모델 불러오기
+const app = express(); //app 에 담기
 app.set("view engine", "ejs"); //html 파일 불러오기
 // app.use( express.static('publuic'));  //public/img.panda.jpeg
+
 app.use('/static', express.static(__dirname + '/static')); // 접근하기 위해서  /static/img/panda.jpeg 
 
 const port = 8080; //8000번 포트로 연결
@@ -42,6 +43,12 @@ app.get("/main",(req,res)=>{
 app.get("/fishinfo",(req,res)=>{
     res.render("fishinfo");
 })
+
+//미디어로 이동
+app.get("/media", (req, res) => {
+  res.render("media");
+});
+
 
 app.listen(port, () => {
     console.log("server open:", port);

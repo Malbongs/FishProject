@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/login.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/83a7760d2d.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <title>로그인</title>
+</head>
+<body>
+    <script defer src="/static/js/login.js"></script>
+    <div style="display: flex; justify-content:center; height: 100vh; width:100%; align-items:center;">
+        <div class="wrap">
+            <div class="loginFont">로그인</div>
+            <div class="inputs">
+                <div>
+                    <input class="input idInput loginId" type="text" placeholder=" 아이디를 입력해주세요">
+                </div>
+                <div>
+                    <input class="input pwInput loginPw" type="password" placeholder=" 비밀번호를 입력해주세요">
+                </div>
+            </div>
+            <div style="width: 100%;"><button class="button loginBtn">로그인</button></div>
+            <div style="width: 100%;"><button class="button joinBtn">회원가입</button></div>
+            <div style="width: 100%;"><button class="button kakaoBtn"><i class="fa-solid fa-comment"></i>  카카오로 시작하기</button></div>
+        </div>
+    </div>
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
+     <!-- 네비바 인클루드 입니다. -->
+     <%-include("nav.ejs")%>
+</body>
+</html>

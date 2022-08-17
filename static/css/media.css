@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    font-family: 'SUIT-Medium';
+    margin: 0;
+}
+
+body {
+    color: #65AAB5;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1600px;
+    padding: 20px;
+    margin: auto;
+}
+
+.subcontainer {
+    width: 85%;
+    margin: auto;
+}
+
+.controller {
+    display: flex;
+    justify-content: space-between;
+}
+
+.controls-1 i, .controls-2 i, .controls-3 i, .controls-4 i{
+    color: #65AAB5;
+    font-size: 1rem;
+}
+
+.previous-1, .next-1, .previous-2, .next-2, .previous-3, .next-3, .previous-4, .next-4{
+    padding: 2px;
+    width: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: none;
+    transition: 0.7s ease-in-out;
+    border: 3px solid #65AAB5;
+    background-color: white;
+    box-shadow: 0 0 5px #bbb;
+}
+
+.slide-img {
+    width: 100%;
+    height: 275px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+} 
+
+.slide-img:hover {
+    box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.9) inset;
+}
+
+.slide-img a {
+    text-decoration: none;
+    transform: scale(0);
+    transition: 0.8s;
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0;
+}
+
+.slide-img i {
+    font-size: 3rem;
+    color: red;
+}
+
+.slide-img:hover a {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.img-1 {
+    background-image: url("/static/image/onetwo1.png");
+}
+.img-2 {
+    background-image: url("/static/image/onetwo2.png");
+}
+.img-3 {
+    background-image: url("/static/image/onetwo3.png");
+}
+.img-4 {
+    background-image: url("/static/image/onetwo4.png");
+}
+.img-5 {
+    background-image: url("/static/image/onetwo5.png");
+}
+.img-6 {
+    background-image: url("/static/image/zzi1.png");
+}
+.img-7 {
+    background-image: url("/static/image/zzi2.png");
+}
+.img-8 {
+    background-image: url("/static/image/zzi3.png");
+}
+.img-9 {
+    background-image: url("/static/image/zzi4.png");
+}
+.img-10 {
+    background-image: url("/static/image/zzi5.png");
+}
+.img-11 {
+    background-image: url("/static/image/lure1.png");
+}
+.img-12 {
+    background-image: url("/static/image/lure2.png");
+}
+.img-13 {
+    background-image: url("/static/image/lure3.png");
+}
+.img-14 {
+    background-image: url("/static/image/lure4.png");
+}
+.img-15 {
+    background-image: url("/static/image/lure5.png");
+}
+.img-16 {
+    background-image: url("/static/image/sunsang1.png");
+}
+.img-17 {
+    background-image: url("/static/image/sunsang2.png");
+}
+.img-18 {
+    background-image: url("/static/image/sunsang3.png");
+}
+.img-19 {
+    background-image: url("/static/image/sunsang4.png");
+}
+.img-20 {
+    background-image: url("/static/image/sunsang5.png");
+}
+
+@media(max-width:1600px) {
+    .container {
+        width: 100%;
+    }
+}

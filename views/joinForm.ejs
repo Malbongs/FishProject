@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/login.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link href="file:///Users/choejunhyeon/Desktop/download/icon.png" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+    <script defer src="/static/js/login.js"></script>
+    <div style="display: flex; justify-content:center; height: 100vh; width:100%; align-items:center;">
+        <div class="wrap">
+            <div class="loginFont">회원가입</div>
+            <div class="inputs">
+                <div class="idDiv">
+                    <input class="input idInput is-safe" type="text" placeholder=" 아이디(이메일 주소)를 입력해주세요">
+                    <button class="idBtn" onclick="emailCheck()">중복확인</button>
+                </div>
+                <div>
+                    <input class="input pwInput is-safe" type="password" placeholder=" 비밀번호를 입력해주세요 (영문/숫자/특수문자 2가지 이상 조합)">
+                </div>
+                <div>
+                    <input class="input pwCheck is-safe" type="password" placeholder=" 비밀번호를 다시 입력해주세요">
+                </div>
+                <div>
+                    <input class="input nameInput is-safe" type="text" placeholder=" 이름을 입력해주세요">
+                </div>
+            </div>
+            <div style="width: 100%;"><button onclick="signUp()" class="button signupBtn">가입하기</button></div>
+        </div>
+    </div>
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
+    <!-- 네비바 인클루드 입니다. -->
+    <%-include("nav.ejs")%>
+</body>
+</html>
