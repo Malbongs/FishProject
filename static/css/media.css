@@ -31,8 +31,13 @@ body {
 }
 
 .controller {
+    background-color: #65AAB5;
     display: flex;
     justify-content: space-between;
+    border-radius: 2px;
+}
+.controller h2 {
+    color: white;
 }
 
 .controls-1 i, .controls-2 i, .controls-3 i, .controls-4 i{
@@ -49,7 +54,6 @@ body {
     transition: 0.7s ease-in-out;
     border: 3px solid #65AAB5;
     background-color: white;
-    box-shadow: 0 0 5px #bbb;
 }
 
 .slide-img {
