@@ -124,3 +124,25 @@ h1,
     justify-content: right;
     width: 100%;
 }
+
+.commentCnt {
+    font-weight: bold;
+}
+
+.commentBox>.row:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.commentBox button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: white;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.commentBox button img {
+    width: 1em;
+    height: 1em;
+}
