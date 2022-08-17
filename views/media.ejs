@@ -1,155 +1,343 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>미디어</title>
-    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <link rel="stylesheet" href="/static/css/media.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"/>
+    <title>Document</title>
 </head>
 <body>
-<!-- <ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-2783044520727903"
-     data-ad-slot="2780937993"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script></div> -->
-<div class="jquery-script-clear"></div>
-</div>
-</div>
-	<div class="container" id="featureContainer" style="margin:150px auto">
-		<h1>Bootstrap 5 Multi Item Carousel Example</h1>
-		<p class="lead">A jQuery script to extend the Bootstrap 5 carousel component that allows multiple items per view.</p>
-		<div class="row mx-auto my-auto justify-content-center">
-			<div id="featureCarousel" class="carousel slide" data-bs-ride="carousel">
-				<h2 class="font-weight-light float-start">Bootstrap 5 Multi Item Carousel</h2>
-				<div class="float-end pe-md-4">
-					<a class="indicator" href="#featureCarousel" role="button" data-bs-slide="prev">
-						<span class="fas fa-chevron-left" aria-hidden="true"></span>
-					</a> &nbsp;&nbsp;
-					<a class="w-aut indicator" href="#featureCarousel" role="button" data-bs-slide="next">
-						<span class="fas fa-chevron-right" aria-hidden="true"></span>
-					</a>
-				</div>
-				<div class="carousel-inner" role="listbox">
-					<div class="carousel-item active">
-						<div class="col-md-3">
-							<div class="card">
-								<div class="card-img">
-									<img src="https://source.unsplash.com/JTkibpa_Xv4/450x650" class="img-fluid">
-								</div>
-								<div class="card-img-overlays">Slide 1</div>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="col-md-3">
-							<div class="card">
-								<div class="card-img">
-									<img src="https://source.unsplash.com/m-eNBfYYrbA/450x650" class="img-fluid">
-								</div>
-								<div class="card-img-overlays">Slide 2</div>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="col-md-3">
-							<div class="card">
-								<div class="card-img">
-									<img src="https://source.unsplash.com/W2XfQIptWYs/450x650" class="img-fluid">
-								</div>
-								<div class="card-img-overlays">Slide 3</div>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="col-md-3">
-							<div class="card">
-								<div class="card-img">
-									<img src="https://source.unsplash.com/txX3cXgiAzU/450x650" class="img-fluid">
-								</div>
-								<div class="card-img-overlays">Slide 4</div>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="col-md-3">
-							<div class="card">
-								<div class="card-img">
-									<img src="https://source.unsplash.com/2zjKnJsT7D0/450x650" class="img-fluid">
-								</div>
-								<div class="card-img-overlays">Slide 5</div>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="col-md-3">
-							<div class="card">
-								<div class="card-img">
-									<img src="https://source.unsplash.com/AvnXTPOPVHY/450x650" class="img-fluid">
-								</div>
-								<div class="card-img-overlays">Slide 6</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</div>
-
-	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-	<script>
-		let items = document.querySelectorAll('#featureContainer .carousel .carousel-item');
-items.forEach((el) => {
-  const minPerSlide = 4
-  let next = el.nextElementSibling
-  for (var i=1; i<minPerSlide; i++) {
-    if (!next) {
-      // wrap carousel by using first child
-      next = items[0]
-    }
-    let cloneChild = next.cloneNode(true)
-    el.appendChild(cloneChild.children[0])
-    next = next.nextElementSibling
-  }
-})
-$(document).ready(function(){
-  $('#featureCarousel').carousel({interval: false});
-  $('#featureCarousel').carousel('pause');
-});
-	</script>
-	<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36251023-1']);
-  _gaq.push(['_setDomainName', 'jqueryscript.net']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-<script>
-try {
-  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
-    return true;
-  }).catch(function(e) {
-    var carbonScript = document.createElement("script");
-    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
-    carbonScript.id = "_carbonads_js";
-    document.getElementById("carbon-block").appendChild(carbonScript);
-  });
-} catch (error) {
-  console.log(error);
-}
-</script>
+    <script defer src="/static/js/media.js"></script>
+    <!-- 원투낚시 -->
+    <section class="slider">
+        <div class="container">
+            <div class="subcontainer">
+                <div class="slider-wrapper">
+                    <div class="controller">
+                        <div>
+                            <h2>원투 낚시</h2>
+                        </div>
+                        <div class="controls-1">
+                            <button class="previous-1"><i class="fa-solid fa-angle-left"></i></button>
+                            <button class="next-1"><i class="fa-solid fa-angle-right"></i></button>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="my-slider-1">
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-1">
+                                    <a href="https://www.youtube.com/watch?v=J73G6TulOwY" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] 우중낚시🎣 비 안온다면서 폭우가..?(거제 원투낚시)</h3>
+                                    <p>2022. 8. 16.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-2">
+                                    <a href="https://www.youtube.com/watch?v=AnRNgGdbIe4&t=1s" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] 바다낚시 원투낚시 기초 시작부터 채비까지 #1 원투대 준비부터 채비까지</h3>
+                                    <p>2021. 5. 7.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-3">
+                                    <a href="https://www.youtube.com/watch?v=m3Q-nxS9hr8&t=1s" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] 낚시인이라면 꼭 봐야할 원투낚시 수중입질영상-FOX☆TV</h3>
+                                    <p>2021. 4. 4.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-4">
+                                    <a href="https://www.youtube.com/watch?v=9d_gpcsB8MQ&t=30s" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] [바다낚시 강의 ep.16] 낚시가게 사장님이 알려주는 원투낚시 총정리편 | 특징부터 낚시대 추천까지!</h3>
+                                    <p>2022. 1. 23.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-5">
+                                    <a href="https://www.youtube.com/watch?v=8S4Lni_1bKk&t=2s" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] 원투낚시! 요즘같은 시기에 잡을곳은 이포인트밖에 없다!!</h3>
+                                    <p>2022. 8. 10.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 찌 낚시 -->
+    <section class="slider">
+        <div class="container">
+            <div class="subcontainer">
+                <div class="slider-wrapper">
+                    <div class="controller">
+                        <div>
+                            <h2>찌 낚시</h2>
+                        </div>
+                        <div class="controls-2">
+                            <button class="previous-2"><i class="fa-solid fa-angle-left"></i></button>
+                            <button class="next-2"><i class="fa-solid fa-angle-right"></i></button>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="my-slider-2">
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-6">
+                                    <a href="https://www.youtube.com/watch?v=d6PK8f5jpaI" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] 만능낚시!! 릴찌낚시를 배우자!!</h3>
+                                    <p>2020. 1. 18.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-7">
+                                    <a href="https://www.youtube.com/watch?v=fuw_ev1VDss" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] 바다찌낚시 입문자들을 위한 영상입니다 ... 반유동채비로 감성돔을 낚아보자!</h3>
+                                    <p>2021. 11. 29.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-8">
+                                    <a href="https://www.youtube.com/watch?v=bjwWsdYcsP8" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] [다리tv] 쉽게 배우는 바다낚시!!! ☆ 반유동채비 ☆
+                                    </h3>
+                                    <p>2020. 3. 20.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-9">
+                                    <a href="https://www.youtube.com/watch?v=9d_gpcsB8MQ&t=30s" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] [바다낚시 강의 ep.16] 낚시가게 사장님이 알려주는 원투낚시 총정리편 | 특징부터 낚시대 추천까지!</h3>
+                                    <p>2022. 1. 23.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-10">
+                                    <a href="https://www.youtube.com/watch?v=TGagjB5-f8w" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] 찌낚시 채비법과 수심체크를 한번에 다 배우세요!</h3>
+                                    <p>2020. 10. 26.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 루어 낚시 -->
+    <section class="slider">
+        <div class="container">
+            <div class="subcontainer">
+                <div class="slider-wrapper">
+                    <div class="controller">
+                        <div>
+                            <h2>루어 낚시</h2>
+                        </div>
+                        <div class="controls-3">
+                            <button class="previous-3"><i class="fa-solid fa-angle-left"></i></button>
+                            <button class="next-3"><i class="fa-solid fa-angle-right"></i></button>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="my-slider-3">
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-11">
+                                    <a href="https://www.youtube.com/watch?v=JeB35ruYOWE" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] 삼치 루어낚시 이렇게 해보세요! 석축 꿀팁! 뼈다귀삼촌</h3>
+                                    <p>2022. 8. 16.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-12">
+                                    <a href="https://www.youtube.com/watch?v=H-lUG66wcFI" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] 메탈지그만 있으면 입문자 초보자도 손맛 보는 삼치 고등어 루어 낚시</h3>
+                                    <p>2022. 8. 13.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-13">
+                                    <a href="https://www.youtube.com/watch?v=Q0qbDN64b_Y" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] 루어낚시 입문 가이드 [싸이코배스]
+                                    </h3>
+                                    <p>2016. 5. 6.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-14">
+                                    <a href="https://www.youtube.com/watch?v=W9VoETHNFLE" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] [럭맨의 쉬운 루어낚시] 2편. 무조건 잡을 수 있는 루어낚시 1.75g의 비밀</h3>
+                                    <p>2021. 2. 3.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-15">
+                                    <a href="https://www.youtube.com/watch?v=M51TXFoRnHE" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] 루어낚시 입문. 이 영상보시면 루어낚시 고수가 됩니다. 100% 잡습니다. 꽝치면 책임집니다ㅋㅋㅋㅋㅋㅋ</h3>
+                                    <p>2020. 12. 20.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 선상 낚시 -->
+    <section class="slider">
+        <div class="container">
+            <div class="subcontainer">
+                <div class="slider-wrapper">
+                    <div class="controller">
+                        <div>
+                            <h2>선상 낚시</h2>
+                        </div>
+                        <div class="controls-4">
+                            <button class="previous-4"><i class="fa-solid fa-angle-left"></i></button>
+                            <button class="next-4"><i class="fa-solid fa-angle-right"></i></button>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="my-slider-4">
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-16">
+                                    <a href="https://www.youtube.com/watch?v=Td8tvy9hVDI" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] 선상낚시 초보 가 꼭 필요한 준비물!! sea ​​fishing gear</h3>
+                                    <p>2022. 5. 19.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-17">
+                                    <a href="https://www.youtube.com/watch?v=XkS8llTfDfk" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] '선상낚시 초보'를 위한 초보 티 벗는 방법</h3>
+                                    <p>2022. 5. 31.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-18">
+                                    <a href="https://www.youtube.com/watch?v=bwGe6Mua91Q" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] 선상낚시 민폐탈출 초보탈출 욕안먹기
+                                    </h3>
+                                    <p>2019. 8. 12.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-19">
+                                    <a href="https://www.youtube.com/watch?v=8HwYaEe2EQM" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] 선상낚시 초보기초이론1</h3>
+                                    <p>2021. 7. 4.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <div class="slide-img img-20">
+                                    <a href="https://www.youtube.com/watch?v=9YWdCVScxto" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3>[YouTube] 선상낚시 이제 힘들게 하지마세요!</h3>
+                                    <p>2022. 4. 13.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
