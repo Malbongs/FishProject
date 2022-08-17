@@ -167,34 +167,90 @@ nav *{
         margin-top: 50px;
         width : 90%;
         height : 80%;
-        background-color: black;
         box-shadow: 5px 5px 5px;
        
     }
 
-
     /* 세번째 화면 */
     .part3{
-        
+        text-align: center;
         width: 100%;
         height: 800px;
-        background-color: yellow;
         
     }
+
+    .shop{
+        display: inline-block;
+        margin-top: 100px;
+        width: 90%;
+        height : 70%;
+        overflow: hidden;
+    }
+    .shop img{
+        padding: 10px;
+        width: 100%;
+        height: 35%;
+
+    }
+    .shop img:hover{
+
+        cursor: pointer;
+        transform: scale(1.2);
+        transition: all 0.2s linear;
+       
+
+    }
+
+
+
     /* 네번째 화면 */
     .part4{
-
         width: 100%;
-        height: 800px;
-        background-color: green;
+        height: 600px;
+     }
+
+     .news{
+        font-family: 'HallymGothic-Regular' ;
+        font-weight: 1000;
+        color: black;
+        font-size: 50px;
+        margin: 150px 30px;
+        position: absolute;
+
+     }
+     .news:hover{
+        cursor: pointer;
+        
+     }
+
+     .videos{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        
+     }
+   
+    .media{
+        margin: 250px 30px;
+        width: 33%;
+        height: 40%;
+        background-color: white;
         
     }
-   
     
+    
+    .tag{
+        margin-top: 10px;
+        font-family: 'HallymGothic-Regular' ;
+        color: black;
+        font-size: 17px;
+        position: absolute;
+    }   
 
-
-    
-    
+    .tag p {
+        color: gray;
+        font-size: 13px;
+    }
     /* 폰트 */
     @font-face {
        

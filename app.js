@@ -13,23 +13,30 @@ app.get("/",(req,res)=>{//다음 주소를 정해주는 문자열 req(request약
 
 //로그인 폼으로 이동
 app.get("/loginForm",(req,res)=>{
-    res.render("loginForm.ejs");
+    res.render("loginForm");
 })
 
 //회원가입 폼으로 이동
 app.get("/joinForm",(req,res)=>{
-    res.render("joinForm.ejs");
+    res.render("joinForm");
 })
 
 //자유게시판으로 이동
 app.get("/ddd",(req,res)=>{
-    res.render("ddd.ejs");
+    res.render("");
 })
 
 //main으로 이동
 app.get("/main",(req,res)=>{
     res.render("main");
 })
+
+//월별 낚시페이지로 이동
+app.get("/fishinfo",(req,res)=>{
+    res.render("fishinfo");
+})
+
+
 
 
 app.listen(port,()=>{
