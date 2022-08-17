@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/board.css">
+  <title>자유게시판</title>
+</head>
+
+<body style="background-color: #EBEDF3;">
+  <!-- 네비바 인클루드 입니다. -->
+  <%-include("nav.ejs")%>
+
+  <div class="main">
+    <div class="container">
+      <div class="indexBoard">
+        <div class="indexBoardTitle">
+          <h3><a href="">전체게시글</a></h3>
+          <div class="more"><a href="#">더보기</a></div>
+        </div>
+      </div>
+      <div class="indexBoard">
+        <div class="indexBoardTitle">
+          <h3><a href="">원투낚시</a></h3>
+          <div class="more"><a href="#">더보기</a></div>
+        </div>
+      </div>
+      <div class="indexBoard">
+        <div class="indexBoardTitle">
+          <h3><a href="">찌낚시</a></h3>
+          <div class="more"><a href="#">더보기</a></div>
+        </div>
+      </div>
+      <div class="indexBoard">
+        <div class="indexBoardTitle">
+          <h3><a href="/boardLure">루어낚시</a></h3>
+          <div class="more"><a href="/boardLure">더보기</a></div>
+        </div>
+      </div>
+      <div class="indexBoard">
+        <div class="indexBoardTitle">
+          <h3><a href="">선상낚시</a></h3>
+          <div class="more"><a href="#">더보기</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+</body>
+
+</html>
