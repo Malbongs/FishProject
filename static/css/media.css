@@ -1,16 +1,16 @@
 @font-face {
-    font-family: 'SUIT-Medium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'HallymGothic-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
 }
 * {
-    font-family: 'SUIT-Medium';
+    font-family: 'HallymGothic-Regular';
     margin: 0;
 }
 
 body {
-    color: #65AAB5;
+    color: black;
 }
 
 .slider {
@@ -21,7 +21,8 @@ body {
 
 .container {
     width: 1600px;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin: auto;
 }
 
@@ -57,10 +58,10 @@ body {
 }
 
 .slide-img {
-    width: 100%;
-    height: 275px;
+    /* width: 100%; */
+    height: 230px;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
     display: flex;
@@ -70,7 +71,7 @@ body {
 } 
 
 .slide-img:hover {
-    box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.9) inset;
+    box-shadow: 0 0 0 230px rgba(0, 0, 0, 0.9) inset;
 }
 
 .slide-img a {

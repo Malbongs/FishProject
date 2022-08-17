@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'SUIT-Medium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'HallymGothic-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
 }
 * {
-    font-family: 'SUIT-Medium';
+    font-family: 'HallymGothic-Regular';
 }
 body {
     margin: 0;
