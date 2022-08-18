@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>미끼</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/css/shop.css" />
+  </head>
+  <body>
+    <h1 class="category_shop">미끼</h1>
+    <hr style="background-color: rgb(0, 0, 0, 0.05)" />
+    <div class="upper-bar_shop">
+      <div>검색결과 - 7건</div>
+      <select id="sort" name="items1">
+        <option value="higherRating">평점순</option>
+        <option value="higherPrice">높은가격순</option>
+        <option value="lowerPrice">낮은가격순</option>
+      </select>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" val="shop6">
+        <img class="image_shop" src="/static/image/item6.gif" alt="" />
+        <p class="title">움직이는 루어 미끼 낚시 5개세트</p>
+        <p class="price" val="7480">7,480₩</p>
+        <p class="rating" val="5"></p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" val="shop7">
+        <img class="image_shop" src="/static/image/item7.png" alt="" />
+        <p class="title">조선 생크릴 - 감성돔 참돔 새우미끼</p>
+        <p class="price" val="4800">4,800₩</p>
+        <p class="rating" val="5"></p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" val="shop8">
+        <img class="image_shop" src="/static/image/item8.png" alt="" />
+        <div class="detail">
+          <p class="title">피싱웨이브 갯지렁이 100g</p>
+          <p class="price" val="10000">10,000₩</p>
+          <p class="rating" val="4"></p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" val="shop9">
+        <img class="image_shop" src="/static/image/item9.png" alt="" />
+        <p class="title">일성 옥수수 글루텐 떡밥</p>
+        <p class="price" val="7000">7,000₩</p>
+        <p class="rating" val="4"></p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" val="shop10">
+        <img class="image_shop" src="/static/image/item10.png" alt="" />
+        <p class="title">가물치 개구리웜 5종세트 루어낚시용품</p>
+        <p class="price" val="9460">9,460₩</p>
+        <p class="rating" val="3"></p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" val="shop11">
+        <img class="image_shop" src="/static/image/item11.png" alt="" />
+        <p class="title">식물성 동물성 글루텐 떡밥 집어제</p>
+        <p class="price" val="8000">8,000₩</p>
+        <p class="rating" val="2"></p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3" val="shop12">
+        <img class="image_shop" src="/static/image/item12.png" alt="" />
+        <p class="title">메탈지그 루어낚시 미끼</p>
+        <p class="price" val="990">990₩</p>
+        <p class="rating" val="1"></p>
+      </div>
+    </div>
+    <%-include("footer.ejs")%>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/static/js/shopLogic.js"></script>
+  </body>
+</html>

@@ -1,5 +1,6 @@
 const express = require("express"); //express 모델 불러오기
 const app = express(); //app 에 담기
+const shopRouter = require("./routers/shop.js"); // 쇼핑몰 라우터 분리
 app.set("view engine", "ejs"); //html 파일 불러오기
 // app.use( express.static('publuic'));  //public/img.panda.jpeg
 
@@ -7,6 +8,7 @@ app.use('/static', express.static(__dirname + '/static')); // 접근하기 위�
 
 const port = 8080; //8000번 포트로 연결
 //ip:8000/
+
 app.get("/", (req, res) => {//다음 주소를 정해주는 문자열 req(request약자)클라이언트가 사버에게    res(restuns)서버가 클라이언트한테 보내는 응답
     res.render("main");
 
@@ -48,7 +50,7 @@ app.get("/fishinfo",(req,res)=>{
 app.get("/media", (req, res) => {
   res.render("media");
 });
-
+app.use("/shop",shopRouter); //쇼핑몰 라우터로 이동
 
 app.listen(port, () => {
     console.log("server open:", port);

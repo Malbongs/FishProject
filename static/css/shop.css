@@ -1,0 +1,198 @@
+h1.category_shop {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 300;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: center;
+  }
+  div.col-12.col-lg-3.col-md-4.col-sm-6 {
+    position: relative;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    margin-bottom: 10px;
+
+  }
+  img.image_shop {
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    margin-bottom: 0px;
+    border: 1px solid rgb(0, 0, 0, 0.4);
+  }
+  img.image_page {
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 0px;
+    border: 1px solid rgb(0, 0, 0, 0.4);
+  }
+  .row p {
+    margin-bottom: 0px;
+  }
+  p.price {
+    color: rgb(11, 67, 141);
+  }
+  div.upper-bar_shop {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  div.upper-bar_shop div {
+    margin-left: 30px;
+  }
+  div.upper-bar_shop select {
+    margin-right: 30px;
+  }
+h1.link_page{
+  text-align: center;
+  margin-bottom: 15px;
+    margin-top: 15px;
+    font-weight: 100;
+    opacity: 0.4;
+    font-size: 20px;
+
+
+}
+div.col-12.col-md-6{
+  position: relative;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h1.link_page a{
+  font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+    color: black;
+    
+}
+div.detail_page{
+  padding-left:20px;
+}
+h1.productName_page{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size:20px;
+  font-weight: 400;
+}
+div.sizeAndPrice{
+  display: flex;
+  justify-content: space-evenly;
+}
+#size{
+  border-radius: 5px;
+  height:30px;
+  width:300px;
+}
+div.price_page{
+  font-weight: 600;
+  color: rgb(11, 67, 141);
+}
+div.price_page{
+  margin-bottom:20px;
+}
+div.order_page{
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  width: 350px;
+
+}
+div.order_page input{
+  width: 100px;
+}
+div.order_page button{
+  width:120px;
+}
+
+select#size{
+  margin-bottom: 30px;
+}
+button.basket_page{
+  background-color: white;
+  border:rgb(53,96,255) 1px solid;
+  color: rgb(53,96,255);
+  font-weight: 500;
+}
+button.ordernow_page{
+  background-color: rgb(53,96,255);
+  border:rgb(53,96,255) 1px solid;
+  color: white;
+  font-weight: 500;
+}
+.order_page input{
+  text-align: center;
+  font-weight: 500;
+}
+.order_page input:focus{
+  outline:none;
+}
+div.totalPrice_page{
+  width:350px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.totalPrice_page span:nth-child(1){
+  font-weight: 600;
+}
+
+p.info_page{
+  margin-top: 20px;
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+div.essentialInfo{
+  text-align: center;
+ 
+}
+
+table{
+  width: 350px;
+  display: inline-block;
+  
+}
+
+div.row{
+  width:100%;
+}
+tr td:nth-child(1){
+  width:150px;
+  background-color: rgb(240,240,240);
+
+}
+td{
+
+  font-weight: 200;
+  font-size:11px;
+  height: 50px;
+}
+tr{
+  
+  height: 40px;
+  border-bottom: 1px solid rgb(230,230,230);
+  border-top: 1px solid rgb(230,230,230);
+}
+tr td:nth-child(2){
+  width:220px;
+
+
+}
+td p{
+  margin-left: 5px;
+}
+
+.col-12.col-sm-6.col-md-4.col-lg-3 p:hover{
+  cursor: pointer;
+}
+.col-12.col-sm-6.col-md-4.col-lg-3 img:hover{
+  cursor: pointer;
+}
