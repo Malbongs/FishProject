@@ -1,0 +1,75 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>낚당-쇼핑</title>
+    <style>
+      @font-face {
+        font-family: "SUIT-Medium";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2")
+          format("woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      p#title {
+        font-family: SUIT-Medium;
+        font-size: 25px;
+        color: white;
+        font-weight: 500;
+      }
+      .upper-nav {
+        font-family: SUIT-Medium;
+        display: flex;
+        justify-content: space-between;
+        background-color: #65aab5;
+        height: 60px;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      #logo {
+        width: 50px;
+        margin-left: 10px;
+        margin-right: 40px;
+      }
+      .icons img {
+        width: 100px;
+        margin-left: 0px;
+      }
+      .categories {
+        display: flex;
+        justify-content: center;
+      }
+      .categories div {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-family: UIT-Medium;
+        font-weight: 600;
+        color: rgb(170, 170, 170);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="upper-nav">
+        <a href="/"><img id="logo" src="../static/image/logo.png" alt="" /></a>
+        <p id="title">낚당몰.</p>
+        <div class="icons">
+          <img src="../static/image/shoppingBag.png" alt="" />
+        </div>
+      </div>
+    </nav>
+    <div class="categories">
+      <div>미끼</div>
+      <div>낚시대</div>
+      <div>공동용품</div>
+    </div>
+  </body>
+</html>
