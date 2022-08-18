@@ -9,12 +9,19 @@
     font-family: 'Pretendard-Regular';
 }
 
-.indexBoardTitle a {
+.indexBoard {
+    display: flex;
+    flex-direction: column;
+}
+
+.indexBoardTitle a,
+.indexBoardText a {
     text-decoration: none !important;
     color: black;
 }
 
-.indexBoardTitle a:hover {
+.indexBoardTitle a:hover,
+.indexBoardText a:hover {
     text-decoration: none !important
 }
 
@@ -52,4 +59,33 @@
     height: 10%;
     margin: 10px;
     padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+
+.indexBoardText>.textLine {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin-left: 5px;
+}
+
+.indexBoardText .date {
+    font-size: 12px;
+}
+
+.boardPreview>.imgPreview {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.boardPreview>.imgPreview:hover {
+    transform: scale(1.2);
+}
+
+.boardPreview img {
+    border-radius: 10%;
+    height: 100%;
 }
