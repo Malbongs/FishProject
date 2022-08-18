@@ -35,7 +35,7 @@ function signUp() {
     console.log("sdflkajl");
   } else {
     alert(`${name}님 낚당! 가입을 축하합니다`);
-    window.location.replace("/");
+    window.location.replace("/loginForm");
   }
 }
 
