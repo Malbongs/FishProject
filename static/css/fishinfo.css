@@ -1,0 +1,82 @@
+.fishinfo{
+    text-align: center;
+}
+
+.all{
+    position: relative;
+}
+
+.map{
+   width: 50%;
+   height: 50%;
+}
+
+
+ /* 어종 위치지정 */
+
+ /* 감성돔 */
+.gamfish{ 
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border:5px double rgb(35, 161, 186);
+    border-radius: 50px;
+    bottom: 135px;
+    left: 600px;
+}
+.gamfish:hover{
+    transform: scale(2.0);
+    cursor: pointer;
+}
+/* 볼락 */
+.ballfish{ 
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border: 1px;
+    border-radius: 50px;
+    border:5px double rgb(35, 161, 186);
+    bottom: 130px;
+    left: 530px;
+}
+.ballfish:hover{
+    transform: scale(2.0);
+    cursor: pointer;
+}
+
+/* 학꽁치 */
+.hackfish{ 
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border: 1px;
+    border-radius: 50px;
+    border:5px double rgb(35, 161, 186);
+    bottom: 140px;
+    left: 660px;
+}
+.hackfish:hover{
+    transform: scale(2.0);
+    cursor: pointer;
+}
+
+
+
+img{
+    width: 100%;
+    height: 100%;   
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .selectbox{
+
+} */

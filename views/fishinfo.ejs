@@ -2,13 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/fishinfo.css">
     <title>Document</title>
 </head>
- <!-- 네비바 인클루드 입니다. -->
- <%-include("nav.ejs")%>
 <body>
-    월별 낚시 정보란 입니다.
+    <!-- 네비바 인클루드 -->
+    <!-- <%-include("nav.ejs")%> --> 
+
+
+    <div class="fishinfo" style="margin-top: 76px;">
+        <div class="all">
+            <img class="map" src="/static/image/map.png">
+            <div class="gamfish" title="감성돔"><img src="/static/image/gamfish.png"></div>
+            <div class="ballfish"><img src="/static/image/ballfish.png"></div>
+            <div class="hackfish"><img src="/static/image/hackfish.png"></div>
+            
+        </div>
+
+        <div class="selectbox">
+            <select name="month">
+                <option value="">월 선택</option>
+                <option value="">1월</option>
+                <option value="">2월</option>
+                <option value="">3월</option>
+                <option value="">4월</option>
+                <option value="">5월</option>
+                <option value="">6월</option>
+                <option value="">7월</option>
+                <option value="">8월</option>
+                <option value="">9월</option>
+                <option value="">10월</option>
+                <option value="">11월</option>
+                <option value="">12월</option>
+            </select>
+        </div>
+    </div>
+
+    
 </body>
 </html>
