@@ -9,16 +9,13 @@
     font-family: 'Pretendard-Regular';
 }
 
-a {
-    text-decoration: none !important
-}
-
-a:hover {
-    text-decoration: none !important
-}
-
 .indexBoardTitle a {
+    text-decoration: none !important;
     color: black;
+}
+
+.indexBoardTitle a:hover {
+    text-decoration: none !important
 }
 
 .indexBoardTitle>h3 {
@@ -30,12 +27,13 @@ a:hover {
     font-size: 12px;
 }
 
-.container {
+.main>.container {
     display: grid;
     grid-template-columns: 500px 500px;
     grid-template-rows: 500px 500px;
     grid-gap: 20px;
     justify-content: center;
+    padding-top: 100px;
 }
 
 .indexBoard {
@@ -54,8 +52,4 @@ a:hover {
     height: 10%;
     margin: 10px;
     padding-left: 10px;
-}
-
-.container {
-    padding-top: 100px;
 }

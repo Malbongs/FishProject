@@ -12,12 +12,12 @@ app.get("/", (req, res) => {//다음 주소를 정해주는 문자열 req(reques
 
 })
 
-app.get("/loginForm",(req,res)=>{
+app.get("/loginForm", (req, res) => {
     res.render("loginForm");
 })
 
 //회원가입 폼으로 이동
-app.get("/joinForm",(req,res)=>{
+app.get("/joinForm", (req, res) => {
     res.render("joinForm");
 })
 
@@ -34,19 +34,23 @@ app.get("/boardInner", (req, res) => {
     res.render("boardInner");
 })
 
+app.get("/boardWrite", (req, res) => {
+    res.render("boardWrite");
+})
+
 //main으로 이동
-app.get("/main",(req,res)=>{
+app.get("/main", (req, res) => {
     res.render("main");
 })
 
 //월별 낚시페이지로 이동
-app.get("/fishinfo",(req,res)=>{
+app.get("/fishinfo", (req, res) => {
     res.render("fishinfo");
 })
 
 //미디어로 이동
 app.get("/media", (req, res) => {
-  res.render("media");
+    res.render("media");
 });
 
 
