@@ -30,8 +30,16 @@
     font-size: 20px;
 }
 
+.indexBoardTitle>h3:hover {
+    transform: scale(1.2);
+}
+
 .indexBoardTitle>.more {
     font-size: 12px;
+}
+
+.indexBoardTitle>.more:hover {
+    transform: scale(1.2);
 }
 
 .main>.container {
@@ -88,4 +96,34 @@
 .boardPreview img {
     border-radius: 10%;
     height: 100%;
+}
+
+.boardPreview .imgPreview:nth-child(1) {
+    opacity: 0;
+    animation: fadein 1s 0.5s forwards;
+}
+
+.boardPreview .imgPreview:nth-child(2) {
+    opacity: 0;
+    animation: fadein 1s 1s forwards;
+}
+
+.boardPreview .imgPreview:nth-child(3) {
+    opacity: 0;
+    animation: fadein 1s 1.5s forwards;
+}
+
+.boardPreview .imgPreview:nth-child(4) {
+    opacity: 0;
+    animation: fadein 1s 2s forwards;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
