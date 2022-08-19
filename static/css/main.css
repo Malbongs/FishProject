@@ -153,8 +153,8 @@ nav *{
     .box2{ 
         border-radius: 3%;
         display: inline-block;
-        margin-top: 120px;
-        width : 80%;
+        /* margin-top: 120px; */
+        width : 70%;
         height : 60%;
         background-color: white;
         box-shadow: 5px 5px 5px;
