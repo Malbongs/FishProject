@@ -18,7 +18,7 @@
 
 <body style="background-color: #EBEDF3;">
   <!-- 네비바 인클루드 입니다. -->
-
+  <%-include("nav.ejs")%>
   <div class="article">
     <div class="articleTop">
       <a class="back" href="/boardLure">
@@ -32,7 +32,9 @@
         </div>
         <div class="etc">
           <div class="writer">관리자 admin 22. 08. 16</div>
-          <button type="button" class="report btn btn-outline-danger">신고</button>
+          <button type="button" class="report btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#reportModal">
+            신고
+          </button>
         </div>
       </div>
       <div class="content">
@@ -43,8 +45,8 @@
           <button type="button" class="btn btn-light" onclick="location.href='/boardLure'">목록</button>
         </div>
         <div class="edit">
-          <button type="button" class="btn btn-light">공유</button>
-          <button type="button" class="btn btn-light">추천</button>
+          <button id="shareBtn" type="button" class="btn btn-light">공유</button>
+          <button id="recommend" type="button" class="btn btn-light">추천</button>
         </div>
       </div>
       <div class="commentsTitle">
@@ -96,6 +98,64 @@
         </tbody>
       </table>
     </section>
+  </div>
+  <br>
+
+  <!-- 공유 버튼 모달이 -->
+  <div id="shareModal" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">공유하기</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="icon">
+            <button type="button" id="shareKt" class="btn_comm"><a href="https://accounts.kakao.com/login?continue=https%3A%2F%2Fcs.kakao.com%2Fhelps%3Fservice%3D8%26locale%3Dko%26category%3D25"><img src="/static/image/board/kakaotalk.png" alt=""></a></button>
+            <button type="button" id="shareIn" class="btn_comm"><a href="https://www.instagram.com/sem/campaign/emailsignup/?campaign_id=13530338586&extra_1=s|c|547419126431|e|instagram%20%27|&placement=&creative=547419126431&keyword=instagram%20%27&partner_id=googlesem&extra_2=campaignid%3D13530338586%26adgroupid%3D126262418054%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-1321618851291%26loc_physical_ms%3D1009871%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQjwxveXBhDDARIsAI0Q0x3PkIVS5oY1RhAlaS-tupWDzim9LfqQccJcTIEAe8gm03TAYACifrsaAsdUEALw_wcB"><img src="/static/image/board/instagram.png" alt=""></a></button>
+            <button type="button" id="shareFb" class="btn_comm"><a href="https://www.facebook.com/"><img src="/static/image/board/facebook.png" alt=""></a></button>
+            <button type="button" id="shareTw" class="btn_comm"><a href="https://twitter.com/i/flow/login"><img src="/static/image/board/twitter.png" alt=""></a></button>
+            <button type="button" id="shareKs" class="btn_comm"><a href="https://accounts.kakao.com/login?continue=https://story.kakao.com/"><img src="/static/image/board/kakaostory.png" alt=""></a></button>
+            <button type="button" id="shareBn" class="btn_comm"><a href="https://band.us/ko"><img src="/static/image/board/band.png" alt=""></a></button>
+            <button type="button" id="shareNb" class="btn_comm"><a href="https://section.blog.naver.com/BlogHome.naver?directoryNo=0&currentPage=1&groupId=0"><img src="/static/image/board/naverblog.png" alt=""></a></button>
+            <button type="button" id="shareTi" class="btn_comm"><a href="https://www.tistory.com/"><img src="/static/image/board/tistory.png" alt=""></a></button>
+          </div>
+          <div class="urlCopy">
+            <input style="width: 400px;" class="form-control-sm urlAddr" type="text" value="http://localhost:8080/boardInner" aria-label="Disabled input example" disabled readonly>
+            <button type="button" class="btn btn-secondary copyBtn">복사</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--신고버튼 모달이 -->
+  <div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">신고하기</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="display: flex; flex-direction: column;">
+          <div>항목</div>
+          <select class="form-select" name="" id="">
+            <option value="">부적절한 발언</option>
+            <option value="">선정적인 매체 포함</option>
+            <option value="">폭력적인 매체 포함</option>
+            <option value="">기타</option>
+          </select>
+          <div>신고내용</div>
+          <textarea class="form-control" placeholder="내용을 입력해주세요." style="height: 100%;" name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">종료</button>
+          <button type="button" id="reportBtn" data-bs-dismiss="modal" class="btn btn-danger">신고하기</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- 자바스크립트 -->
@@ -168,6 +228,8 @@
       box.appendChild(comment);
     }
 
+
+    // 댓글 삭제 기능
     $(document).ready(function() {
       $('.commentBox').on('click', '.removeBtn', function() {
         $(this).parent().remove();
@@ -175,7 +237,43 @@
         document.getElementsByClassName("commentCnt")[0].innerText = commentCnt;
       })
     });
+
+    // 모달 호출
+    $('#shareBtn').click(function() {
+      $('#shareModal').modal('show')
+    });
+
+    // 공유 url 카피 함수
+    $('.copyBtn').click(function() {
+      const copyText = $(".urlAddr").val();
+      const textArea = document.createElement("textarea");
+      document.body.appendChild(textArea);
+
+      textArea.innerText = copyText;
+
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+
+      alert("Copied!");
+    });
+
+    // 추천 버튼 함수
+    $('#recommend').click(function() {
+      alert("로그인이 필요합니다.")
+    });
+
+    // 신고 버튼 함수
+    $('#reportBtn').click(function() {
+      alert("고객님의 신고가 접수되었습니다.");
+    });
+
+    // modal 입력폼 초기화
+    $('.modal').on('hidden.bs.modal', function(e) {
+      $('textarea').val('');
+    });
   </script>
+  <!-- footer 호출 -->
   <%-include("footer.ejs")%>
 </body>
 

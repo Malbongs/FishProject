@@ -18,7 +18,7 @@
 
 <body style="background-color: #EBEDF3;">
   <!-- 네비바 인클루드 입니다. -->
-
+  <%-include("nav.ejs")%>
   <div class="article">
     <div class="articleTop">
       <a class="back" href="/board">
@@ -62,7 +62,7 @@
       </table>
     </section>
     <div class="search">
-      <select name="searchType" id="">
+      <select class="form-select" aria-label="Default select example">
         <option value="title">제목</option>
         <option value="titleAndContent">제목 + 내용</option>
         <option value="name">글쓴이</option>
