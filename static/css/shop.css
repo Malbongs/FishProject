@@ -231,8 +231,9 @@ p#title {
   margin-right: 40px;
 }
 .icons img {
-  width: 100px;
+  width: 60px;
   margin-left: 0px;
+  margin-right:10px;
 }
 .categories {
   display: flex;
@@ -249,4 +250,7 @@ p#title {
 p#title{
   margin-bottom: 0px;
   margin-top: 0px;
+}
+a {
+  text-decoration: none;
 }
