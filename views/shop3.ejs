@@ -1,0 +1,117 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>모아캠핑 다용도 낚시대 세트</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/css/shop.css" />
+  </head>
+  <body>
+    <%-include("shopNav.ejs")%>
+    <h1 class="link_page">
+      <a href="">쇼핑 홈</a><span> > </span> <a href="/shop/fishingrod">낚시대</a>
+      <span> > </span>
+      <a href="">모아캠핑 다용도 낚시대 세트</a>
+    </h1>
+    <hr style="background-color: rgb(0, 0, 0, 0.05)" />
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <img class="image_page" src="/static/image/item3.png" alt="" />
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="detail_page">
+          <h1 class="productName_page">모아캠핑 다용도 낚시대 세트</h1>
+          <div val="4" class="star_page"></div>
+          <div class="price_page" val="12500">12,500원</div>
+          <select name="size" id="size">
+            <option value="12500"">
+              <div class="sizeAndPrice">
+                <div>사이즈 300</div>
+                <span
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+                >
+                <div>12,500원</div>
+              </div>
+            </option>
+          </select>
+          <div class="totalPrice_page">
+            <span>총 상품금액</span>
+            <div><span>12,500</span><span>원</span></div>
+          </div>
+          <div class="order_page">
+            <input type="number" min="1" value="1" max="100" />
+            <button class="basket_page">장바구니 담기</button>
+            <button class="ordernow_page">바로 주문하기</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-0 col-md-2"></div>
+    </div>
+    <p class="info_page">필수 표기정보</p>
+    <div class="row">
+      <div class="col-0 col-md-1"></div>
+      <div class="col-12 col-md-4 essentialInfo" style="margin-bottom: 0px">
+        <table>
+          <tr>
+            <td><p>품명 및 모델명</p></td>
+            <td><p>모아캠핑 다용도 낚시대 세트</p></td>
+          </tr>
+          <tr>
+            <td><p>색상</p></td>
+            <td><p>혼합색상</p></td>
+          </tr>
+          <tr>
+            <td><p>A/S 책임자 전화번호</p></td>
+            <td><p>010-2504-5779</p></td>
+          </tr>
+          <tr>
+            <td><p>제조자(수입자)</p></td>
+            <td><p>낚당</p></td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-0 col-md-1"></div>
+      <div class="col-12 col-md-4 essentialInfo" style="margin-bottom: 0px">
+        <table>
+          <tr>
+            <td><p>재질</p></td>
+            <td>
+              <p>
+                원투대:플라스틱 , 릴:플라스틱
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td><p>출시년월</p></td>
+            <td><p>2022.01</p></td>
+          </tr>
+          <tr>
+            <td><p>제조국</p></td>
+            <td><p>중국</p></td>
+          </tr>
+          <tr>
+            <td><p>품질보증기준</p></td>
+            <td><p>불량 시 환불 및 교환</p></td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-0 col-md-1"></div>
+    </div>
+    <%-include("footer.ejs")%>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="/static/js/pageLogic.js"></script>
+  </body>
+</html>
