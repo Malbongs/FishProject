@@ -4,7 +4,6 @@ router.get("/",(req,res)=>{
     res.render('shop');
 });
 router.get("/:item",(req,res)=>{
-    console.log("hello");
     const item = req.params.item;
     res.render(`${item}`);
 });
