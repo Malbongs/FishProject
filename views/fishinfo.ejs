@@ -2,42 +2,110 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/static/css/fishinfo.css">
     <title>Document</title>
 </head>
 <body>
     <!-- 네비바 인클루드 -->
-    <!-- <%-include("nav.ejs")%> --> 
+    <%-include("nav.ejs")%> 
 
 
     <div class="fishinfo" style="margin-top: 76px;">
         <div class="all">
             <img class="map" src="/static/image/map.png">
-            <div class="gamfish"><img src="/static/image/gamfish.png"><div class="gam"></div></div>
-            <div class="ballfish"><img src="/static/image/ballfish.png"></div>
-            <div class="hackfish"><img src="/static/image/hackfish.png"></div>
+
+            <!-- 1~3월 서해북부 없음 -->
+            <!-- 4~6월 서해북부  우럭 노래미 숭어-->
+            <!-- 우럭 -->
+            <div class="fish" id="woofish_NW"><img src="/static/image/woofish.png"><div class="textbox" id="woo_NW"><b>우럭</b><br>낚시방법:원투 찌 루어 낚시<br>미끼:갯지렁이,루어</div></div>
+            <!-- 숭어 -->
+            <div class="fish" id="soungfish_NW"><img src="/static/image/soungfish.png"><div class="textbox" id="soung_NW"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
+            <!-- 놀래미 -->
+            <div class="fish" id="nallfish_NW"><img src="/static/image/nallfish.png"><div class="textbox" id="nall_NW"><b>놀래미</b><br>낚시방법:원투 찌<br>미끼:갯지렁이</div></div>
+            
+            <!-- 7~9월 서해북부 우럭 노래미 숭어 학꽁치,갈치,붕장어 -->
+            <!-- 갈치 -->
+            <div class="fish" id="gallfish_NW"><img src="/static/image/gallfish.png"><div class="textbox" id="gall_NW"><b>갈치</b><br>낚시방법:선상,루어 낚시<br>미끼:루어,지렁이,스푼 등등</div></div>
+            <!-- 학꽁치 -->
+            <div class="fish" id="hackfish_NW"><img src="/static/image/hackfish.png"><div class="textbox" id="hack_NW"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
+            <!-- 붕장어 -->
+            <div class="fish" id="bongfish_NW"><img src="/static/image/bongfish.png"><div class="textbox" id="bong_NW"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
+            
+            <!-- 10~12월 서해북부 망둥어-->
+            <!-- 망둥어 -->
+            <div class="fish" id="mangfish_NW"><img src="/static/image/mangfish.png"><div class="textbox" id="mang_NW"><b>망둥어</b><br>낚시방법:원투 찌 낚시<br>미끼:지렁이</div></div>
+
+            <!-- 1~3월 서해중부 없음 -->
+            <!-- 4~6월 서해북부  우럭 노래미 숭어-->
+            <!-- 우럭 -->
+            <div class="fish" id="woofish_W"><img src="/static/image/woofish.png"><div class="textbox" id="woo_W"><b>우럭</b><br>낚시방법:원투 찌 루어 낚시<br>미끼:갯지렁이,루어</div></div>
+            <!-- 숭어 -->
+            <div class="fish" id="soungfish_W"><img src="/static/image/soungfish.png"><div class="textbox" id="soung_W"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
+            <!-- 놀래미 -->
+            <div class="fish" id="nallfish_W"><img src="/static/image/nallfish.png"><div class="textbox" id="nall_W"><b>놀래미</b><br>낚시방법:원투 찌<br>미끼:갯지렁이</div></div>
+            <!-- 망둥어 -->
+            <div class="fish" id="mangfish_W"><img src="/static/image/mangfish.png"><div class="textbox" id="mang_W"><b>망둥어</b><br>낚시방법:원투 찌 낚시<br>미끼:지렁이</div></div>
+            <!-- 학꽁치 -->
+            <div class="fish" id="hackfish_W"><img src="/static/image/hackfish.png"><div class="textbox" id="hack_W"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
+            <!-- 붕장어 -->
+            <div class="fish" id="bongfish_W"><img src="/static/image/bongfish.png"><div class="textbox" id="bong_W"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
+            <!-- 농어 -->
+            <div class="fish" id="bongfish_W"><img src="/static/image/bongfish.png"><div class="textbox" id="bong_W"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
+            <!-- 감성돔 -->
+            <div class="fish" id="gamfish_W"><img src="/static/image/gamfish.png"><div class="textbox" id="gam_w"><b>감성돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
+
+
+
+
+
+
+
+
+
+
+            <div class="fish" id="hackfish"><img src="/static/image/hackfish.png"><div class="textbox" id="hack"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
+            <div class="fish" id="gamfish"><img src="/static/image/gamfish.png"><div class="textbox" id="gam"><b>감성돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
+            <div class="fish" id="ballfish"><img src="/static/image/ballfish.png"><div class="textbox" id="ball"><b>볼락</b><br>낚시방법:루어 낚시<br>미끼:소프트 루어</div></div>
+            <div class="fish" id="bangfish"><img src="/static/image/bangfish.png"><div class="textbox" id="bang"><b>벵에돔(대물출현!!)</b><br>낚시방법:갯바위 밑밥 낚시<br>미끼:크릴</div></div>
+            <div class="fish" id="bangfish1"><img src="/static/image/bangfish.png"><div class="textbox" id="bang1"><b>벵에돔(대물출현!!)</b><br>낚시방법:갯바위 밑밥 낚시<br>미끼:크릴</div></div>
+            <div class="fish" id="hackfish1"><img src="/static/image/hackfish.png"><div class="textbox" id="hack"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
+            <div class="fish" id="ballfish1"><img src="/static/image/ballfish.png"><div class="textbox" id="ball"><b>볼락</b><br>낚시방법:루어 낚시<br>미끼:소프트 루어</div></div>
+            <div class="fish" id="chamfish"><img src="/static/image/chamfish.png"><div class="textbox" id="cham"><b>참돔</b><br>낚시방법:흘림 낚시<br>미끼:새우류,게류</div></div>
+            <div class="fish" id="moonfish"><img src="/static/image/moonfish.png"><div class="textbox" id="moon"><b>문치가자미</b><br>낚시방법:원투 낚시<br>미끼:홍거시</div></div>
             
         </div>
 
+
+
+
         <div class="selectbox">
             <select name="month">
-                <option value="">월 선택</option>
-                <option value="">1월</option>
-                <option value="">2월</option>
-                <option value="">3월</option>
-                <option value="">4월</option>
-                <option value="">5월</option>
-                <option value="">6월</option>
-                <option value="">7월</option>
-                <option value="">8월</option>
-                <option value="">9월</option>
-                <option value="">10월</option>
-                <option value="">11월</option>
-                <option value="">12월</option>
+                <option value="select">시즌 선택</option>
+                <option value="one_s">1~3월</option>
+                <option value="two_s">4~6월</option>
+                <option value="three_s">7~9월</option>
+                <option value="four_s">10~12월</option>
+               
             </select>
         </div>
     </div>
 
     
+    <%-include("footer.ejs")%> 
 </body>
+<script>
+    
+    // text보여지게하는 함수
+    $('.fish').hover(function(){
+        $(this).children(".textbox").css("display","block");
+        console.log($(this).children(".textbox"));
+    },function(){
+        $(this).children(".textbox").css("display","none");
+    })
+        
+    
+
+
+</script>
 </html>
