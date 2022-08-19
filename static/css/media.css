@@ -7,6 +7,7 @@
 * {
     font-family: 'HallymGothic-Regular';
     margin: 0;
+
 }
 
 body {
@@ -19,6 +20,10 @@ body {
     align-items: center;
 }
 
+.slide h3 {
+    font-size: 1.17em !important;
+}
+
 .container {
     width: 1600px;
     padding-top: 20px;
@@ -27,18 +32,23 @@ body {
 }
 
 .subcontainer {
-    width: 85%;
+    width: 85% !important;
     margin: auto;
 }
 
 .controller {
-    background-color: #65AAB5;
     display: flex;
     justify-content: space-between;
-    border-radius: 2px;
+    align-items: center;
+    height: 50px;
+    padding: 0 15px 10px 15px;
+    border-bottom: 3px solid #65AAB5;
 }
 .controller h2 {
-    color: white;
+    color: #65AAB5;
+    font-size: 1.5em !important;
+    font-weight: bolder !important;
+    margin-bottom: 0 !important;
 }
 
 .controls-1 i, .controls-2 i, .controls-3 i, .controls-4 i{
@@ -47,10 +57,9 @@ body {
 }
 
 .previous-1, .next-1, .previous-2, .next-2, .previous-3, .next-3, .previous-4, .next-4{
-    padding: 2px;
-    width: 30px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
-    border-radius: 50%;
     outline: none;
     transition: 0.7s ease-in-out;
     border: 3px solid #65AAB5;
@@ -58,10 +67,10 @@ body {
 }
 
 .slide-img {
-    /* width: 100%; */
+    width: 100%;
     height: 230px;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
     display: flex;
