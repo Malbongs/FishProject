@@ -20,12 +20,17 @@
   <!-- 네비바 인클루드 입니다. -->
   <%-include("nav.ejs")%>
   <div class="article">
-    <br>
-    <h1><input class="articleTitle form-control" type="text" placeholder="제목을 입력해주세요"></h1>
-    <br>
     <section class="boardList">
       <span class="badge text-bg-light">카테고리</span>
       루어낚시게시판
+    </section>
+    <br>
+    <section class="boardList articleTitle">
+      <input class="form-control titleForm" type="text" placeholder="제목을 입력해주세요">
+    </section>
+    <br>
+    <section class="boardList articleWriter">
+      <input class="form-control" type="text" placeholder="작성자를 입력해주세요">
     </section>
     <br>
     <section class="boardList writeForm">
@@ -34,13 +39,38 @@
 
     <div class="writeBtn" style="margin-top: 5px;">
       <button type="button" class="btn btn-secondary submitBtn">작성</button>
-      <button type="button" class="btn btn-danger"><a class="cancel" href="/boardLure">
-          취소 </a></button>
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#cancelModal">
+        취소</button>
     </div>
 
   </div>
   <br>
   <%-include("footer.ejs")%>
+
+  <!-- 취소 모달이 -->
+  <div class="modal" id="cancelModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>현재까지 작성한 내용이 사라질 수 있습니다. 정말로 취소하시겠습니까?</p>
+        </div>
+        <div class="modal-footer">
+          <a class="cancel" href="/boardLure"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">네</button></a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">아니오</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 스크립트 -->
+  <script>
+    $(".submitBtn").click(function() {
+      alert("준비중입니다.")
+    });
+  </script>
 </body>
 
 </html>
