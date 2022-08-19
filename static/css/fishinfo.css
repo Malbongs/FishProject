@@ -1,0 +1,148 @@
+
+@font-face {
+    font-family: 'HallymGothic-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.all{
+    left: 150px;
+    position: relative;
+    width: 800px;
+    height: auto;  
+}
+
+.map{
+   width: 100%;
+   height: auto
+}
+
+
+ /* 어종 위치지정 */
+
+
+.fish{ 
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border:5px double rgb(35, 161, 186);
+    border-radius: 50px;
+}
+
+.fish:hover{
+    transform: scale(1.4);
+    cursor: pointer;
+}
+
+.textbox{
+    position: absolute;
+    left: 50px;
+    top: -10px;
+    display: none;
+    font-size: 10px;
+    border:5px double rgb(35, 161, 186);
+    background-color: white;
+    width: 150px;
+    height: 50px;
+    font-family:'HallymGothic-Regular' ;
+}
+
+ /* 감성돔 */
+#gamfish{
+    bottom: 200px;
+    left: 400px;
+}
+/* 볼락 */
+#ballfish{ 
+    bottom: 150px;
+    left: 300px;
+}
+#ballfish1{ 
+    bottom: 550px;
+    right: 100px;
+}
+/* 학꽁치 */
+#hackfish{ 
+    bottom: 200px;
+    left: 500px;
+}
+#hackfish1{ 
+    bottom: 500px;
+    right: 60px;
+}
+/* 벵에돔 */
+#bangfish{ 
+    bottom: 50px;
+    left: 200px; 
+}
+#bangfish1{ 
+    bottom: 200px;
+    left: 330px; 
+}
+/* 문치가자미 */
+#moonfish{
+    bottom: 500px;
+    right: 120px;
+}
+/* 참돔 */
+#chamfish{
+    bottom: 150px;
+    left: 180px;
+}
+
+/* 서해 북부 4~6월 우럭,노래미,숭어 */
+#woofish_NW{
+    top: 190px;
+    left:150px;
+}
+#soungfish_NW{
+    top: 245px;
+    left: 150px;
+}
+#nallfish_NW{
+    top: 230px;
+    left: 100px;
+}
+
+/* 서해 북부 7~9월 우럭,노래미,숭어,갈치,붕장어,학꽁치*/
+#gallfish_NW{
+    top: 170px;
+    left:100px;
+}
+#hackfish_NW{
+    top: 300px;
+    left: 140px;
+}
+#bongfish_NW{
+    top: 280px;
+    left: 80px;
+}
+/* 서해 북부 10~12월 망둥어 */
+#mangfish_NW{
+    top:240px;
+    left: 200px;
+}
+
+
+
+
+img{
+    width: 100%;
+    height: 100%; 
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .selectbox{
+
+} */

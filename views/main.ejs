@@ -44,6 +44,9 @@
           <li class="nav-item">
             <a class="nav-link"  href="/joinForm">JOIN</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/board">BOARD</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -81,7 +84,8 @@
 
 
   <!-- 월별 낚시 정보로 이동 -->
-  <div class="part2" id="two">
+  <div style="display: flex; justify-content: space-evenly; align-items: center;" class="part2" id="two">
+    <%-include("weather.ejs")%>
     <div class="box2">
       <div class="box3">
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rA04czNV7GI?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -104,7 +108,7 @@
   <!-- MEDIA페이지 이동 -->
   <div class="part4" id="four">
 
-    <div class="news" onclick="location.href='/fishinfo'">MEDIA</div>
+    <div class="news" onclick="location.href='/media'">MEDIA</div>
     <div class="videos">
       <div class="media">
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/yZ_QYbfHKGg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

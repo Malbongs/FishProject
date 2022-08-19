@@ -2,54 +2,381 @@
 <html lang="en">
 
 <head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/static/css/board.css">
+  <link href="/static/image/icon.png" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" href="/static/css/footer.css">
   <title>자유게시판</title>
 </head>
 
 <body style="background-color: #EBEDF3;">
   <!-- 네비바 인클루드 입니다. -->
   <%-include("nav.ejs")%>
-
   <div class="main">
     <div class="container">
+
+      <!--전체게시글 -->
       <div class="indexBoard">
         <div class="indexBoardTitle">
           <h3><a href="">전체게시글</a></h3>
           <div class="more"><a href="#">더보기</a></div>
         </div>
+        <% for(i=0; i<4; i++) { %>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">루낚게</span>
+            <a href=""><span> 안녕하세요 오늘 가입했습니다 ㅎㅎ</span></a>
+            <span class="date">22. 08. 18.</span>
+          </div>
+        </div>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">원낚게</span>
+            <a href=""><span>낚시 고수님들 잘부탁드려요 !!</span></a>
+            <span class="date">22. 08. 18.</span>
+            </a>
+          </div>
+        </div>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">찌낚게</span>
+            <a href=""><span>오늘은 날씨 때문에 물고기가 잘 안잡히네요 ㅜㅜ</span></a>
+            <span class="date">22. 08. 18.</span>
+          </div>
+        </div>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">선낚게</span>
+            <a href=""><span>[번개] 이번주 토요일 같이 인천 낚시하러 가실분</span></a>
+            <span class="date">22. 08. 18.</span>
+          </div>
+        </div>
+        <% } %>
       </div>
+
+      <!-- 이미지 게시판 -->
       <div class="indexBoard">
         <div class="indexBoardTitle">
-          <h3><a href="">원투낚시</a></h3>
-          <div class="more"><a href="#">더보기</a></div>
+          <h3><a href="/boardLure">이미지</a></h3>
+          <div class="more"><a href="/boardLure">더보기</a></div>
+        </div>
+        <div class="row justify-content-center boardPreview">
+          <div class="imgPreview col-5 m-1">
+            <img src="/static/image/board/board1.png" alt="">
+            <div class="imgTitle">오늘 잡은거에요! </div>
+          </div>
+          <div class="imgPreview col-5 m-1">
+            <img src="/static/image/board/board2.png" alt="">
+            <div class="imgTitle">안녕하세요~~</div>
+          </div>
+          <div class="imgPreview col-5 m-1 mt-5">
+            <img src="/static/image/board/board3.png" alt="">
+            <div class="imgTitle">저보다 크네요 ;</div>
+          </div>
+          <div class="imgPreview col-5 m-1 mt-5">
+            <img src="/static/image/board/board4.png" alt="">
+            <div class="imgTitle">쭈꾸미 한마리 몰고가세요~</div>
+          </div>
         </div>
       </div>
-      <div class="indexBoard">
+
+      <!-- 원투낚시게시판 -->
+      <div class="indexBoard slideUp">
         <div class="indexBoardTitle">
-          <h3><a href="">찌낚시</a></h3>
-          <div class="more"><a href="#">더보기</a></div>
+          <h3><a href="/boardLure">원투낚시</a></h3>
+          <div class="more"><a href="/boardLure">더보기</a></div>
         </div>
+        <% for(i=0; i<4; i++) { %>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">루낚게</span>
+            <a href=""><span> 안녕하세요 오늘 가입했습니다 ㅎㅎ</span></a>
+            <span class="date">22. 08. 18.</span>
+          </div>
+        </div>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">원낚게</span>
+            <a href=""><span>낚시 고수님들 잘부탁드려요 !!</span></a>
+            <span class="date">22. 08. 18.</span>
+            </a>
+          </div>
+        </div>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">찌낚게</span>
+            <a href=""><span>오늘은 날씨 때문에 물고기가 잘 안잡히네요 ㅜㅜ</span></a>
+            <span class="date">22. 08. 18.</span>
+          </div>
+        </div>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">선낚게</span>
+            <a href=""><span>[번개] 이번주 토요일 같이 인천 낚시하러 가실분</span></a>
+            <span class="date">22. 08. 18.</span>
+          </div>
+        </div>
+        <% } %>
+
       </div>
-      <div class="indexBoard">
+
+      <!-- 찌낚시게시판 -->
+      <div class="indexBoard slideUp">
+        <div class="indexBoardTitle">
+          <h3><a href="/boardLure">찌낚시</a></h3>
+          <div class="more"><a href="/boardLure">더보기</a></div>
+        </div>
+        <% for(i=0; i<4; i++) { %>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">루낚게</span>
+            <a href=""><span> 안녕하세요 오늘 가입했습니다 ㅎㅎ</span></a>
+            <span class="date">22. 08. 18.</span>
+          </div>
+        </div>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">원낚게</span>
+            <a href=""><span>낚시 고수님들 잘부탁드려요 !!</span></a>
+            <span class="date">22. 08. 18.</span>
+            </a>
+          </div>
+        </div>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">찌낚게</span>
+            <a href=""><span>오늘은 날씨 때문에 물고기가 잘 안잡히네요 ㅜㅜ</span></a>
+            <span class="date">22. 08. 18.</span>
+          </div>
+        </div>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">선낚게</span>
+            <a href=""><span>[번개] 이번주 토요일 같이 인천 낚시하러 가실분</span></a>
+            <span class="date">22. 08. 18.</span>
+          </div>
+        </div>
+        <% } %>
+      </div>
+
+      <!-- 루어낚시게시판 -->
+      <div class="indexBoard slideUp">
         <div class="indexBoardTitle">
           <h3><a href="/boardLure">루어낚시</a></h3>
           <div class="more"><a href="/boardLure">더보기</a></div>
         </div>
+        <% for(i=0; i<4; i++) { %>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">루낚게</span>
+            <a href=""><span> 안녕하세요 오늘 가입했습니다 ㅎㅎ</span></a>
+            <span class="date">22. 08. 18.</span>
+          </div>
+        </div>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">원낚게</span>
+            <a href=""><span>낚시 고수님들 잘부탁드려요 !!</span></a>
+            <span class="date">22. 08. 18.</span>
+            </a>
+          </div>
+        </div>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">찌낚게</span>
+            <a href=""><span>오늘은 날씨 때문에 물고기가 잘 안잡히네요 ㅜㅜ</span></a>
+            <span class="date">22. 08. 18.</span>
+          </div>
+        </div>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">선낚게</span>
+            <a href=""><span>[번개] 이번주 토요일 같이 인천 낚시하러 가실분</span></a>
+            <span class="date">22. 08. 18.</span>
+          </div>
+        </div>
+        <% } %>
       </div>
-      <div class="indexBoard">
+
+      <!-- 선상낚시게시판 -->
+      <div class="indexBoard slideUp">
         <div class="indexBoardTitle">
-          <h3><a href="">선상낚시</a></h3>
-          <div class="more"><a href="#">더보기</a></div>
+          <h3><a href="/boardLure">선상낚시</a></h3>
+          <div class="more"><a href="/boardLure">더보기</a></div>
+        </div>
+        <% for(i=0; i<4; i++) { %>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">루낚게</span>
+            <a href=""><span> 안녕하세요 오늘 가입했습니다 ㅎㅎ</span></a>
+            <span class="date">22. 08. 18.</span>
+          </div>
+        </div>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">원낚게</span>
+            <a href=""><span>낚시 고수님들 잘부탁드려요 !!</span></a>
+            <span class="date">22. 08. 18.</span>
+            </a>
+          </div>
+        </div>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">찌낚게</span>
+            <a href=""><span>오늘은 날씨 때문에 물고기가 잘 안잡히네요 ㅜㅜ</span></a>
+            <span class="date">22. 08. 18.</span>
+          </div>
+        </div>
+        <div class="indexBoardText">
+          <div class="textLine">
+            <span class="badge text-bg-light">선낚게</span>
+            <a href=""><span>[번개] 이번주 토요일 같이 인천 낚시하러 가실분</span></a>
+            <span class="date">22. 08. 18.</span>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+  </div>
+  <br>
+  <%-include("footer.ejs")%>
+
+  <div class="chat">
+    <button class="chatIcon" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      <div class="chatCnt commentCnt">3</div>
+      <img src="/static/image/board/fishChat.png" alt="">
+    </button>
+  </div>
+
+  <div class="modal fade modal-lg" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">실시간채팅(<span class="commentCnt">3</span>)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body chatForm">
+          <div class="chatLine">
+            <div class="chatBg">🐟</div>
+            <div class="chatUser">낚시광</div>
+            <div class="chatText">안녕하세요</div>
+          </div>
+          <div class="chatLine">
+            <div class="chatBg">🐠</div>
+            <div class="chatUser">도시어부</div>
+            <div class="chatText">반가워요 낚시광님~~</div>
+          </div>
+          <div class="chatLine">
+            <div class="chatBg">🐬</div>
+            <div class="chatUser">강태공후계자</div>
+            <div class="chatText">오 도시어부님도 계셨네요 ㅎㅇ</div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="form-row inputForm">
+            <div class="col-1">
+              <select class="form-control" name="" id="chatBg">
+                <option value="🐟">🐟</option>
+                <option value="🐠">🐠</option>
+                <option value="🐬">🐬</option>
+                <option value="🐳">🐳</option>
+              </select>
+            </div>
+            <div class="col-2">
+              <input id="nickName" class="form-control" placeholder="닉네임"></input>
+            </div>
+            <div class="col-7">
+              <input id="text" class="form-control" placeholder="내용"></input>
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn btn-secondary submitBtn">전송</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- script -->
+  <script>
+    var commentCnt = 3;
 
-  </div>
+    // slide-up
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        $('.slideUp').each(function(i) {
+
+          var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+          var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+          if (bottom_of_window > bottom_of_element) {
+            $(this).animate({
+              'opacity': '1',
+              'margin': '20px'
+            }, 1000);
+          }
+
+        });
+      });
+    });
+
+    // 채팅 입력 기능
+    $(".submitBtn").click(function() {
+      const bg_value = document.getElementById("chatBg")[0].value;
+      const text_value = document.getElementById("text").value;
+      const name_value = document.getElementById("nickName").value;
+
+      // 입력값 유효성 체크
+      if (name_value == "") {
+        alert("닉네임을 입력해주세요.");
+        return 0;
+      } else if (text_value == "") {
+        alert("내용을 입력해주세요.");
+        return 0;
+      }
+
+      // 빈 채팅 폼 생성
+      const box = document.getElementsByClassName("chatForm")[0];
+      const comment = document.createElement("div");
+      const userName = document.createElement("div");
+      const text = document.createElement("div");
+      const bg = document.createElement("div");
+
+      // 채팅 수 카운트 증가
+      commentCnt += 1;
+      document.getElementsByClassName("commentCnt")[0].innerText = commentCnt;
+      document.getElementsByClassName("commentCnt")[1].innerText = commentCnt;
+
+      // 그리드 스타일 추가
+      comment.className += 'chatLine';
+      userName.className += 'chatUser';
+      text.className += 'chatText';
+      bg.className += 'chatBg';
+
+      // input 폼 초기화
+      document.getElementById("text").value = "";
+
+      // 가져온 input 값 빈 댓글 폼에 집어넣기
+      userName.innerText = name_value;
+      text.innerText = text_value;
+      bg.innerText = bg_value;
+
+      // 채팅 폼 합치기
+      comment.appendChild(bg);
+      comment.appendChild(userName);
+      comment.appendChild(text);
+
+      // 합친 채팅 폼 실제 채팅창에 추가
+      box.appendChild(comment);
+    });
+  </script>
 </body>
 
 </html>

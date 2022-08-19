@@ -9,11 +9,13 @@
     font-family: 'Pretendard-Regular';
 }
 
-a {
+.article a,
+.cancel {
     text-decoration: none !important
 }
 
-a:hover {
+.artice a:hover,
+.cancel {
     text-decoration: none !important
 }
 
@@ -38,19 +40,26 @@ h1,
 }
 
 .search {
+    display: flex;
     width: auto;
-    justify-content: center;
+    margin-top: 10px;
+    height: 35px;
+}
+
+.search>.form-select {
+    width: 100px;
 }
 
 .article>.articleTop {
+    display: flex;
+    justify-content: space-between;
     width: 70%;
 }
 
-.articleTop>.back {
-    align-items: center;
+.articleTop>.back,
+.articleTop>.write {
     padding: 10px;
     background-color: white;
-    width: 10%;
     font-size: 15px;
     height: auto;
     border-radius: 12px;
@@ -145,4 +154,68 @@ h1,
 .commentBox button img {
     width: 1em;
     height: 1em;
+}
+
+.articleTitle {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.articleTitle>.form-control {
+    border: none;
+    font-size: 1.5em;
+}
+
+.articleWriter>.form-control {
+    border: none;
+    font-size: 1em;
+}
+
+.writeForm {
+    height: 500px;
+}
+
+.writeForm>textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 1em;
+}
+
+.writeBtn {
+    width: 70%;
+    text-align: right;
+}
+
+.cancel {
+    color: white;
+}
+
+#shareModal img {
+    width: 50px;
+    height: 50px;
+}
+
+#shareModal .icon button {
+    background-color: white;
+    border: none;
+}
+
+#shareModal .urlCopy {
+    display: flex;
+    margin-top: 5px;
+}
+
+.boardCategory {
+    display: flex;
+    gap: 10px;
+    width: 70%;
+    margin: 10px 0px 10px 10px;
+    opacity: 0.4;
+}
+
+.boardCategory>button {
+    width: 100px;
+    font-size: 13px;
 }

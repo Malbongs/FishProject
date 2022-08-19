@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/boardSub.css">
+  <title>루낚게</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link href="/static/image/icon.png" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" href="/static/css/footer.css">
+
+</head>
+
+<body style="background-color: #EBEDF3;">
+  <!-- 네비바 인클루드 입니다. -->
+  <%-include("nav.ejs")%>
+  <div class="article">
+    <section class="boardList">
+      <span class="badge text-bg-light">카테고리</span>
+      루어낚시게시판
+    </section>
+    <br>
+    <section class="boardList articleTitle">
+      <input class="form-control titleForm" type="text" placeholder="제목을 입력해주세요">
+    </section>
+    <br>
+    <section class="boardList articleWriter">
+      <input class="form-control" type="text" placeholder="작성자를 입력해주세요">
+    </section>
+    <br>
+    <section class="boardList writeForm">
+      <textarea class="form-control" type="text" placeholder="내용을 입력해주세요."></textarea>
+    </section>
+
+    <div class="writeBtn" style="margin-top: 5px;">
+      <button type="button" class="btn btn-secondary submitBtn">작성</button>
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#cancelModal">
+        취소</button>
+    </div>
+
+  </div>
+  <br>
+  <%-include("footer.ejs")%>
+
+  <!-- 취소 모달이 -->
+  <div class="modal" id="cancelModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>현재까지 작성한 내용이 사라질 수 있습니다. 정말로 취소하시겠습니까?</p>
+        </div>
+        <div class="modal-footer">
+          <a class="cancel" href="/boardLure"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">네</button></a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">아니오</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 스크립트 -->
+  <script>
+    $(".submitBtn").click(function() {
+      alert("준비중입니다.")
+    });
+  </script>
+</body>
+
+</html>
