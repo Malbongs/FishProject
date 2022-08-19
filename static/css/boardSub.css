@@ -40,8 +40,14 @@ h1,
 }
 
 .search {
+    display: flex;
     width: auto;
-    justify-content: center;
+    margin-top: 10px;
+    height: 35px;
+}
+
+.search>.form-select {
+    width: 100px;
 }
 
 .article>.articleTop {
@@ -153,6 +159,7 @@ h1,
 .articleTitle {
     width: 100%;
     border: none;
+    font-size: 2em;
 }
 
 .writeForm {
@@ -173,4 +180,19 @@ h1,
 
 .cancel {
     color: white;
+}
+
+#shareModal img {
+    width: 50px;
+    height: 50px;
+}
+
+#shareModal .icon button {
+    background-color: white;
+    border: none;
+}
+
+#shareModal .urlCopy {
+    display: flex;
+    margin-top: 5px;
 }
