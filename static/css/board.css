@@ -5,6 +5,8 @@
     font-style: normal;
 }
 
+
+
 * {
     font-family: 'Pretendard-Regular';
 }
@@ -44,9 +46,8 @@
 
 .main>.container {
     display: grid;
-    grid-template-columns: 500px 500px;
-    grid-template-rows: 500px 500px;
-    grid-gap: 20px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
     justify-content: center;
     padding-top: 100px;
 }
@@ -54,9 +55,14 @@
 .indexBoard {
     background-color: white;
     border-radius: 12px;
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 95%;
     margin: 20px;
+}
+
+.slideUp {
+    opacity: 0;
+    margin-bottom: -100px;
 }
 
 .indexBoardTitle {
@@ -118,6 +124,91 @@
     animation: fadein 1s 2s forwards;
 }
 
+.indexBoard:nth-child(3) {
+    opacity: 0.5;
+}
+
+.indexBoard:nth-child(4) {
+    opacity: 0.5;
+}
+
+.chat {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+}
+
+.chat img {
+    width: 70px;
+    height: 70px;
+}
+
+.chatLine {
+    display: flex;
+    gap: 5px;
+}
+
+.chat>.chatIcon {
+    background-color: transparent;
+    border: none;
+}
+
+.chat .chatCnt {
+    position: absolute;
+    right: 10px;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+
+.inputForm {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+    width: 100%;
+    border: none;
+}
+
+.inputForm>#chatBg {
+    border: none;
+}
+
+.chatForm .chatUser {
+    font-weight: bold;
+}
+
+.chat {
+    animation-name: alarm;
+    animation-iteration-count: infinite;
+    animation-duration: 2.5s;
+}
+
+@keyframes alarm {
+    0% {}
+
+    10% {
+        margin-bottom: 10px;
+    }
+
+    20% {
+        margin-bottom: 0px;
+    }
+
+    30% {
+        margin-bottom: 10px;
+    }
+
+    40% {
+        margin-bottom: 0px;
+    }
+}
+
+
 @keyframes fadein {
     from {
         opacity: 0;
@@ -125,5 +216,22 @@
 
     to {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .main>.container {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        padding-top: 100px;
+    }
+
+    .indexBoard {
+        width: 80vw;
+    }
+
+    .indexBoardText>.textLine {
+        font-size: 13px;
     }
 }
