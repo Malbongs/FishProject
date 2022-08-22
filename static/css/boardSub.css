@@ -39,17 +39,6 @@ h1,
     font-size: 2em;
 }
 
-.search {
-    display: flex;
-    width: auto;
-    margin-top: 10px;
-    height: 35px;
-}
-
-.search>.form-select {
-    width: 100px;
-}
-
 .article>.articleTop {
     display: flex;
     justify-content: space-between;
@@ -243,6 +232,7 @@ h1,
     display: flex;
     justify-content: space-between;
 }
+
 
 @media screen and (max-width : 1200px) {
 
