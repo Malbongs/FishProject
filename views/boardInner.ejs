@@ -31,7 +31,10 @@
           테스트페이지
         </div>
         <div class="etc">
-          <div class="writer">관리자 admin 22. 08. 16</div>
+          <div class="writer">
+            <img style="width: 20px; height: 20px;" src="/static/image/board/lev6.png" alt="">
+            관리자 admin 22. 08. 16
+          </div>
           <button type="button" class="report btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#reportModal">
             신고
           </button>
@@ -91,7 +94,10 @@
             <td>
               테스트<%=i%>
             </td>
-            <td>관리자</td>
+            <td>
+              <img style="width: 20px; height: 20px;" src="/static/image/board/lev6.png" alt="">
+              관리자
+            </td>
             <td>08. 16</td>
           </tr>
           <% } %>
@@ -190,7 +196,13 @@
       var today = new Date();
       var now = today.toLocaleString();
 
+      // 등급 뱃지 생성
+      var ranLev = Math.floor(Math.random() * 4) + 1;
+      const badgeImg = new Image(20, 20);
+      badgeImg.src = `/static/image/board/lev${ranLev}.png`
+
       // 빈 댓글 폼 생성
+      const nameTitle = document.createElement("div");
       const box = document.getElementsByClassName("commentBox")[0];
       const comment = document.createElement("div");
       const userName = document.createElement("span");
@@ -201,9 +213,9 @@
 
       // 그리드 스타일 추가
       comment.className += 'row';
-      userName.className += 'col-2';
-      text.className += 'col-6';
-      date.className += 'col-3';
+      nameTitle.className += 'col-11 col-lg-2 name';
+      text.className += 'col-12 col-lg-6';
+      date.className += 'col-12 col-lg-3 date';
       removeBtn.className += 'col-1 removeBtn'
 
       // input 폼 초기화
@@ -218,8 +230,12 @@
       removeImg.src = '/static/image/rmvBtn.png'
       removeBtn.appendChild(removeImg)
 
+      // 등급뱃지 + 이름 합치기
+      nameTitle.appendChild(badgeImg);
+      nameTitle.appendChild(userName);
+
       // 댓글 폼 합치기
-      comment.appendChild(userName);
+      comment.appendChild(nameTitle);
       comment.appendChild(text);
       comment.appendChild(date);
       comment.appendChild(removeBtn);

@@ -20,27 +20,41 @@
   <!-- 네비바 인클루드 입니다. -->
   <%-include("nav.ejs")%>
   <div class="article">
+    <div class="articleTop">
+      <a class="back" href="/boardLure">
+        뒤로가기 </a>
+    </div>
+    <br>
     <section class="boardList">
       <span class="badge text-bg-light">카테고리</span>
       루어낚시게시판
     </section>
     <br>
+    <h4 class="writeTitle">제목</h4>
     <section class="boardList articleTitle">
       <input class="form-control titleForm" type="text" placeholder="제목을 입력해주세요">
     </section>
     <br>
+    <h4 class="writeTitle">작성자</h4>
     <section class="boardList articleWriter">
       <input class="form-control" type="text" placeholder="작성자를 입력해주세요">
     </section>
     <br>
+    <h4 class="writeTitle">내용
+    </h4>
     <section class="boardList writeForm">
       <textarea class="form-control" type="text" placeholder="내용을 입력해주세요."></textarea>
     </section>
-
-    <div class="writeBtn" style="margin-top: 5px;">
-      <button type="button" class="btn btn-secondary submitBtn">작성</button>
-      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#cancelModal">
-        취소</button>
+    <div class="articleBottom">
+      <div class="attach">
+        <input type="file" onchange="readURL(this);">
+        <img id="preview" />
+      </div>
+      <div class="writeBtn" style="margin-top: 5px;">
+        <button type="button" class="btn btn-secondary submitBtn">작성</button>
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#cancelModal">
+          취소</button>
+      </div>
     </div>
 
   </div>
@@ -67,9 +81,23 @@
 
   <!-- 스크립트 -->
   <script>
+    // 작성하기 버튼
     $(".submitBtn").click(function() {
       alert("준비중입니다.")
     });
+
+    // 첨부파일 버튼
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          document.getElementById('preview').src = e.target.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+      } else {
+        document.getElementById('preview').src = "";
+      }
+    }
   </script>
 </body>
 
