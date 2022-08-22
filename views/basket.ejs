@@ -171,6 +171,24 @@
           "결제 금액";
       }
       function handleEmpty() {
+        if (!window.localStorage.getItem("basket")) {
+          const p = document.createElement("p");
+          const p2 = document.createElement("p");
+          const img = document.createElement("img");
+          img.setAttribute("src", "/static/image/cart.PNG");
+          img.classList.add("cart_img");
+          const div = document.createElement("div");
+          div.classList.add("cart");
+          div.appendChild(img);
+          p.classList.add("empty");
+          p.innerText = "장바구니에 담긴 상품이 없습니다.";
+          p2.innerText = "원하는 상품을 장바구니에 담아보세요!";
+          p2.classList.add("basket_add");
+          document.querySelector("#forEmpty").appendChild(div);
+          document.querySelector("#forEmpty").appendChild(p);
+          document.querySelector("#forEmpty").appendChild(p2);
+          return false;
+        }
         const arr = JSON.parse(window.localStorage.getItem("basket"));
         console.log(arr);
         if (arr.length == 0) {
