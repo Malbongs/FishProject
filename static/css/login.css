@@ -7,8 +7,12 @@
 * {
     font-family: 'HallymGothic-Regular';
 }
+html {
+    overflow-x: hidden;
+}
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 .wrap {
@@ -115,18 +119,22 @@ body {
     height: 198px;
     animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
     transform: translate3d(0, 0, 0);
+    overflow-x: hidden !important;
 }
 .wave:nth-of-type(2) {
     top: -175px;
     animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
     opacity: 1;
+    overflow: hidden !important;
 }
 @keyframes wave {
     0% {
         margin-left: 0;
+        overflow-x: hidden ;
     }
     100% {
         margin-left: -1600px;
+        overflow-x: hidden ;
     }
 }
 @keyframes swell {
