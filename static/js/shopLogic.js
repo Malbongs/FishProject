@@ -27,10 +27,10 @@ function drawStar() {
       const count = ele.getAttribute("val");
       console.log(count);
       for (let i = 0; i < parseInt(count); i++) {
-        ele.innerHTML += "⭐";
+        ele.innerHTML += "<img src=\"/static/image/star1.jpg\">";
       }
       for (let i = 0; i < 5 - parseInt(count); i++) {
-        ele.innerHTML += "✩";
+        ele.innerHTML += "<img src=\"/static/image/star2.jpg\">";
       }
     });
   }

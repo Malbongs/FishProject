@@ -1,0 +1,274 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>장바구니</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/css/shop.css" />
+    <style>
+      .basket_list img {
+        border-radius: 10px;
+        width: 200px;
+        height: 200px;
+      }
+      .basket_list .col-md-3 {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .basket_list .col-md-3 p {
+        display: inline-block;
+        width: 80%;
+
+        text-align: center;
+      }
+      .basket_list .col-md-3 p:nth-child(2) {
+        background: linear-gradient(
+          to right,
+          rgb(15, 134, 123),
+          rgb(15, 143, 8)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .basket_list .col-md-3 p:nth-child(1) {
+        font-weight: 500;
+      }
+      .basket_list .col-md-3 p:nth-child(3) {
+        background: linear-gradient(
+          to right,
+          rgb(241, 66, 72),
+          rgb(236, 144, 142)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 600;
+      }
+      .basket_list .col-md-3 p:nth-child(6) {
+        width: 100%;
+        background: linear-gradient(
+          to right,
+          rgb(224, 125, 141),
+          rgb(113, 113, 244)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .basket_list .col-md-3 p:nth-child(7) {
+        background-color: white;
+        border: 1px solid red;
+        margin-top: 10px;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        padding-top: 5px;
+        border-radius: 10px;
+        color: red;
+        border: 1px solid;
+      }
+      .empty {
+        text-align: center;
+        font-size: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 500;
+        margin-bottom: 0px;
+      }
+      .cart_img {
+        width: 200px;
+      }
+      .cart {
+        margin-top: 70px;
+        text-align: center;
+      }
+      .basket_add {
+        font-size: 15px;
+        color: rgb(130, 130, 130);
+        text-align: center;
+      }
+
+      #priceDisplay div {
+        margin-left: 10px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+      #priceDisplay {
+        margin-left: 100px;
+        margin-right: 100px;
+        background-color: rgb(250, 250, 250);
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <%-include("shopNav.ejs")%>
+    <h1 class="category_shop">장바구니</h1>
+    <hr style="background-color: rgb(0, 0, 0, 0.05)" />
+    <div class="row basket_list"></div>
+    <div id="forEmpty"></div>
+
+    <div id="priceDisplay">
+      <div id="total">
+        <p></p>
+        <p></p>
+      </div>
+      <div id="fee">
+        <p></p>
+        <p></p>
+      </div>
+      <div id="discount">
+        <p></p>
+        <p></p>
+      </div>
+      <div id="payAmount">
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+
+    <%-include("footer.ejs")%>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      if (handleEmpty()) {
+        drawBasket();
+        handleTotal();
+      }
+      function handleTotal() {
+        const divs = document.querySelectorAll(".information");
+        console.log(divs);
+        let total = 0;
+
+        divs.forEach((ele) => {
+          total +=
+            parseInt(ele.getAttribute("howMany")) *
+            parseInt(ele.getAttribute("price"));
+        });
+        const totalTag = document.querySelector("#total p:nth-child(2)");
+        totalTag.innerText = `${total.toLocaleString()}원`;
+        document.querySelector("#total p:nth-child(1)").innerText =
+          "총 상품 가격";
+        const fee = document.querySelector("#fee p:nth-child(2)");
+        fee.innerText = "무료";
+        document.querySelector("#fee p:nth-child(1)").innerText = "배송료";
+        const discount = document.querySelector("#discount p:nth-child(2)");
+        discount.innerText = (total / 10).toLocaleString() + "원";
+        document.querySelector("#discount p:nth-child(1)").innerText =
+          "할인 금액";
+        const amount = document.querySelector("#payAmount p:nth-child(2)");
+        amount.innerText =
+          (parseInt(total) - parseInt(total / 10)).toLocaleString() + "원";
+        document.querySelector("#payAmount p:nth-child(1)").innerText =
+          "결제 금액";
+      }
+      function handleEmpty() {
+        const arr = JSON.parse(window.localStorage.getItem("basket"));
+        console.log(arr);
+        if (arr.length == 0) {
+          const p = document.createElement("p");
+          const p2 = document.createElement("p");
+          const img = document.createElement("img");
+          img.setAttribute("src", "/static/image/cart.PNG");
+          img.classList.add("cart_img");
+          const div = document.createElement("div");
+          div.classList.add("cart");
+          div.appendChild(img);
+          p.classList.add("empty");
+          p.innerText = "장바구니에 담긴 상품이 없습니다.";
+          p2.innerText = "원하는 상품을 장바구니에 담아보세요!";
+          p2.classList.add("basket_add");
+          document.querySelector("#forEmpty").appendChild(div);
+          document.querySelector("#forEmpty").appendChild(p);
+          document.querySelector("#forEmpty").appendChild(p2);
+          return false;
+        } else {
+          return true;
+        }
+      }
+      function drawBasket() {
+        const arr = JSON.parse(window.localStorage.getItem("basket"));
+        if (!arr) {
+          alert("빈 장바구니 입니다");
+          return;
+        }
+        let num = 0;
+        arr.forEach((ele) => {
+          const div = document.createElement("div");
+          div.classList.add("col-12");
+          div.classList.add("col-md-3");
+          div.setAttribute("val", num);
+          const img = document.createElement("img");
+          img.setAttribute("src", ele.id);
+          div.appendChild(img);
+          const div2 = document.createElement("div");
+
+          div2.setAttribute("howMany", ele.howMany);
+          div2.setAttribute("price", ele.price);
+          div2.classList.add("information");
+          div2.classList.add("col-12");
+          div2.classList.add("col-md-3");
+          div.setAttribute("val", num++);
+          const p1 = document.createElement("p");
+
+          p1.innerText = `${ele.title}`;
+          const p2 = document.createElement("p");
+
+          p2.innerText = `내일 도착 예정 - 8월 23일 화`;
+          const p3 = document.createElement("p");
+          p3.innerText = `배송비 무료 이벤트 진행 중`;
+          const p4 = document.createElement("p");
+          p4.innerText = `가격: ${parseInt(ele.price).toLocaleString()}원`;
+          const p5 = document.createElement("p");
+          p5.innerText = `수량: ${ele.howMany}개`;
+          const p6 = document.createElement("p");
+          p6.innerText = `총 가격: ${(
+            parseInt(ele.price) * parseInt(ele.howMany)
+          ).toLocaleString()}원`;
+          const p7 = document.createElement("p");
+          p7.innerText = "삭제";
+          p7.addEventListener("click", (event) => {
+            const newArr = JSON.parse(window.localStorage.getItem("basket"));
+            let target = -1;
+            for (let i = 0; i < newArr.length; i++) {
+              if (
+                newArr[i].title == ele.title &&
+                newArr[i].price == ele.price &&
+                newArr[i].howMany == ele.howMany
+              ) {
+                target = i;
+              }
+            }
+            newArr.splice(target, 1);
+            window.localStorage.setItem("basket", JSON.stringify(newArr));
+            div.remove();
+            div2.remove();
+            const div3 = document.querySelector("#priceDisplay");
+            if (handleEmpty()) {
+              handleTotal();
+            } else {
+              div3.remove();
+            }
+          });
+          div2.appendChild(p1);
+          div2.appendChild(p2);
+          div2.appendChild(p3);
+          div2.appendChild(p4);
+          div2.appendChild(p5);
+          div2.appendChild(p6);
+          div2.appendChild(p7);
+          document.querySelector(".row").appendChild(div);
+          document.querySelector(".row").appendChild(div2);
+        });
+      }
+    </script>
+  </body>
+</html>
