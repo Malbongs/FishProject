@@ -138,9 +138,14 @@ h1,
     font-weight: bold;
 }
 
+.commentBox {
+    margin-bottom: 10px;
+}
+
 .commentBox>.row:hover {
     background-color: rgb(235, 235, 235);
 }
+
 
 .commentBox button {
     width: 20px;
@@ -154,6 +159,10 @@ h1,
 .commentBox button img {
     width: 1em;
     height: 1em;
+}
+
+.commentBox .name {
+    font-weight: bold;
 }
 
 .articleTitle {
