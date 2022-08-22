@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="/static/css/board.css">
   <link href="/static/image/icon.png" rel="shortcut icon" type="image/x-icon">
   <link rel="stylesheet" href="/static/css/footer.css">
+  <!-- fade 라이브러리 -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <title>자유게시판</title>
 </head>
 
@@ -22,7 +25,7 @@
     <div class="container">
 
       <!--전체게시글 -->
-      <div class="indexBoard">
+      <div class="indexBoard" data-aos="fade-up">
         <div class="indexBoardTitle">
           <h3><a href="">전체게시글</a></h3>
           <div class="more"><a href="#">더보기</a></div>
@@ -61,7 +64,7 @@
       </div>
 
       <!-- 이미지 게시판 -->
-      <div class="indexBoard">
+      <div class="indexBoard" data-aos="fade-up">
         <div class="indexBoardTitle">
           <h3><a href="/boardLure">이미지</a></h3>
           <div class="more"><a href="/boardLure">더보기</a></div>
@@ -87,7 +90,7 @@
       </div>
 
       <!-- 원투낚시게시판 -->
-      <div class="indexBoard slideUp">
+      <div class="indexBoard" data-aos="fade-up">
         <div class="indexBoardTitle">
           <h3><a href="/boardLure">원투낚시</a></h3>
           <div class="more"><a href="/boardLure">더보기</a></div>
@@ -123,11 +126,10 @@
           </div>
         </div>
         <% } %>
-
       </div>
 
       <!-- 찌낚시게시판 -->
-      <div class="indexBoard slideUp">
+      <div class="indexBoard" data-aos="fade-up">
         <div class="indexBoardTitle">
           <h3><a href="/boardLure">찌낚시</a></h3>
           <div class="more"><a href="/boardLure">더보기</a></div>
@@ -166,7 +168,7 @@
       </div>
 
       <!-- 루어낚시게시판 -->
-      <div class="indexBoard slideUp">
+      <div class="indexBoard" data-aos="fade-up">
         <div class="indexBoardTitle">
           <h3><a href="/boardLure">루어낚시</a></h3>
           <div class="more"><a href="/boardLure">더보기</a></div>
@@ -205,7 +207,7 @@
       </div>
 
       <!-- 선상낚시게시판 -->
-      <div class="indexBoard slideUp">
+      <div class="indexBoard" data-aos="fade-up">
         <div class="indexBoardTitle">
           <h3><a href="/boardLure">선상낚시</a></h3>
           <div class="more"><a href="/boardLure">더보기</a></div>
@@ -306,26 +308,9 @@
 
   <!-- script -->
   <script>
+    AOS.init();
+
     var commentCnt = 3;
-
-    // slide-up
-    $(document).ready(function() {
-      $(window).scroll(function() {
-        $('.slideUp').each(function(i) {
-
-          var bottom_of_element = $(this).offset().top + $(this).outerHeight();
-          var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-          if (bottom_of_window > bottom_of_element) {
-            $(this).animate({
-              'opacity': '1',
-              'margin': '20px'
-            }, 1000);
-          }
-
-        });
-      });
-    });
 
     // 채팅 입력 기능
     $(".submitBtn").click(function() {

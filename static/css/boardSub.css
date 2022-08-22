@@ -228,3 +228,57 @@ h1,
     width: 100px;
     font-size: 13px;
 }
+
+.writeTitle {
+    width: 70%;
+    text-align: left;
+    color: gray;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.articleBottom {
+    margin-top: 10px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width : 1200px) {
+
+
+    .article>.articleTop {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .article>.boardList,
+    h1,
+    .item {
+        padding: 20px;
+        background-color: white;
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .article .writeTitle {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    .boardCategory {
+        justify-content: left;
+        width: 100%;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .boardCategory>button {
+        width: 25vw;
+    }
+
+    .articleBottom {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
