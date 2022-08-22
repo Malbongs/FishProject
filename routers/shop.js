@@ -12,6 +12,9 @@ router.get("/:item/:id",(req,res)=>{
     res.render(`${id}`);
 });
 
+router.get("/basket",(req,res)=>{
+    res.render('basket');
+});
 
 
 module.exports = router;

@@ -13,44 +13,271 @@
       crossorigin="anonymous"
     />
     <style>
+      @keyframes come {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .for {
+        animation-name: to_white;
+        animation-duration: 1s;
+      }
+      @keyframes to_white {
+        from {
+          background-color: black;
+        }
+        to {
+          background-color: white;
+        }
+      }
+      .show {
+        animation-name: come;
+        animation-duration: 3s;
+      }
+      .no_show {
+        display: none;
+      }
+
       nav {
         position: fixed;
         width: 100%;
+
+        z-index: 15;
+        height: 100px;
       }
       footer {
         position: relative;
         bottom: 0px;
       }
-      .useless {
-        width: 100%;
-        height: 5226px;
-      }
+
       .image {
         position: fixed;
-        top: 100px;
-        z-index: 10;
+        top: 110px;
+        z-index: 8;
         height: 800px;
         width: 100%;
         transition: 1s ease-in-out;
       }
       .image footer {
-        z-index: 15;
+        z-index: 11;
       }
       .slide-in {
         position: fixed;
-        z-index: 20;
+        z-index: 10;
         width: 100%;
         height: 100%;
+      }
+      .greetings {
+        z-index: 14;
+        width: 100%;
+        position: fixed;
+        top: 500px;
+        text-align: center;
+        color: white;
+        font-size: 40px;
+        font-weight: 800;
+      }
+      @keyframes slidein {
+        from {
+          top: 700px;
+          opacity: 0;
+        }
+        to {
+          top: 500px;
+          opacity: 1;
+        }
+      }
+      .greetings span:nth-child(2) {
+        font-weight: 300;
+        font-size: 30px;
+        letter-spacing: 3px;
+        background: linear-gradient(
+          to right,
+          rgb(169, 206, 236),
+          rgb(242, 185, 125)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .for_event {
+        animation-name: slidein;
+        animation-duration: 2s;
+      }
+      .test span {
+        font-size: 50px;
+        font-weight: 700;
+
+        background: linear-gradient(
+          to right,
+          rgb(224, 125, 141),
+          rgb(113, 113, 244)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      body {
+        background-color: black;
+        height: 6030px;
+      }
+      .test {
+        width: 100%;
+        font-weight: 500;
+
+        text-align: center;
+        z-index: 15;
+        position: fixed;
+        top: 300px;
+        font-size: 25px;
+      }
+
+      nav {
+        background-color: white;
+        height: 110px;
+      }
+      .greetings span:nth-child(3) {
+        font-size: 20px;
+        font-weight: 300;
+      }
+      #ex {
+        width: 100%;
+        animation-name: come;
+        animation-duration: 3s;
+        position: fixed;
+        top: 330px;
+        z-index: 30;
+        text-align: center;
+      }
+      #ex1 {
+        position: relative;
+        display: inline-block;
+        width: 350px;
+        height: 300px;
+        border-radius: 10px;
+        background-image: url("/static/image/logistics.jpg");
+        background-size: cover;
+      }
+      #manu {
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+      }
+      #ex1 p {
+        width: 240px;
+        margin-left: 20px;
+        text-align: left;
+        position: absolute;
+        color: white;
+        font-weight: 600;
+        font-size: 22px;
+        bottom: 1px;
+      }
+      #ex1 span {
+        animation-name: come;
+        animation-duration: 2s;
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: 100;
+        color: white;
+      }
+      .event {
+        animation-name: come;
+        animation-duration: 5s;
+        position: relative;
+        top: 5400px;
+        font-size: 50px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .event_content {
+        position: relative;
+        top: 5400px;
+      }
+      .evnt {
+        text-align: center;
+      }
+      .ele {
+        position: relative;
+        animation-name: come;
+        animation-duration: 3s;
+        display: inline-block;
+        border-radius: 20px;
+        width: 300px;
+        height: 300px;
+        margin-bottom: 20px;
+        background-color: rgb(250, 250, 250);
+      }
+      .evnt img {
+        width: 50px;
+      }
+      .ele p {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      #event2 p {
+        background: linear-gradient(
+          to right,
+          rgb(0, 116, 194),
+          rgb(143, 254, 138)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      #event1 p {
+        background: linear-gradient(
+          to right,
+          rgb(255, 250, 84),
+          rgb(237, 117, 71)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      #event3 p {
+        background: linear-gradient(
+          to right,
+          rgb(40, 51, 47),
+          rgb(255, 255, 255)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      #event4 p {
+        background: linear-gradient(
+          to right,
+          rgb(241, 66, 72),
+          rgb(236, 144, 142)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .btn {
+        position: absolute;
+        width: 20px;
+        top: 250px;
+        left: 250px;
       }
     </style>
   </head>
   <body>
     <nav>
       <div class="upper-nav">
-        <a href="/"><img id="logo" src="/static/image/logo.png" alt="" /></a>
-        <a href="/shop"><p id="title">낚당몰.</p></a>
+        <a id="home" href="/" style="color: white; text-decoration: none"
+          >Home</a
+        >
+        <a href="/shop" style="text-decoration: none"
+          ><p id="title">낚당몰.</p></a
+        >
         <div class="icons">
-          <img src="/static/image/shoppingBag.png" alt="" />
+          <a href="/shop/basket"
+            ><img src="/static/image/shoppingBag.png" alt=""
+          /></a>
         </div>
       </div>
       <div class="categories">
@@ -59,149 +286,55 @@
         <a href="/shop/equipment">공동장비</a>
       </div>
     </nav>
-    <div class="useless"></div>
-    <img class="image" src="/static/image/shopBackground.jpg" alt="" />
-    <img
-      class="slide-in"
-      src="/static/image/shopBackground2.jpeg"
-      alt=""
-      style="display: none"
-    />
-    <footer class="text-center text-lg-start bg-white text-muted">
-      <!-- Section: Social media -->
-      <section
-        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-      >
-        <!-- Left -->
-        <div class="me-5 d-none d-lg-block">
-          <span>Get connected with us on social networks:</span>
-        </div>
-        <!-- Left -->
-
-        <!-- Right -->
-        <div>
-          <a href="" class="me-4 link-grayish">
-            <i class="fa-brands fa-facebook" target="_blank"></i>
-          </a>
-          <a
-            href="https://instagram.com/usfishing_official?igshid=YmMyMTA2M2Y="
-            target="_blank"
-            class="me-4 link-grayish"
-          >
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a
-            href="https://github.com/Malbongs/FishProject.git"
-            target="_blank"
-            class="me-4 link-grayish"
-          >
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </div>
-        <!-- Right -->
-      </section>
-      <!-- Section: Social media -->
-
-      <!-- Section: Links  -->
-      <section class="">
-        <div class="container text-center text-md-start mt-5">
-          <!-- Grid row -->
-          <div class="row mt-3">
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <!-- Content -->
-              <h6 class="text-uppercase fw-bold mb-4">
-                <i class="fas fa-gem me-3 text-grayish"></i>당신의 낚시 파트너
-                낚당!
-              </h6>
-              <p>
-                2조 프로젝트 낚당 입니다. 어신 이라는 앱을 바탕으로 필요한
-                점들을 추가 하여 제작하였습니다.
-              </p>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Stack</h6>
-              <p>Node.js</p>
-              <p>Jquery</p>
-              <p>JavaScript</p>
-              <p>HTML5 ,CSS, Github</p>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Team</h6>
-              <p>
-                <a
-                  href="https://github.com/Malbongs"
-                  target="_blank"
-                  class="text-reset"
-                  >KDT2nd_최준현</a
-                >
-              </p>
-              <p>
-                <a href="#!" target="_blank" class="text-reset"
-                  >KDT2nd_우석우</a
-                >
-              </p>
-              <p>
-                <a
-                  href="https://github.com/cge1023"
-                  target="_blank"
-                  class="text-reset"
-                  >KDT2nd_최고은</a
-                >
-              </p>
-              <p>
-                <a
-                  href="https://github.com/Ungzzi"
-                  target="_blank"
-                  class="text-reset"
-                  >KDT2nd_정지웅</a
-                >
-              </p>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-              <p>
-                <i class="fas fa-home me-3 text-grayish"></i> Korea, Seoul, KDT
-              </p>
-              <p>
-                <i class="fas fa-envelope me-3 text-grayish"></i>
-                Nackdang@example.com
-              </p>
-              <p><i class="fas fa-phone me-3 text-grayish"></i>010-0000-0000</p>
-              <p>
-                <i class="fas fa-print me-3 text-grayish"></i> + 01 234 567 89
-              </p>
-            </div>
-            <!-- Grid column -->
-          </div>
-          <!-- Grid row -->
-        </div>
-      </section>
-      <!-- Section: Links  -->
-
-      <!-- Copyright -->
-      <div
-        class="text-center p-4"
-        style="background-color: #4a4a4b !important; color: white !important"
-      >
-        © 2022 Copyright:
-        <a class="text-reset fw-bold" href="https://sgma.io/">어신.com</a>
+    <div class="greetings for_event">
+      <span>낚당몰. <br /></span><span>Renewal <br /></span>
+      <span>더 알아보기 위해 스크롤</span>
+    </div>
+    <div class="test">
+      <span> 저렴하게. 색다르게. </span> <br />
+      <span>강력하게.</span>
+    </div>
+    <div id="ex" class="no_show">
+      <div id="ex1">
+        <img id="manu" src="/static/image/manufacturing.jpg" alt="" />
+        <p>자사가 직접 의뢰한 브랜드 제품 판매.</p>
+        <span class="dontshow">이벤트에 대해 알아보려면 스크롤</span>
       </div>
-      <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
+    </div>
+    <div class="event no_show">8월 이벤트</div>
+    <div class="event_content row">
+      <div class="col-12 col-md-6 col-lg-4 evnt">
+        <div class="ele" id="event1">
+          <img src="/static/image/plus1.PNG" alt="" class="btn" />
+          <img src="/static/image/point.png" alt="" />
+          <p>신규 가입자 1만 포인트 증정!</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 evnt">
+        <div class="ele" id="event2">
+          <img class="btn" src="/static/image/plus2.PNG" alt="" />
+          <img src="/static/image/ship.png" alt="" />
+          <p>응모하고 태평양 선상낚시 가자!</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 evnt">
+        <div class="ele" id="event3">
+          <img class="btn" src="/static/image/plus3.PNG" alt="" />
+          <img src="/static/image/sale.png" alt="" />
+          <p>미끼류 최대 40% 할인 중!</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 evnt">
+        <div class="ele" id="event4">
+          <img class="btn" src="/static/image/plus4.PNG" alt="" />
+          <img src="/static/image/recruit.png" alt="" />
+          <p>낚당몰. S/W 개발자 채용 중!</p>
+        </div>
+      </div>
+    </div>
+
+    <img class="image" src="/static/image/shopBackground.jpeg" alt="" />
+
     <script>
       history.scrollRestoration = "manual";
     </script>
@@ -211,6 +344,7 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      document.querySelector(".test").style.opacity = "0";
       location.reload = (event) => {
         window.scollY = "0";
       };
@@ -224,31 +358,183 @@
         html.scrollHeight,
         html.offsetHeight
       );
-      console.log(height);
       window.addEventListener("scroll", (event) => {
-        let scrollY = this.scrollY;
-        let scrollX = this.scrollX;
-        if (scrollY < 300) {
-          const img = document.querySelector(".slide-in");
-          if (img.style.display != "none") {
-            img.style.display = "none";
+        const scrollY = window.scrollY;
+        console.log(scrollY);
+        if (scrollY < 500) {
+          const target = document.querySelector(".greetings");
+          const img = document.querySelector(".image");
+          const font = document.querySelector(".test");
+          if (target.style.display == "none") {
+            target.style.display = "block";
+          }
+          target.style.opacity = 1 - scrollY / 500;
+          img.style.opacity = 1 - scrollY / 500;
+          font.style.opacity = scrollY / 500;
+        }
+        if (scrollY > 500) {
+          const img = document.querySelector(".image");
+          const target = document.querySelector(".greetings");
+          if (target.style.display != "none") {
+            target.classList.remove("for_event");
+            target.style.display = "none";
+            if (img.style.opacity != "0") {
+              img.style.opacity = "0";
+            }
           }
         }
-        if (scrollY > 300 && scrollY <= 600) {
-          const newImage = document.querySelector(".slide-in");
-          if (newImage.style.display != "none") {
-            newImage.style.top =
-              String(95 + (600 - scrollY) * (618 / 300)) + "px";
-          } else {
-            newImage.style.display = "block";
-            newImage.style.top = "713px";
+        if (scrollY >= 500 && scrollY < 600) {
+          const font = document.querySelector(".test");
+          if (font.style.opacity != "1") {
+            font.style.opacity = "1";
           }
-          let want = 0.2 * ((600 - scrollY) / 300);
-          img.style.opacity = 0.8 + want;
+          if (font.style.top != "300px") {
+            font.style.top = "300px";
+          }
         }
-        if (scrollY > 600) {
-          const newImage = document.querySelector(".slide-in");
-          newImage.style.top = "95px";
+        if (scrollY >= 600 && scrollY < 1200) {
+          const font = document.querySelector(".test");
+          font.style.top = String(300 - (150 * (scrollY - 600)) / 600) + "px";
+        }
+        if (scrollY < 1200) {
+          const ex = document.querySelector("#ex");
+          if (!ex.classList.contains("no_show")) {
+            ex.classList.add("no_show");
+          }
+        }
+        if (scrollY >= 1200 && scrollY < 2100) {
+          const ex = document.querySelector("#ex");
+          if (ex.classList.contains("no_show")) {
+            ex.classList.remove("no_show");
+          }
+        }
+        if (scrollY >= 1200 && scrollY < 1800) {
+          const text = document.querySelector("#ex1 p");
+          if (text.innerText != "자사가 직접 의뢰한 브랜드 제품 판매.") {
+            text.innerText = "자사가 직접 의뢰한 브랜드 제품 판매.";
+          }
+          text.style.opacity = (1600 - scrollY) / 300;
+        }
+        if (scrollY >= 1800 && scrollY < 2100) {
+          const text = document.querySelector("#ex1 p");
+          if (text.innerText != "국내 택배사와 연계한 초고속 배송.") {
+            text.innerText = "국내 택배사와 연계한 초고속 배송.";
+          }
+          text.style.opacity = 1 - (2100 - scrollY) / 300;
+        }
+
+        if (scrollY >= 1500 && scrollY < 2100) {
+          const manu = document.querySelector("#manu");
+          manu.style.opacity = (2100 - scrollY) / 600;
+          if (scrollY >= 2100 && scrollY < 2300) {
+            const manu = document.querySelector("#manu");
+            manu.style.opacity = 0;
+          }
+        }
+        if (scrollY <= 2300) {
+          const manu = document.querySelector("#manu");
+          if (manu.getAttribute("src") != "/static/image/manufacturing.jpg") {
+            manu.setAttribute("src", "/static/image/manufacturing.jpg");
+          }
+        }
+        if (scrollY >= 2300 && scrollY < 2900) {
+          const manu = document.querySelector("#manu");
+          if (manu.getAttribute("src") != "/static/image/refund.jpg") {
+            manu.setAttribute("src", "/static/image/refund.jpg");
+          }
+          manu.style.opacity = 1 - (2900 - scrollY) / 600;
+        }
+        if (scrollY < 2600 && scrollY >= 1800) {
+          const text = document.querySelector("#ex1 p");
+          if (text.innerText != "국내 택배사와 연계한 초고속 배송.") {
+            text.innerText = "국내 택배사와 연계한 초고속 배송.";
+          }
+        }
+        if (scrollY >= 2300 && scrollY < 2600) {
+          const text = document.querySelector("#ex1 p");
+          text.style.opacity = (2600 - scrollY) / 300;
+        }
+        if (scrollY >= 2600) {
+          const text = document.querySelector("#ex1 p");
+          if (text.innerText != "1주일내 단순 변심시에도 100% 환불") {
+            text.innerText = "1주일내 단순 변심시에도 100% 환불";
+          }
+          text.style.opacity = (scrollY - 2600) / 300;
+        }
+        if (scrollY >= 2900) {
+          const text = document.querySelector("#ex1 p");
+          text.style.opacity = 1;
+          const manu = document.querySelector("#manu");
+          manu.style.opacity = 1;
+        }
+        if (scrollY < 3300) {
+          const text = document.querySelector("#ex1 span");
+          if (text.style.display != "none") {
+            text.style.display = "none";
+          }
+          console.log(text.classList);
+        }
+        if (scrollY >= 3300) {
+          const text = document.querySelector("#ex1 span");
+          if (text.style.display == "none") {
+            text.style.display = "inline-block";
+          }
+        }
+        if (scrollY <= 4000 && scrollY > 3000) {
+          const font = document.querySelector(".test");
+          if (font.style.display == "none") {
+            font.style.display = "block";
+          }
+          const body = document.querySelector("body");
+          if (body.classList.contains("for")) {
+            body.classList.remove("for");
+            body.style.backgroundColor = "black";
+          }
+          const display = document.querySelector("#ex");
+          if (display.classList.contains("no_show")) {
+            display.classList.remove("no_show");
+          }
+        }
+
+        if (scrollY > 4000) {
+          const font = document.querySelector(".test");
+          if (font.style.display != "none") {
+            font.style.display = "none";
+          }
+          const body = document.querySelector("body");
+          const display = document.querySelector("#ex");
+          if (!display.classList.contains("no_show")) {
+            display.classList.add("no_show");
+          }
+
+          if (!body.classList.contains("for")) {
+            body.classList.add("for");
+            body.style.backgroundColor = "white";
+          }
+        }
+        if (scrollY <= 4700) {
+          const font = document.querySelector(".event");
+          if (!font.classList.contains("no_show")) {
+            font.classList.add("no_show");
+          }
+          const events = document.querySelectorAll(".ele");
+          events.forEach((ele) => {
+            if (!ele.classList.contains("no_show")) {
+              ele.classList.add("no_show");
+            }
+          });
+        }
+        if (scrollY > 4700) {
+          const font = document.querySelector(".event");
+          if (font.classList.contains("no_show")) {
+            font.classList.remove("no_show");
+          }
+          const events = document.querySelectorAll(".ele");
+          events.forEach((ele) => {
+            if (ele.classList.contains("no_show")) {
+              ele.classList.remove("no_show");
+            }
+          });
         }
       });
     </script>
