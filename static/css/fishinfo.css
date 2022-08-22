@@ -500,6 +500,15 @@ img{
 
 
 
-/* .selectbox{
+select{
+    border-radius: 10px;
+    position: fixed;
+    top: 100px;
+    right: 200px;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    font-family: 'HallymGothic-Regular';
+    color: rgb(35, 161, 186);;
 
-} */
+}
