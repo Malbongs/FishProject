@@ -45,7 +45,7 @@ function onError(error) {
 }
 
 function fetchData() {
-  infoTxt.innerText = "날씨 정보를 가져오는 중 입니다..";
+  infoTxt.innerText = "날씨 정보 가져오는 중..";
   infoTxt.classList.add("pending");
   fetch(api).then((response) =>
     response.json().then((result) => weatherDetails(result))

@@ -10,19 +10,14 @@
     box-sizing: border-box;
     font-family: 'HallymGothic-Regular';
 }
-/* body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-} */
+
 .wrapper {
-    display: inline-block;
+    /* display: inline-block; */
     width: 20%;
-    /* background: #fff; */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 3%;
     margin: 0;
+    /* position: relative; */
 }
 .wrapper header {
     color: white;
@@ -186,4 +181,14 @@ header i {
 .details p {
     color: white;
     font-size: 14px;
+}
+
+@media screen and (min-width: 100px) and (max-width:1024px) {
+    .wrapper {
+        width: 50%;
+        margin: auto;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
 }
