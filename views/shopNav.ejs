@@ -1,16 +1,41 @@
 <nav>
   <div class="upper-nav">
-    <a id="home" href="/">Home</a>
-    <a href="/shop"><p id="title">낚당몰.</p></a>
-    <div class="icons">
+    <a href="/shop" style="text-decoration: none"
+      ><p id="title">NAKDANG.COM</p></a
+    >
+    <div id="show_bar">
+      <div class="dropdown">
+        <button
+          class="ropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          style="border: none; background-color: transparent"
+        >
+          <img src="/static/image/me.png" alt="" />
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/shop/myhome">MY홈</a></li>
+          <li><a class="dropdown-item" href="#">배송조회</a></li>
+          <li><a class="dropdown-item" href="#">고객센터</a></li>
+        </ul>
+      </div>
       <a href="/shop/basket"
-        ><img src="/static/image/shoppingBag.png" alt=""
+        ><img src="/static/image/shoppingCart.png" alt=""
       /></a>
+      <div class="basketCount"></div>
     </div>
   </div>
   <div class="categories">
-    <a href="/shop/fishingrod">낚시대</a>
-    <a href="/shop/bait">미끼</a>
-    <a href="/shop/equipment">공동장비</a>
+    <div class="categoriesInfo">
+      <a href="/">낚당홈</a>
+      <a href="/loginForm">로그인</a>
+    </div>
+    <div class="categoriesShow">
+      <a href="/shop/fishingrod">낚시대</a>
+      <a href="/shop/bait">미끼</a>
+      <a href="/shop/equipment">공동장비</a>
+    </div>
+    <div class="categoriesInfo"></div>
   </div>
 </nav>
