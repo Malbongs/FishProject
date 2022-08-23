@@ -55,6 +55,11 @@ h1,
     color: black;
 }
 
+.articleTop>.back:hover,
+.articleTop>.write:hover {
+    background-color: rgb(224, 224, 224);
+}
+
 .item {
     display: flex;
     flex-wrap: wrap;
@@ -140,14 +145,17 @@ h1,
     width: 20px;
     height: 20px;
     border: none;
-    background-color: white;
+    background-color: transparent;
     align-items: flex-start;
     text-align: center;
 }
 
-.commentBox button img {
-    width: 1em;
-    height: 1em;
+.commentBox button {
+    background-image: url(/static/image/board/rmvBtn.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
 }
 
 .commentBox .name {
@@ -171,6 +179,8 @@ h1,
 }
 
 .writeForm {
+    display: flex;
+    flex-direction: column;
     height: 500px;
 }
 
@@ -233,14 +243,79 @@ h1,
     justify-content: space-between;
 }
 
+.upImg {
+    width: 100px;
+    height: 100px;
+}
 
-@media screen and (max-width : 1200px) {
+/* 첨부파일 */
+.attach label {
+    display: inline-block;
+    padding: .5em .75em;
+    color: #fff;
+    font-size: inherit;
+    line-height: normal;
+    vertical-align: middle;
+    background-color: #65AAB5;
+    cursor: pointer;
+    border: 1px solid #65AAB5;
+    border-radius: .25em;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+}
+
+.attach label:hover {
+    background-color: #65AAB5;
+}
+
+.attach label:active {
+    background-color: #015871;
+}
+
+.attach input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* 페이지네이션 버튼 색깔 */
+#myTable_wrapper .page-link {
+    color: #65AAB5;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+#myTable_wrapper .disabled .page-link {
+    color: #ccc;
+}
+
+#myTable_wrapper .active .page-link {
+    z-index: 1;
+    color: white !important;
+    font-weight: bold;
+    background-color: #65AAB5 !important;
+    border-color: #ccc;
+}
+
+#myTable_wrapper .page-link:focus,
+#myTable_wrapper .page-link:hover {
+    color: white !important;
+    background-color: #65AAB5 !important;
+    border-color: #ccc;
+}
+
+@media screen and (max-width : 1000px) {
 
 
     .article>.articleTop {
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        width: 90%;
     }
 
     .article>.boardList,
@@ -248,18 +323,18 @@ h1,
     .item {
         padding: 20px;
         background-color: white;
-        width: 100%;
+        width: 90%;
         border-radius: 12px;
     }
 
     .article .writeTitle {
-        width: 100%;
+        width: 90%;
         margin-bottom: 0px;
     }
 
     .boardCategory {
         justify-content: left;
-        width: 100%;
+        width: 90%;
         margin: 10px 0px 10px 0px;
     }
 
@@ -268,7 +343,12 @@ h1,
     }
 
     .articleBottom {
-        width: 100%;
+        width: 90%;
         justify-content: space-between;
+    }
+
+    .upImg {
+        width: 70px;
+        height: 70px;
     }
 }
