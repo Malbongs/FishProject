@@ -273,12 +273,20 @@ nav *{
             background-position: center;
         }
         .part2 {
-            display: block;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
         }
         .box2 {
-            width: 70%;
             margin: auto;
-            height: auto;
+            height: 38%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .box3 {
+            margin: auto;
         }
 
     }
