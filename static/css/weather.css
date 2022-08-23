@@ -12,12 +12,11 @@
 }
 
 .wrapper {
-    /* display: inline-block; */
     width: 20%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 3%;
     margin: 0;
-    /* position: relative; */
+    background-color: #153254;
 }
 .wrapper header {
     color: white;
@@ -92,7 +91,7 @@ header i {
     color: white;
     font-size: 19px;
     padding: 0 15px;
-    background: #29405C;
+    background: #153254;
 }
 .input-part button {
     color: black;
