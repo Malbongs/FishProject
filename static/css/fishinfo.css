@@ -6,11 +6,15 @@
     font-style: normal;
 }
 
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)) ,url('/static/image/see.jpeg');
+    background-size: cover;
+}
 .all{
     left: 150px;
     position: relative;
     width: 800px;
-    height: auto;  
+    height: auto; 
 }
 
 .map{
@@ -23,11 +27,13 @@
 
 
 .fish{ 
+    display: none;
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border:5px double rgb(35, 161, 186);
     border-radius: 50px;
+    background-color: white;
 }
 
 .fish:hover{
@@ -40,102 +46,72 @@
     left: 50px;
     top: -10px;
     display: none;
-    font-size: 10px;
+    font-size: 6px;
     border:5px double rgb(35, 161, 186);
     background-color: white;
-    width: 150px;
-    height: 50px;
+    width: 160px;
+    height: 60px;
     font-family:'HallymGothic-Regular' ;
 }
 
- /* 감성돔 */
-#gamfish{
-    bottom: 200px;
-    left: 400px;
-}
-/* 볼락 */
-#ballfish{ 
-    bottom: 150px;
-    left: 300px;
-}
-#ballfish1{ 
-    bottom: 550px;
-    right: 100px;
-}
-/* 학꽁치 */
-#hackfish{ 
-    bottom: 200px;
-    left: 500px;
-}
-#hackfish1{ 
-    bottom: 500px;
-    right: 60px;
-}
-/* 벵에돔 */
-#bangfish{ 
-    bottom: 50px;
-    left: 200px; 
-}
-#bangfish1{ 
-    bottom: 200px;
-    left: 330px; 
-}
-/* 문치가자미 */
-#moonfish{
-    bottom: 500px;
-    right: 120px;
-}
-/* 참돔 */
-#chamfish{
-    bottom: 150px;
-    left: 180px;
-}
+ 
+
 
 /* 서해 북부 4~6월 우럭,노래미,숭어 */
 #woofish_NW{
     top: 190px;
     left:150px;
+    z-index: 9;
 }
 #soungfish_NW{
     top: 245px;
     left: 150px;
+    z-index: 8;
 }
 #nallfish_NW{
     top: 230px;
     left: 100px;
+    z-index: 9;
 }
 
 /* 서해 북부 7~9월 우럭,노래미,숭어,갈치,붕장어,학꽁치*/
 #gallfish_NW{
     top: 170px;
     left:100px;
+    z-index: 10;
 }
 #hackfish_NW{
     top: 300px;
     left: 140px;
+    z-index: 9;
 }
 #bongfish_NW{
     top: 280px;
     left: 80px;
+    z-index: 10;
 }
 /* 서해 북부 10~12월 망둥어 */
 #mangfish_NW{
     top:240px;
     left: 200px;
+    z-index: 7;
 }
 
 /* 서해 중부 4~6월  우럭 숭어 놀래미 망둥어 학꽁치 붕장어 농어 감성돔   */
 #woofish_W{
     top: 370px;
     left:145px;
+    z-index: 9;
 }
 #soungfish_W{
     top: 430px;
     left: 140px;
+    z-index: 9;
 }
 #nallfish_W{
     top: 370px;
     left: 80px;
+    z-index: 10;
 }
 #mangfish_W{
     top:380px;
@@ -148,14 +124,17 @@
 #bongfish_W{
     top: 430px;
     left: 80px;
+    z-index: 10;
 }
 #nongfish_W{
     top: 485px;
     left: 110px;
+    z-index: 10;
 }
 #gamfish_W{
     top:485px;
     left: 160px;
+    z-index: 8;
 }
 /* 서해 중부 7~9월  우럭 숭어 놀래미 망둥어 갈치 붕장어 농어 감성돔   */
 #gallfish_W{
@@ -167,10 +146,12 @@
 #gabfish_W{
     bottom: 615px;
     left: 200px;
+    z-index: 3;
 }
 #jjufish_W{
     bottom: 570px;
     left: 180px;
+    z-index: 4;
 }
 #samfish_W{
     bottom: 630px;
@@ -181,48 +162,59 @@
 #gamfish_WS{
     bottom:350px;
     left: 120px;
+    z-index: 29;
 }
 #woofish_WS{
     bottom: 300px;
     left: 150px;
+    z-index: 28;
 }
 #soungfish_WS{
     bottom: 300px;
     left: 90px;
+    z-index: 30;
 }
 #bongfish_WS{
     bottom: 340px;
     left: 180px;
+    z-index: 28;
 }
 #nongfish_WS{
     bottom: 250px;
     left: 110px;
+    z-index: 30;
 }
 #mangfish_WS{
     bottom: 240px;
     left: 170px;
+    z-index: 29;
 }
 
  /* 1~3월 동해북부 임연수어 학꽁치 븡장어 우럭 노래미 */
 #imfish_NE{
     top: 70px;
     right: 260px;
+    z-index: 30;
 }
 #hackfish_NE{
     top: 70px;
     right: 200px;
+    z-index: 28;
 }
 #bongfish_NE{
     top: 120px;
     right: 235px;
+    z-index: 29;
 }
 #woofish_NE{
     top: 130px;
     right: 180px;
+    z-index: 28;
 }
 #nallfish_NE{
     top: 85px;
     right: 150px;
+    z-index: 27;
 }
 #soungfish_NE{
     top: 130px;
@@ -233,10 +225,12 @@
 #moonfish_NE{
     top: 170px;
     right: 230px;
+    z-index: 29;
 }
 #zollfish_NE{
     top: 185px;
     right: 180px;
+    z-index: 28;
 }
 /* 10~12월 동해북부 감성돔 가자미 학꽁치 숭어 고등어 븡장어 우럭 노래미  */
 #gamfish_NE{
@@ -246,48 +240,59 @@
 #gofish_NE{
     top: 230px;
     right: 200px;
+    z-index: 30;
 }
  /* 1~3월 동해중부 감성돔 학꽁치 노래미 가자미 우럭 붕장어 숭어 졸복 */
  #gamfish_E{
     top: 270px;
     right: 150px;
+    z-index: 20;
 }
  #hackfish_E{
     top: 270px;
     right: 95px;
+    z-index: 19;
 }
 #bongfish_E{
     top: 320px;
     right: 140px;
+    z-index: 20;
 }
 #woofish_E{
     top: 320px;
     right: 85px;
+    z-index: 19;
 }
 #nallfish_E{
     top: 280px;
     right: 40px;
+    z-index: 18;
 }
 #soungfish_E{
     top: 330px;
     right: 35px;
+    z-index: 18;
 }
 #moonfish_E{
     top: 373px;
     right: 140px;
+    z-index: 20;
 }
 #zollfish_E{
     top: 372px;
     right: 83px;
+    z-index: 19;
 }
  /* 4~6월 동해중부 임연수어,노래미,가자미,우럭,붕장어,농어,숭어,졸복,보리멸 */
 #imfish_E{
     bottom: 480px;
     right: 135px;
+    z-index: 20;
 }
 #nongfish_E{
     bottom: 480px;
     right: 80px;
+    z-index: 19;
 }
 #borifish_E{
     bottom: 525px;
@@ -297,63 +302,77 @@
 #bangfish_E{
     bottom: 475px;
     right: 27px;
+    z-index: 17;
 }
 /* 10~12월 동해중부 감성돔,학꽁치,노래미,가자미,우럭,붕장어,고등어,숭어,졸복 */
 #gofish_E{
     bottom: 495px;
     right: 185px;
+    z-index: 23;
 }
 /* 1~3월 동해남부 임연수어,노래미,가자미,학꽁치,우럭,붕장어,숭어,졸복 */
 #imfish_ES{
     bottom: 430px;
     right: 150px;
+    z-index: 20;
 }
 #hackfish_ES{
     bottom: 430px;
     right: 97px;
+    z-index: 18;
 }
 #bongfish_ES{
     bottom: 430px;
     right: 45px;
+    z-index: 17;
 }
 #woofish_ES{
     bottom: 380px;
     right: 160px;
+    z-index: 20;
 }
 #nallfish_ES{
     bottom: 380px;
     right: 105px;
+    z-index: 19;
 }
 #soungfish_ES{
     bottom: 380px;
     right: 50px;
+    z-index: 18;
 }
 #moonfish_ES{
     bottom: 380px;
     right: -5px;
+    z-index: 16;
 }
 #zollfish_ES{
     bottom: 330px;
     right: 160px;
+    z-index: 21;
 }
 
 /* 4~6월 동해남부 노래미,가자미,우럭,붕장어,농어,볼락,숭어,졸복 */
 #nongfish_ES{
     bottom: 330px;
     right: 110px;
+    z-index: 19;
 }
 #ballfish_ES{
     bottom: 330px;
     right: 55px;
+    z-index: 18;
 }
 /* 7~9월 동해남부 벵에돔,노래미,가자미,보리멸,우럭,붕장어,농어,볼락,숭어,졸복 */
 #bangfish_ES{
     bottom: 330px;
     right: 0px;
+    z-index: 17;
 }
 #borifish_ES{
     bottom: 430px;
     right: -6px;
+    z-index: 15;
 }
 /* 10~12월 동해남부 감성돔,노래미,가자미,우럭,붕장어,고등어,숭어,졸복 */
 #gamfish_ES{
@@ -370,52 +389,64 @@
 #woofish_SW{
     bottom: 190px;
     left: 165px;
+    z-index: 29;
 }
 #nallfish_SW{
     bottom: 200px;
     left: 220px;
+    z-index: 28;
 }
 /* 4~6월 남해서부 감성돔,학꽁치,우럭,노래미,붕장어,도다리 */
 #gamfish_SW{
     bottom: 180px;
     left: 270px;
+    z-index: 27;
 }
 #hackfish_SW{
     bottom: 230px;
     left: 260px;
+    z-index: 27;
 }
 #bongfish_SW{
     bottom: 250px;
     left: 310px;
+    z-index: 26;
 }
 #dofish_SW{
     bottom: 200px;
-    left:320px
+    left:320px;
+    z-index: 26;
 }
 /* 7~9월 남해서부 감성돔, 숭어,깔다구,전갱이,우럭,노래미,붕장어,도다리,참돔,갈치,능성어,고등어 */
 #soungfish_SW{
     bottom: 200px;
     left: 120px;
+    z-index: 30;
 }
 #gallfish_SW{
     bottom: 150px;
     left: 130px;
+    z-index: 30;
 }
 #gofish_SW{
     bottom: 150px;
     left: 180px;
+    z-index: 29;
 }
 #chamfish_SW{
     bottom: 150px;
     left: 320px;
+    z-index: 26;
 }
 #junfish_SW{
     bottom: 150px;
     left: 230px;
+    z-index: 28;
 }
 #neongfish_SW{
     bottom: 130px;
     left: 280px;
+    z-index: 27;
 }
 /* 10~12월 남해서부 감성돔,학꽁치,고등어,우럭,노래미,붕장어,갈치,능성어 */
 
@@ -423,65 +454,213 @@
 #gamfish_S{
     bottom: 280px;
     left: 350px;
+    z-index: 25;
 }
 #bangfish_S{
     bottom: 280px;
     left: 400px;
+    z-index: 24;
 }
 #nallfish_S{
     bottom: 280px;
     left: 450px;
+    z-index: 23;
 }
 #hackfish_S{
     bottom: 230px;
     left: 360px;
+    z-index: 25;
 }
 #woofish_S{
     bottom: 230px;
     left: 410px;
+    z-index: 24;
 }
 #ballfish_S{
     bottom: 230px;
     left: 460px;
+    z-index: 23;
 }
 #soungfish_S{
     bottom: 180px;
     left: 370px;
+    z-index: 25;
 }
 /* 4~6월 남해중부 감성돔,벵에돔,노래미,도다리,보리멸,우럭,붕장어,농어,볼락,숭어 */
 #dofish_S{
     bottom: 180px;
-    left:420px
+    left:420px;
+    z-index: 24;
 }
 #bongfish_S{
     bottom: 180px;
     left: 470px;
+    z-index: 23;
 }
 #borifish_S{
     bottom: 130px;
     left: 370px;
+    z-index: 25;
 }
 #nongfish_S{
     bottom: 130px;
     left: 420px;
+    z-index: 24;
 }
 /* 7~9월 남해중부 감성돔,벵에돔,노래미,도다리,보리멸,우럭,붕장어,농어,볼락,고등어,숭어,줄삼치 */
 #gofish_S{
     bottom: 100px;
     left: 330px;
+    z-index: 25;
 }
 #jullfish_S{
     bottom: 85px;
     left: 400px;
+    z-index: 24;
 }
 /* 10~12월 남해중부 감성돔,벵에돔,노래미,도다리,보리멸,학꽁치,우럭,붕장어,농어,볼락,고등어,숭어,줄삼치,참돔 */
 #chamfish_S{
     bottom: 130px;
     left: 470px;
+    z-index: 23;
 }
+/* 1~3월 남해동부 노래미 학꽁치 볼락 */
+#nallfish_SE{
+    bottom: 320px;
+    right: 250px;
+    z-index: 22;
+}
+#hackfish_SE{
+    bottom: 270px;
+    right: 250px;
+    z-index: 22;
+}
+#ballfish_SE{
+    bottom: 300px;
+    right: 200px;
+    z-index: 21;
+} 
+/* 4~6월 남해동부 감성돔,벵에돔,노래미,도다리,보리멸,붕장어,농어,고등어,숭어,참돔 */
+#gamfish_SE{
+    bottom: 220px;
+    right: 240px;
+    z-index: 22;
+}
+#bangfish_SE{
+    bottom: 250px;
+    right: 200px;
+    z-index: 21;
+}
+#dofish_SE{
+    bottom: 280px;
+    right: 155px;
+    z-index: 20;
+}
+#borifish_SE{
+    bottom: 170px;
+    right: 230px;
+    z-index: 22;
+}
+#bongfish_SE{
+    bottom: 200px;
+    right: 185px;
+    z-index: 21;
+}
+#nongfish_SE{
+    bottom: 230px;
+    right: 145px;
+    z-index: 19;
+}
+#gofish_SE{
+    bottom: 280px;
+    right: 105px;
+    z-index: 18;
+}
+#soungfish_SE{
+    bottom: 230px;
+    right: 95px;
+}
+#chamfish_SE{
+    bottom: 182px;
+    right: 139px;
+    z-index: 18;
+}
+/* 7~9월 남해동부 감성돔,벵에돔,노래미,도다리,보리멸,붕장어,농어,고등어,숭어 */
+/* 10~12월 남해동부 감성돔,노래미,도다리,보리멸,붕장어,볼락,숭어 */
 
-
-
+/* 1~3월 제주도 벵에돔,농어,자리돔,학꽁치 */
+#bangfish_Z{
+    bottom: 80px;
+    left: 100px;
+    z-index: 39;
+  
+}
+#nongfish_Z{
+    bottom: 110px;
+    left: 150px;
+    z-index: 38;
+ 
+}
+#zafish_Z{
+    bottom: 105px;
+    left: 200px;
+    z-index: 27;
+   
+}
+#hackfish_Z{
+    bottom: 55px;
+    left: 210px;
+    z-index: 26;
+    
+}
+/* 4~6월 제주도 벵에돔,감성돔,농어,독가시치,돌돔,자리돔,참돔,보리멸 */
+#gamfish_Z{
+    bottom: 50px;
+    left: 60px;
+    z-index: 40;
+}
+#dockfish_Z{
+    bottom: 20px;
+    left: 100px;
+    z-index: 38;
+}
+#dollfish_Z{
+    bottom: 60px;
+    left: 160px;
+    z-index: 37;
+}
+#chamfish_Z{
+    bottom: 5px;
+    left: 200px;
+    z-index: 28;
+}
+#borifish_Z{
+    bottom: 10px;
+    left: 150px;
+    z-index: 35;
+}
+/* 7~9월 제주도 벵에돔,농어,오징어,한치,독가시치,자리돔,참돔,전갱이,보리멸,돌돔,벤자리 */
+#ofish_Z{
+    bottom: 1px;
+    left: 40px;
+    z-index: 41;
+}
+#hanfish_Z{
+    bottom: -30px;
+    left: 86px;
+    z-index: 38;
+}
+#benfish_Z{
+    bottom: -40px;
+    left: 140px;
+    z-index: 34;
+}
+/* 10~12월 제주도 벵에돔,감성돔,농어,오징어,한치,부시리,독가시치,다금바리,자리돔,참돔 */
+#dafish_Z{
+    bottom: 20px;
+    left: 250px;
+    z-index: 20;
+}
 
 
 img{
@@ -497,18 +676,15 @@ img{
 
 
 
-
-
-
 select{
     border-radius: 10px;
-    position: fixed;
+    position: absolute;
     top: 100px;
-    right: 200px;
     width: 100px;
     height: 40px;
     font-size: 20px;
     font-family: 'HallymGothic-Regular';
     color: rgb(35, 161, 186);;
+    z-index: 50;
 
 }
