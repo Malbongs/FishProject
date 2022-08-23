@@ -2,26 +2,7 @@ body{
     margin: 0px;
 }
 
-.body-wrap {
-    min-height: 100vh;
-    position: relative;
 
-}
-/* scrollbar */
-/* .box{
-
-    overflow: auto;
-    word-break: break-all;
-}
-.box::-webkit-scrollbar{
-    width: 8px;
-}
-.box::-webkit-scrollbar-track{
-    background-color: aqua;
-}
-.box ::-webkit-scrollbar-thumb{
-    background-color: white;
-} */
 
 
 
@@ -29,20 +10,18 @@ body{
 nav{
     position: fixed !important;
     z-index: 1;
+    top: 0;
     width: 100%;
 }
 
 nav *{
-    font-size: 15px !important;
-    font-family: 'HallymGothic-Regular';
+    font-size: 17px !important;
+    font-family: 'Pretendard-Regular';
     color: white !important;
 }
  
 .change{
-    background-color: white !important;
-}
-.change a{
-    color: black !important;
+    background-color:  #65AAB5 !important;
 }
 
 .logoimg{
@@ -86,7 +65,7 @@ nav *{
     }
 
     .div2{
-        font-family: 'HallymGothic-Regular';
+        font-family: 'Pretendard-Regular';
         position: absolute;
         top:  350px;
         left: 45%;
@@ -104,7 +83,7 @@ nav *{
        
         width: 100%;
         height: 800px;
-        font-family: 'HallymGothic-Regular' !important;
+        font-family: 'Pretendard-Regular' !important;
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url('/static/image/vison.jpeg');
         background-size: cover;
 
@@ -130,7 +109,7 @@ nav *{
     }
  
     list{
-        font-family: 'HallymGothic-Regular';
+        font-family: 'Pretendard-Regular';
         margin: 0 20px;
     }
 
@@ -210,7 +189,7 @@ nav *{
      }
 
      .news{
-        font-family: 'HallymGothic-Regular' ;
+        font-family: 'Pretendard-Regular' ;
         font-weight: 1000;
         color: black;
         font-size: 50px;
@@ -241,7 +220,7 @@ nav *{
     
     .tag{
         margin-top: 10px;
-        font-family: 'HallymGothic-Regular' ;
+        font-family: 'Pretendard-Regular' ;
         color: black;
         font-size: 17px;
         position: absolute;
@@ -253,14 +232,10 @@ nav *{
     }
     /* 폰트 */
     @font-face {
-       
-            font-family: 'HallymGothic-Regular';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
-            font-weight: 400;
-            font-style: normal;
-        
-           
-            
+        font-family: 'Pretendard-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
     }
 
 

@@ -2,302 +2,373 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/static/css/fishinfo.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
     <title>Document</title>
 </head>
 <body>
-
+    <!-- 네비바 인클루드 -->
+    <%-include("nav.ejs")%>
 
     <div class="fishinfo" style="margin-top: 76px;">
         <div class="all">
             <img class="map" src="/static/image/map.png">
 
-            <!-- 1~3월 서해북부 없음 -->
-            <!-- 4~6월 서해북부  우럭 노래미 숭어-->
-            <!-- 우럭 -->
-            <div class="fish" id="woofish_NW"><img src="/static/image/fish/woofish.png"><div class="textbox" id="woo_NW"><b>우럭</b><br>낚시방법:원투 찌 루어 낚시<br>미끼:갯지렁이,루어</div></div>
-            <!-- 숭어 -->
-            <div class="fish" id="soungfish_NW"><img src="/static/image/fish/soungfish.png"><div class="textbox" id="soung_NW"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
-            <!-- 놀래미 -->
-            <div class="fish" id="nallfish_NW"><img src="/static/image/fish/nallfish.png"><div class="textbox" id="nall_NW"><b>놀래미</b><br>낚시방법:원투 찌<br>미끼:갯지렁이</div></div>
-            
-            <!-- 7~9월 서해북부 우럭 노래미 숭어 학꽁치,갈치,붕장어 -->
-            <!-- 갈치 -->
-            <div class="fish" id="gallfish_NW"><img src="/static/image/fish/gallfish.png"><div class="textbox" id="gall_NW"><b>갈치</b><br>낚시방법:선상,루어 낚시<br>미끼:루어,지렁이,스푼 등등</div></div>
-            <!-- 학꽁치 -->
-            <div class="fish" id="hackfish_NW"><img src="/static/image/fish/hackfish.png"><div class="textbox" id="hack_NW"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
-            <!-- 붕장어 -->
-            <div class="fish" id="bongfish_NW"><img src="/static/image/fish/bongfish.png"><div class="textbox" id="bong_NW"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
-            
-            <!-- 10~12월 서해북부 망둥어-->
-            <!-- 망둥어 -->
-            <div class="fish" id="mangfish_NW"><img src="/static/image/fish/mangfish.png"><div class="textbox" id="mang_NW"><b>망둥어</b><br>낚시방법:원투 찌 낚시<br>미끼:지렁이</div></div>
-
-            <!-- 1~3월 서해중부 없음 -->
-            <!-- 4~6월 서해중부  우럭 숭어 놀래미 망둥어 학꽁치 붕장어 농어 감성돔-->
-            <!-- 우럭 -->
-            <div class="fish" id="woofish_W"><img src="/static/image/fish/woofish.png"><div class="textbox" id="woo_W"><b>우럭</b><br>낚시방법:원투 찌 루어 낚시<br>미끼:갯지렁이,루어</div></div>
-            <!-- 숭어 -->
-            <div class="fish" id="soungfish_W"><img src="/static/image/fish/soungfish.png"><div class="textbox" id="soung_W"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
-            <!-- 놀래미 -->
-            <div class="fish" id="nallfish_W"><img src="/static/image/fish/nallfish.png"><div class="textbox" id="nall_W"><b>놀래미</b><br>낚시방법:원투 찌<br>미끼:갯지렁이</div></div>
-            <!-- 망둥어 -->
-            <div class="fish" id="mangfish_W"><img src="/static/image/fish/mangfish.png"><div class="textbox" id="mang_W"><b>망둥어</b><br>낚시방법:원투 찌 낚시<br>미끼:지렁이</div></div>
-            <!-- 학꽁치 -->
-            <div class="fish" id="hackfish_W"><img src="/static/image/fish/hackfish.png"><div class="textbox" id="hack_W"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
-            <!-- 붕장어 -->
-            <div class="fish" id="bongfish_W"><img src="/static/image/fish/bongfish.png"><div class="textbox" id="bong_W"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
-            <!-- 농어 -->
-            <div class="fish" id="nongfish_W"><img src="/static/image/fish/nongfish.png"><div class="textbox" id="nong_W"><b>농어</b><br>낚시방법:루어 선상<br>미끼:스푼 미노우,웜 루어</div></div>
-            <!-- 감성돔 -->
-            <div class="fish" id="gamfish_W"><img src="/static/image/fish/gamfish.png"><div class="textbox" id="gam_W"><b>감성돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
-            
-            <!-- 7~9월 서해중부  우럭 숭어 놀래미 망둥어 갈치 붕장어 농어 감성돔-->
-            <!-- 갈치 -->
-            <div class="fish" id="gallfish_W"><img src="/static/image/fish/gallfish.png"><div class="textbox" id="gall_W"><b>갈치</b><br>낚시방법:선상,루어 낚시<br>미끼:루어,지렁이,스푼 등등</div></div>
-            
-            <!-- 10~12월 서해중부  우럭 숭어 놀래미 망둥어 갈치 붕장어 감성돔 학꽁치 갑오징어 쭈꾸미 삼치-->
-            <!-- 갑오징어 -->
-            <div class="fish" id="gabfish_W"><img src="/static/image/fish/gabfish.png"><div class="textbox" id="gab_W"><b>갑오징어</b><br>낚시방법:선상,루어 낚시<br>미끼:에기 루어</div></div>
-            <!-- 쭈꾸미 -->
-            <div class="fish" id="jjufish_W"><img src="/static/image/fish/jjufish.png"><div class="textbox" id="jju_W"><b>쭈꾸미</b><br>낚시방법:선상,루어 낚시<br>미끼:에기 루어</div></div>
-            <!-- 삼치 -->
-            <div class="fish" id="samfish_W"><img src="/static/image/fish/samfish.png"><div class="textbox" id="sam_W"><b>삼치</b><br>낚시방법:루어 낚시<br>미끼:에기 루어</div></div>
-            
-            
-           
-           
-            <!-- 4~6월 서해남부 감성돔 우럭 숭어 붕장어 농어 망둥어 -->
-            <!-- 감성돔 -->
-            <div class="fish" id="gamfish_WS"><img src="/static/image/fish/gamfish.png"><div class="textbox" id="gam_WS"><b>감성돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
-            <!-- 우럭 -->
-            <div class="fish" id="woofish_WS"><img src="/static/image/fish/woofish.png"><div class="textbox" id="woo_WS"><b>우럭</b><br>낚시방법:원투 찌 루어 낚시<br>미끼:갯지렁이,루어</div></div>
-            <!-- 숭어 -->
-            <div class="fish" id="soungfish_WS"><img src="/static/image/fish/soungfish.png"><div class="textbox" id="soung_WS"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
-            <!-- 붕장어 -->
-            <div class="fish" id="bongfish_WS"><img src="/static/image/fish/bongfish.png"><div class="textbox" id="bong_WS"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
-            <!-- 농어 -->
-            <div class="fish" id="nongfish_WS"><img src="/static/image/fish/nongfish.png"><div class="textbox" id="nong_WS"><b>농어</b><br>낚시방법:루어 선상<br>미끼:스푼 미노우,웜 루어</div></div>
-            <!-- 망둥어 -->
-            <div class="fish" id="mangfish_WS"><img src="/static/image/fish/mangfish.png"><div class="textbox" id="mang_WS"><b>망둥어</b><br>낚시방법:원투 찌 낚시<br>미끼:지렁이</div></div>
-
-            <!-- 7~9월 서해남부 감성돔 우럭 숭어 붕장어 농어 망둥어 -->
-            <!-- 10~12월 서해남부 감성돔 우럭 숭어 농어 망둥어 -->
-
-            <!-- 1~3월 동해북부 임연수어 학꽁치 븡장어 우럭 노래미 숭어 -->
-            <!-- 임연수어 -->
-            <div class="fish" id="imfish_NE"><img src="/static/image/fish/imfish.png"><div class="textbox" id="im_NE"><b>임연수어</b><br>낚시방법:찌 낚시<br>미끼:백크릴</div></div>
-            <!-- 학꽁치 -->
-            <div class="fish" id="hackfish_NE"><img src="/static/image/fish/hackfish.png"><div class="textbox" id="hack_NE"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
-            <!-- 붕장어 -->
-            <div class="fish" id="bongfish_NE"><img src="/static/image/fish/bongfish.png"><div class="textbox" id="bong_NE"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
-            <!-- 우럭 -->
-            <div class="fish" id="woofish_NE"><img src="/static/image/fish/woofish.png"><div class="textbox" id="woo_NE"><b>우럭</b><br>낚시방법:원투 찌 루어 낚시<br>미끼:갯지렁이,루어</div></div>
-            <!-- 놀래미 -->
-            <div class="fish" id="nallfish_NE"><img src="/static/image/fish/nallfish.png"><div class="textbox" id="nall_NE"><b>놀래미</b><br>낚시방법:원투 찌<br>미끼:갯지렁이</div></div>
-            <!-- 숭어 -->
-            <div class="fish" id="soungfish_NE"><img src="/static/image/fish/soungfish.png"><div class="textbox" id="soung_NE"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
-
-            <!-- 4~6월 동해북부 임연수어 븡장어 우럭 노래미 숭어-->
-
-            <!-- 7~9월 동해북부 가자미 븡장어 우럭 노래미 졸복-->
-            <!-- 가자미 -->
-            <div class="fish" id="moonfish_NE"><img src="/static/image/fish/moonfish.png"><div class="textbox" id="moon_NE"><b>치가자미</b><br>낚시방법:원투 낚시<br>미끼:홍거시</div></div>
-            <!-- 졸복 -->
-            <div class="fish" id="zollfish_NE"><img src="/static/image/fish/zollfish.png"><div class="textbox" id="zoll_NE"><b>졸복(독 위험!)</b><br>낚시방법:원투 찌 낚시<br>미끼:갯지렁이</div></div> 
-
-            <!-- 10~12월 동해북부 감성돔 가자미 학꽁치 숭어 고등어 븡장어 우럭 노래미 -->
-            <!-- 감성돔 -->
-            <div class="fish" id="gamfish_NE"><img src="/static/image/fish/gamfish.png"><div class="textbox" id="gam_NE"><b>감성돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
-            <!-- 고등어 -->
-            <div class="fish" id="gofish_NE"><img src="/static/image/fish/gofish.png"><div class="textbox" id="go_NE"><b>고등어</b><br>낚시방법:찌 낚시<br>미끼:크릴새우</div></div>
-
-
-            <!-- 1~3월 동해중부 감성돔 학꽁치 노래미 가자미 우럭 붕장어 숭어 졸복-->
-            <!-- 감성돔 -->
-            <div class="fish" id="gamfish_E"><img src="/static/image/fish/gamfish.png"><div class="textbox" id="gam_E"><b>감성돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
-            <!-- 학꽁치 -->
-            <div class="fish" id="hackfish_E"><img src="/static/image/fish/hackfish.png"><div class="textbox" id="hack_E"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
-            <!-- 붕장어 -->
-            <div class="fish" id="bongfish_E"><img src="/static/image/fish/bongfish.png"><div class="textbox" id="bong_E"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
-            <!-- 우럭 -->
-            <div class="fish" id="woofish_E"><img src="/static/image/fish/woofish.png"><div class="textbox" id="woo_E"><b>우럭</b><br>낚시방법:원투 찌 루어 낚시<br>미끼:갯지렁이,루어</div></div>
-            <!-- 놀래미 -->
-            <div class="fish" id="nallfish_E"><img src="/static/image/fish/nallfish.png"><div class="textbox" id="nall_E"><b>놀래미</b><br>낚시방법:원투 찌<br>미끼:갯지렁이</div></div>
-            <!-- 숭어 -->
-            <div class="fish" id="soungfish_E"><img src="/static/image/fish/soungfish.png"><div class="textbox" id="soung_E"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
-            <!-- 가자미 -->
-            <div class="fish" id="moonfish_E"><img src="/static/image/fish/moonfish.png"><div class="textbox" id="moon_E"><b>치가자미</b><br>낚시방법:원투 낚시<br>미끼:홍거시</div></div>
-            <!-- 졸복 -->
-            <div class="fish" id="zollfish_E"><img src="/static/image/fish/zollfish.png"><div class="textbox" id="zoll_E"><b>졸복(독 위험!)</b><br>낚시방법:원투 찌 낚시<br>미끼:갯지렁이</div></div> 
-
-            <!-- 4~6월 동해중부 임연수어,노래미,가자미,우럭,붕장어,농어,숭어,졸복,보리멸 -->
-            <!-- 임연수어 -->
-            <div class="fish" id="imfish_E"><img src="/static/image/fish/imfish.png"><div class="textbox" id="im_E"><b>임연수어</b><br>낚시방법:찌 낚시<br>미끼:백크릴</div></div>
-            <!-- 농어 -->
-            <div class="fish" id="nongfish_E"><img src="/static/image/fish/nongfish.png"><div class="textbox" id="nong_E"><b>농어</b><br>낚시방법:루어 선상<br>미끼:스푼 미노우,웜 루어</div></div>
-            <!-- 보리멸 -->
-            <div class="fish" id="borifish_E"><img src="/static/image/fish/borifish.png"><div class="textbox" id="bori_E"><b>보리멸</b><br>낚시방법:원투 낚시<br>미끼:청갯지렁이</div></div>
-
-            <!-- 7~9월 동해중부 벵에돔,노래미,가자미,보리멸,우럭,붕장어,농어,볼락,숭어,졸복 -->
-            <!-- 벵에돔 -->
-            <div class="fish" id="bangfish_E"><img src="/static/image/fish/bangfish.png"><div class="textbox" id="bang_E"><b>벵에돔</b><br>낚시방법:갯바위 밑밥 낚시<br>미끼:크릴</div></div>
-
-            <!-- 10~12월 동해중부 감성돔,학꽁치,노래미,가자미,우럭,붕장어,고등어,숭어,졸복 -->
-            <!-- 고등어 -->
-            <div class="fish" id="gofish_E"><img src="/static/image/fish/gofish.png"><div class="textbox" id="go_E"><b>고등어</b><br>낚시방법:찌 낚시<br>미끼:크릴새우</div></div>
-
-            <!-- 1~3월 동해남부 임연수어,노래미,가자미,학꽁치,우럭,붕장어,숭어,졸복 -->
-            <!-- 임연수어 -->
-            <div class="fish" id="imfish_ES"><img src="/static/image/fish/imfish.png"><div class="textbox" id="im_ES"><b>임연수어</b><br>낚시방법:찌 낚시<br>미끼:백크릴</div></div>
-            <!-- 학꽁치 -->
-            <div class="fish" id="hackfish_ES"><img src="/static/image/fish/hackfish.png"><div class="textbox" id="hack_ES"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
-            <!-- 붕장어 -->
-            <div class="fish" id="bongfish_ES"><img src="/static/image/fish/bongfish.png"><div class="textbox" id="bong_ES"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
-            <!-- 우럭 -->
-            <div class="fish" id="woofish_ES"><img src="/static/image/fish/woofish.png"><div class="textbox" id="woo_ES"><b>우럭</b><br>낚시방법:원투 찌 루어 낚시<br>미끼:갯지렁이,루어</div></div>
-            <!-- 놀래미 -->
-            <div class="fish" id="nallfish_ES"><img src="/static/image/fish/nallfish.png"><div class="textbox" id="nall_ES"><b>놀래미</b><br>낚시방법:원투 찌<br>미끼:갯지렁이</div></div>
-            <!-- 숭어 -->
-            <div class="fish" id="soungfish_ES"><img src="/static/image/fish/soungfish.png"><div class="textbox" id="soung_ES"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
-            <!-- 가자미 -->
-            <div class="fish" id="moonfish_ES"><img src="/static/image/fish/moonfish.png"><div class="textbox" id="moon_ES"><b>치가자미</b><br>낚시방법:원투 낚시<br>미끼:홍거시</div></div>
-            <!-- 졸복 -->
-            <div class="fish" id="zollfish_ES"><img src="/static/image/fish/zollfish.png"><div class="textbox" id="zoll_ES"><b>졸복(독 위험!)</b><br>낚시방법:원투 찌 낚시<br>미끼:갯지렁이</div></div> 
-           
-            <!-- 4~6월 동해남부 노래미,가자미,우럭,붕장어,농어,볼락,숭어,졸복  -->
-            <!-- 농어 -->
-            <div class="fish" id="nongfish_ES"><img src="/static/image/fish/nongfish.png"><div class="textbox" id="nong_E"><b>농어</b><br>낚시방법:루어 선상<br>미끼:스푼 미노우,웜 루어</div></div>
-            <!-- 볼락 -->
-            <div class="fish" id="ballfish_ES"><img src="/static/image/fish/ballfish.png"><div class="textbox" id="ball_ES"><b>볼락</b><br>낚시방법:루어 낚시<br>미끼:소프트 루어</div></div>
-            
-            <!-- 7~9월 동해남부 벵에돔,노래미,가자미,보리멸,우럭,붕장어,농어,볼락,숭어,졸복 -->
-            <!-- 벵에돔 -->
-            <div class="fish" id="bangfish_ES"><img src="/static/image/fish/bangfish.png"><div class="textbox" id="bang_ES"><b>벵에돔</b><br>낚시방법:갯바위 밑밥 낚시<br>미끼:크릴</div></div>
-            <!-- 보리멸 -->
-            <div class="fish" id="borifish_ES"><img src="/static/image/fish/borifish.png"><div class="textbox" id="bori_ES"><b>보리멸</b><br>낚시방법:원투 낚시<br>미끼:청갯지렁이</div></div>
-            
-            <!-- 10~12월 동해남부 감성돔,노래미,가자미,우럭,붕장어,고등어,숭어,졸복 -->
-            <!-- 감성돔 -->
-            <div class="fish" id="gamfish_ES"><img src="/static/image/fish/gamfish.png"><div class="textbox" id="gam_ES"><b>감성돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
-            <!-- 고등어 -->
-            <div class="fish" id="gofish_ES"><img src="/static/image/fish/gofish.png"><div class="textbox" id="go_ES"><b>고등어</b><br>낚시방법:찌 낚시<br>미끼:크릴새우</div></div>
-
-
-
-
-            <!-- 1~3월 남해서부 우럭,노래미  -->
-            <!-- 우럭 -->
-            <div class="fish" id="woofish_SW"><img src="/static/image/fish/woofish.png"><div class="textbox" id="woo_SW"><b>우럭</b><br>낚시방법:원투 찌 루어 낚시<br>미끼:갯지렁이,루어</div></div>
-            <!-- 놀래미 -->
-            <div class="fish" id="nallfish_SW"><img src="/static/image/fish/nallfish.png"><div class="textbox" id="nall_SW"><b>놀래미</b><br>낚시방법:원투 찌<br>미끼:갯지렁이</div></div>
-
-            <!-- 4~6월 남해서부 감성돔,학꽁치,우럭,노래미,붕장어,도다리 -->
-            <!-- 감성돔 -->
-            <div class="fish" id="gamfish_SW"><img src="/static/image/fish/gamfish.png"><div class="textbox" id="gam_SW"><b>감성돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
-            <!-- 학꽁치 -->
-            <div class="fish" id="hackfish_SW"><img src="/static/image/fish/hackfish.png"><div class="textbox" id="hack_SW"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
-            <!-- 붕장어 -->
-            <div class="fish" id="bongfish_SW"><img src="/static/image/fish/bongfish.png"><div class="textbox" id="bong_SW"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
-            <!-- 도다리 -->
-            <div class="fish" id="dofish_SW"><img src="/static/image/fish/dofish.png"><div class="textbox" id="do_SW"><b>도다리</b><br>낚시방법:원투 낚시<br>미끼:갯지렁이</div></div>
-
-            <!-- 7~9월 남해서부 감성돔, 숭어,깔다구,전갱이,우럭,노래미,붕장어,도다리,참돔,갈치,능성어,고등어 -->
-            <!-- 숭어 -->
-            <div class="fish" id="soungfish_SW"><img src="/static/image/fish/soungfish.png"><div class="textbox" id="soung_SW"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
-            <!-- 갈치 -->
-            <div class="fish" id="gallfish_SW"><img src="/static/image/fish/gallfish.png"><div class="textbox" id="gall_SW"><b>갈치</b><br>낚시방법:선상,루어 낚시<br>미끼:루어,지렁이,스푼 등등</div></div>
-            <!-- 고등어 -->
-            <div class="fish" id="gofish_SW"><img src="/static/image/fish/gofish.png"><div class="textbox" id="go_SW"><b>고등어</b><br>낚시방법:찌 낚시<br>미끼:크릴새우</div></div>
-            <!-- 참돔 -->
-            <div class="fish" id="chamfish_SW"><img src="/static/image/fish/chamfish.png"><div class="textbox" id="cham_SW"><b>참돔</b><br>낚시방법:선상 갯바위 낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
-            <!-- 전갱이 -->
-            <div class="fish" id="junfish_SW"><img src="/static/image/fish/junfish.png"><div class="textbox" id="jun_SW"><b>전갱이</b><br>낚시방법:루어,찌 낚시<br>미끼:크릴새우,소프트웜</div></div>
-            <!-- 능성어 -->
-            <div class="fish" id="neongfish_SW"><img src="/static/image/fish/neongfish.png"><div class="textbox" id="neong_SW"><b>능성어</b><br>낚시방법:찌 낚시<br>미끼:크릴새우</div></div>
-
-            <!-- 10~12월 남해서부 감성돔,학꽁치,고등어,우럭,노래미,붕장어,갈치,능성어 -->
-
-
-            <!-- 1~3월 남해중부 감성돔,벵에돔,노래미,학꽁치,우럭,볼락,숭어 -->
-            <!-- 감성돔 -->
-            <div class="fish" id="gamfish_S"><img src="/static/image/fish/gamfish.png"><div class="textbox" id="gam_S"><b>감성돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
-            <!-- 벵에돔 -->
-            <div class="fish" id="bangfish_S"><img src="/static/image/fish/bangfish.png"><div class="textbox" id="bang_S"><b>벵에돔</b><br>낚시방법:갯바위 밑밥 낚시<br>미끼:크릴</div></div>
-            <!-- 놀래미 -->
-            <div class="fish" id="nallfish_S"><img src="/static/image/fish/nallfish.png"><div class="textbox" id="nall_S"><b>놀래미</b><br>낚시방법:원투 찌<br>미끼:갯지렁이</div></div>
-            <!-- 학꽁치 -->
-            <div class="fish" id="hackfish_S"><img src="/static/image/fish/hackfish.png"><div class="textbox" id="hack_S"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
-            <!-- 우럭 -->
-            <div class="fish" id="woofish_S"><img src="/static/image/fish/woofish.png"><div class="textbox" id="woo_S"><b>우럭</b><br>낚시방법:원투 찌 루어 낚시<br>미끼:갯지렁이,루어</div></div>
-            <!-- 볼락 -->
-            <div class="fish" id="ballfish_S"><img src="/static/image/fish/ballfish.png"><div class="textbox" id="ball_S"><b>볼락</b><br>낚시방법:루어 낚시<br>미끼:소프트 루어</div></div>
-            <!-- 숭어 -->
-            <div class="fish" id="soungfish_S"><img src="/static/image/fish/soungfish.png"><div class="textbox" id="soung_S"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
-
-            <!-- 4~6월 남해중부 감성돔,벵에돔,노래미,도다리,보리멸,우럭,붕장어,농어,볼락,숭어 -->
-            <!-- 도다리 -->
-            <div class="fish" id="dofish_S"><img src="/static/image/fish/dofish.png"><div class="textbox" id="do_S"><b>도다리</b><br>낚시방법:원투 낚시<br>미끼:갯지렁이</div></div>
-            <!-- 보리멸 -->
-            <div class="fish" id="borifish_S"><img src="/static/image/fish/borifish.png"><div class="textbox" id="bori_S"><b>보리멸</b><br>낚시방법:원투 낚시<br>미끼:청갯지렁이</div></div>
-            <!-- 붕장어 -->
-            <div class="fish" id="bongfish_S"><img src="/static/image/fish/bongfish.png"><div class="textbox" id="bong_S"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
-            <!-- 농어 -->
-            <div class="fish" id="nongfish_S"><img src="/static/image/fish/nongfish.png"><div class="textbox" id="nong_"><b>농어</b><br>낚시방법:루어 선상<br>미끼:스푼 미노우,웜 루어</div></div>
-
-            <!-- 7~9월 남해중부 감성돔,벵에돔,노래미,도다리,보리멸,우럭,붕장어,농어,볼락,고등어,숭어,줄삼치 -->
-            <!-- 고등어 -->
-            <div class="fish" id="gofish_S"><img src="/static/image/fish/gofish.png"><div class="textbox" id="go_S"><b>고등어</b><br>낚시방법:찌 낚시<br>미끼:크릴새우</div></div>
-            <!-- 줄삼치 -->
-            <div class="fish" id="jullfish_S"><img src="/static/image/fish/jullfish.png"><div class="textbox" id="jull_S"><b>줄삼치</b><br>낚시방법:루어 선상 낚시<br>미끼:스푼 미노우 웜</div></div>
-
-            <!-- 10~12월 남해중부 감성돔,벵에돔,노래미,도다리,보리멸,학꽁치,우럭,붕장어,농어,볼락,고등어,숭어,줄삼치,참돔 -->
-            <!-- 참돔 -->
-            <div class="fish" id="chamfish_S"><img src="/static/image/fish/chamfish.png"><div class="textbox" id="cham_S"><b>참돔</b><br>낚시방법:선상 갯바위 낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
-
-
-
-
-
-
-
-
-
-
-
-
-            <!-- <div class="fish" id="ballfish"><img src="/static/image/fish/ballfish.png"><div class="textbox" id="ball"><b>볼락</b><br>낚시방법:루어 낚시<br>미끼:소프트 루어</div></div>
-            <div class="fish" id="bangfish"><img src="/static/image/fish/bangfish.png"><div class="textbox" id="bang"><b>벵에돔(대물출현!!)</b><br>낚시방법:갯바위 밑밥 낚시<br>미끼:크릴</div></div> -->
-            
-        </div>
-
-
-
-
-        
-            <select name="season">
+            <select id ="season">
                 <option value="select">시즌 선택</option>
                 <option value="one_s">1~3월</option>
                 <option value="two_s">4~6월</option>
                 <option value="three_s">7~9월</option>
                 <option value="four_s">10~12월</option>
             </select>
+
+
+
+
+            <!-- 1~3월 서해북부 없음 -->
+            <!-- 4~6월 서해북부  우럭 노래미 숭어-->
+            <!-- 우럭 -->
+            <div class="fish two_s three_s"  id="woofish_NW"><img src="/static/image/fish/woofish.png"><div class="textbox" id="woo_NW"><b>우럭</b><br>낚시방법:원투 찌 루어 낚시<br>미끼:갯지렁이,루어</div></div>
+            <!-- 숭어 -->
+            <div class="fish two_s three_s"  id="soungfish_NW"><img src="/static/image/fish/soungfish.png"><div class="textbox" id="soung_NW"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
+            <!-- 놀래미 -->
+            <div class="fish two_s three_s"  id="nallfish_NW"><img src="/static/image/fish/nallfish.png"><div class="textbox" id="nall_NW"><b>놀래미</b><br>낚시방법:원투 찌<br>미끼:갯지렁이</div></div>
+            
+            <!-- 7~9월 서해북부 우럭 노래미 숭어 학꽁치,갈치,붕장어 -->
+            <!-- 갈치 -->
+            <div class="fish three_s" id="gallfish_NW"><img src="/static/image/fish/gallfish.png"><div class="textbox" id="gall_NW"><b>갈치</b><br>낚시방법:선상,루어 낚시<br>미끼:루어,지렁이,스푼 등등</div></div>
+            <!-- 학꽁치 -->
+            <div class="fish three_s" id="hackfish_NW"><img src="/static/image/fish/hackfish.png"><div class="textbox" id="hack_NW"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
+            <!-- 붕장어 -->
+            <div class="fish three_s" id="bongfish_NW"><img src="/static/image/fish/bongfish.png"><div class="textbox" id="bong_NW"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
+            
+            <!-- 10~12월 서해북부 망둥어-->
+            <!-- 망둥어 -->
+            <div class="fish four_s" id="mangfish_NW"><img src="/static/image/fish/mangfish.png"><div class="textbox" id="mang_NW"><b>망둥어</b><br>낚시방법:원투 찌 낚시<br>미끼:지렁이</div></div>
+
+            <!-- 1~3월 서해중부 없음 -->
+            <!-- 4~6월 서해중부  우럭 숭어 놀래미 망둥어 학꽁치 붕장어 농어 감성돔-->
+            <!-- 우럭 -->
+            <div class="fish two_s three_s four_s" id="woofish_W"><img src="/static/image/fish/woofish.png"><div class="textbox" id="woo_W"><b>우럭</b><br>낚시방법:원투 찌 루어 낚시<br>미끼:갯지렁이,루어</div></div>
+            <!-- 숭어 -->
+            <div class="fish two_s three_s four_s" id="soungfish_W"><img src="/static/image/fish/soungfish.png"><div class="textbox" id="soung_W"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
+            <!-- 놀래미 -->
+            <div class="fish two_s three_s four_s" id="nallfish_W"><img src="/static/image/fish/nallfish.png"><div class="textbox" id="nall_W"><b>놀래미</b><br>낚시방법:원투 찌<br>미끼:갯지렁이</div></div>
+            <!-- 망둥어 -->
+            <div class="fish two_s three_s four_s" id="mangfish_W"><img src="/static/image/fish/mangfish.png"><div class="textbox" id="mang_W"><b>망둥어</b><br>낚시방법:원투 찌 낚시<br>미끼:지렁이</div></div>
+            <!-- 학꽁치 -->
+            <div class="fish two_s  four_s" id="hackfish_W"><img src="/static/image/fish/hackfish.png"><div class="textbox" id="hack_W"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
+            <!-- 붕장어 -->
+            <div class="fish two_s three_s four_s" id="bongfish_W"><img src="/static/image/fish/bongfish.png"><div class="textbox" id="bong_W"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
+            <!-- 농어 -->
+            <div class="fish two_s three_s four_s" id="nongfish_W"><img src="/static/image/fish/nongfish.png"><div class="textbox" id="nong_W"><b>농어</b><br>낚시방법:루어 선상<br>미끼:스푼 미노우,웜 루어</div></div>
+            <!-- 감성돔 -->
+            <div class="fish two_s three_s" id="gamfish_W"><img src="/static/image/fish/gamfish.png"><div class="textbox" id="gam_W"><b>감성돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
+            
+            <!-- 7~9월 서해중부  우럭 숭어 놀래미 망둥어 갈치 붕장어 농어 감성돔-->
+            <!-- 갈치 -->
+            <div class="fish three_s four_s" id="gallfish_W"><img src="/static/image/fish/gallfish.png"><div class="textbox" id="gall_W"><b>갈치</b><br>낚시방법:선상,루어 낚시<br>미끼:루어,지렁이,스푼 등등</div></div>
+            
+            <!-- 10~12월 서해중부  우럭 숭어 놀래미 망둥어 갈치 붕장어 감성돔 학꽁치 갑오징어 쭈꾸미 삼치-->
+            <!-- 갑오징어 -->
+            <div class="fish four_s" id="gabfish_W"><img src="/static/image/fish/gabfish.png"><div class="textbox" id="gab_W"><b>갑오징어</b><br>낚시방법:선상,루어 낚시<br>미끼:에기 루어</div></div>
+            <!-- 쭈꾸미 -->
+            <div class="fish four_s" id="jjufish_W"><img src="/static/image/fish/jjufish.png"><div class="textbox" id="jju_W"><b>쭈꾸미</b><br>낚시방법:선상,루어 낚시<br>미끼:에기 루어</div></div>
+            <!-- 삼치 -->
+            <div class="fish four_s" id="samfish_W"><img src="/static/image/fish/samfish.png"><div class="textbox" id="sam_W"><b>삼치</b><br>낚시방법:루어 낚시<br>미끼:에기 루어</div></div>
+            
+            
+           
+           
+            <!-- 4~6월 서해남부 감성돔 우럭 숭어 붕장어 농어 망둥어 -->
+            <!-- 감성돔 -->
+            <div class="fish two_s three_s four_s" id="gamfish_WS"><img src="/static/image/fish/gamfish.png"><div class="textbox" id="gam_WS"><b>감성돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
+            <!-- 우럭 -->
+            <div class="fish two_s three_s four_s" id="woofish_WS"><img src="/static/image/fish/woofish.png"><div class="textbox" id="woo_WS"><b>우럭</b><br>낚시방법:원투 찌 루어 낚시<br>미끼:갯지렁이,루어</div></div>
+            <!-- 숭어 -->
+            <div class="fish two_s three_s four_s" id="soungfish_WS"><img src="/static/image/fish/soungfish.png"><div class="textbox" id="soung_WS"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
+            <!-- 붕장어 -->
+            <div class="fish two_s three_s" id="bongfish_WS"><img src="/static/image/fish/bongfish.png"><div class="textbox" id="bong_WS"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
+            <!-- 농어 -->
+            <div class="fish two_s three_s four_s" id="nongfish_WS"><img src="/static/image/fish/nongfish.png"><div class="textbox" id="nong_WS"><b>농어</b><br>낚시방법:루어 선상<br>미끼:스푼 미노우,웜 루어</div></div>
+            <!-- 망둥어 -->
+            <div class="fish two_s three_s four_s" id="mangfish_WS"><img src="/static/image/fish/mangfish.png"><div class="textbox" id="mang_WS"><b>망둥어</b><br>낚시방법:원투 찌 낚시<br>미끼:지렁이</div></div>
+
+            <!-- 7~9월 서해남부 감성돔 우럭 숭어 붕장어 농어 망둥어 -->
+            <!-- 10~12월 서해남부 감성돔 우럭 숭어 농어 망둥어 -->
+
+            <!-- 1~3월 동해북부 임연수어 학꽁치 븡장어 우럭 노래미 숭어 -->
+            <!-- 임연수어 -->
+            <div class="fish one_s two_s" id="imfish_NE"><img src="/static/image/fish/imfish.png"><div class="textbox" id="im_NE"><b>임연수어</b><br>낚시방법:찌 낚시<br>미끼:백크릴</div></div>
+            <!-- 학꽁치 -->
+            <div class="fish one_s four_s" id="hackfish_NE"><img src="/static/image/fish/hackfish.png"><div class="textbox" id="hack_NE"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
+            <!-- 붕장어 -->
+            <div class="fish one_s two_s three_s four_s" id="bongfish_NE"><img src="/static/image/fish/bongfish.png"><div class="textbox" id="bong_NE"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
+            <!-- 우럭 -->
+            <div class="fish one_s two_s three_s four_s" id="woofish_NE"><img src="/static/image/fish/woofish.png"><div class="textbox" id="woo_NE"><b>우럭</b><br>낚시방법:원투 찌 루어 낚시<br>미끼:갯지렁이,루어</div></div>
+            <!-- 놀래미 -->
+            <div class="fish one_s two_s three_s four_s" id="nallfish_NE"><img src="/static/image/fish/nallfish.png"><div class="textbox" id="nall_NE"><b>놀래미</b><br>낚시방법:원투 찌<br>미끼:갯지렁이</div></div>
+            <!-- 숭어 -->
+            <div class="fish one_s two_s three_s four_s" id="soungfish_NE"><img src="/static/image/fish/soungfish.png"><div class="textbox" id="soung_NE"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
+
+            <!-- 4~6월 동해북부 임연수어 븡장어 우럭 노래미 숭어-->
+
+            <!-- 7~9월 동해북부 가자미 븡장어 우럭 노래미 졸복-->
+            <!-- 가자미 -->
+            <div class="fish three_s four_s" id="moonfish_NE"><img src="/static/image/fish/moonfish.png"><div class="textbox" id="moon_NE"><b>치가자미</b><br>낚시방법:원투 낚시<br>미끼:홍거시</div></div>
+            <!-- 졸복 -->
+            <div class="fish three_s" id="zollfish_NE"><img src="/static/image/fish/zollfish.png"><div class="textbox" id="zoll_NE"><b>졸복(독 위험!)</b><br>낚시방법:원투 찌 낚시<br>미끼:갯지렁이</div></div> 
+
+            <!-- 10~12월 동해북부 감성돔 가자미 학꽁치 숭어 고등어 븡장어 우럭 노래미 -->
+            <!-- 감성돔 -->
+            <div class="fish four_s" id="gamfish_NE"><img src="/static/image/fish/gamfish.png"><div class="textbox" id="gam_NE"><b>감성돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
+            <!-- 고등어 -->
+            <div class="fish four_s" id="gofish_NE"><img src="/static/image/fish/gofish.png"><div class="textbox" id="go_NE"><b>고등어</b><br>낚시방법:찌 낚시<br>미끼:크릴새우</div></div>
+
+
+            <!-- 1~3월 동해중부 감성돔 학꽁치 노래미 가자미 우럭 붕장어 숭어 졸복-->
+            <!-- 감성돔 -->
+            <div class="fish one_s four_s" id="gamfish_E"><img src="/static/image/fish/gamfish.png"><div class="textbox" id="gam_E"><b>감성돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
+            <!-- 학꽁치 -->
+            <div class="fish one_s four_s" id="hackfish_E"><img src="/static/image/fish/hackfish.png"><div class="textbox" id="hack_E"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
+            <!-- 붕장어 -->
+            <div class="fish one_s two_s three_s four_s" id="bongfish_E"><img src="/static/image/fish/bongfish.png"><div class="textbox" id="bong_E"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
+            <!-- 우럭 -->
+            <div class="fish one_s two_s three_s four_s" id="woofish_E"><img src="/static/image/fish/woofish.png"><div class="textbox" id="woo_E"><b>우럭</b><br>낚시방법:원투 찌 루어 낚시<br>미끼:갯지렁이,루어</div></div>
+            <!-- 놀래미 -->
+            <div class="fish one_s two_s three_s four_s" id="nallfish_E"><img src="/static/image/fish/nallfish.png"><div class="textbox" id="nall_E"><b>놀래미</b><br>낚시방법:원투 찌<br>미끼:갯지렁이</div></div>
+            <!-- 숭어 -->
+            <div class="fish one_s two_s three_s four_s" id="soungfish_E"><img src="/static/image/fish/soungfish.png"><div class="textbox" id="soung_E"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
+            <!-- 가자미 -->
+            <div class="fish one_s two_s three_s four_s" id="moonfish_E"><img src="/static/image/fish/moonfish.png"><div class="textbox" id="moon_E"><b>치가자미</b><br>낚시방법:원투 낚시<br>미끼:홍거시</div></div>
+            <!-- 졸복 -->
+            <div class="fish one_s two_s three_s four_s" id="zollfish_E"><img src="/static/image/fish/zollfish.png"><div class="textbox" id="zoll_E"><b>졸복(독 위험!)</b><br>낚시방법:원투 찌 낚시<br>미끼:갯지렁이</div></div> 
+
+            <!-- 4~6월 동해중부 임연수어,노래미,가자미,우럭,붕장어,농어,숭어,졸복,보리멸 -->
+            <!-- 임연수어 -->
+            <div class="fish two_s" id="imfish_E"><img src="/static/image/fish/imfish.png"><div class="textbox" id="im_E"><b>임연수어</b><br>낚시방법:찌 낚시<br>미끼:백크릴</div></div>
+            <!-- 농어 -->
+            <div class="fish two_s three_s" id="nongfish_E"><img src="/static/image/fish/nongfish.png"><div class="textbox" id="nong_E"><b>농어</b><br>낚시방법:루어 선상<br>미끼:스푼 미노우,웜 루어</div></div>
+            <!-- 보리멸 -->
+            <div class="fish two_s three_s" id="borifish_E"><img src="/static/image/fish/borifish.png"><div class="textbox" id="bori_E"><b>보리멸</b><br>낚시방법:원투 낚시<br>미끼:청갯지렁이</div></div>
+
+            <!-- 7~9월 동해중부 벵에돔,노래미,가자미,보리멸,우럭,붕장어,농어,볼락,숭어,졸복 -->
+            <!-- 벵에돔 -->
+            <div class="fish three_s" id="bangfish_E"><img src="/static/image/fish/bangfish.png"><div class="textbox" id="bang_E"><b>벵에돔</b><br>낚시방법:갯바위 밑밥 낚시<br>미끼:크릴</div></div>
+
+            <!-- 10~12월 동해중부 감성돔,학꽁치,노래미,가자미,우럭,붕장어,고등어,숭어,졸복 -->
+            <!-- 고등어 -->
+            <div class="fish four_s" id="gofish_E"><img src="/static/image/fish/gofish.png"><div class="textbox" id="go_E"><b>고등어</b><br>낚시방법:찌 낚시<br>미끼:크릴새우</div></div>
+
+            <!-- 1~3월 동해남부 임연수어,노래미,가자미,학꽁치,우럭,붕장어,숭어,졸복 -->
+            <!-- 임연수어 -->
+            <div class="fish one_s" id="imfish_ES"><img src="/static/image/fish/imfish.png"><div class="textbox" id="im_ES"><b>임연수어</b><br>낚시방법:찌 낚시<br>미끼:백크릴</div></div>
+            <!-- 학꽁치 -->
+            <div class="fish one_s" id="hackfish_ES"><img src="/static/image/fish/hackfish.png"><div class="textbox" id="hack_ES"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
+            <!-- 붕장어 -->
+            <div class="fish one_s two_s three_s four_s" id="bongfish_ES"><img src="/static/image/fish/bongfish.png"><div class="textbox" id="bong_ES"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
+            <!-- 우럭 -->
+            <div class="fish one_s two_s three_s four_s" id="woofish_ES"><img src="/static/image/fish/woofish.png"><div class="textbox" id="woo_ES"><b>우럭</b><br>낚시방법:원투 찌 루어 낚시<br>미끼:갯지렁이,루어</div></div>
+            <!-- 놀래미 -->
+            <div class="fish one_s two_s three_s four_s" id="nallfish_ES"><img src="/static/image/fish/nallfish.png"><div class="textbox" id="nall_ES"><b>놀래미</b><br>낚시방법:원투 찌<br>미끼:갯지렁이</div></div>
+            <!-- 숭어 -->
+            <div class="fish one_s two_s three_s four_s" id="soungfish_ES"><img src="/static/image/fish/soungfish.png"><div class="textbox" id="soung_ES"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
+            <!-- 가자미 -->
+            <div class="fish one_s two_s three_s four_s" id="moonfish_ES"><img src="/static/image/fish/moonfish.png"><div class="textbox" id="moon_ES"><b>치가자미</b><br>낚시방법:원투 낚시<br>미끼:홍거시</div></div>
+            <!-- 졸복 -->
+            <div class="fish one_s two_s three_s four_s" id="zollfish_ES"><img src="/static/image/fish/zollfish.png"><div class="textbox" id="zoll_ES"><b>졸복(독 위험!)</b><br>낚시방법:원투 찌 낚시<br>미끼:갯지렁이</div></div> 
+           
+            <!-- 4~6월 동해남부 노래미,가자미,우럭,붕장어,농어,볼락,숭어,졸복  -->
+            <!-- 농어 -->
+            <div class="fish two_s three_s" id="nongfish_ES"><img src="/static/image/fish/nongfish.png"><div class="textbox" id="nong_E"><b>농어</b><br>낚시방법:루어 선상<br>미끼:스푼 미노우,웜 루어</div></div>
+            <!-- 볼락 -->
+            <div class="fish two_s three_s" id="ballfish_ES"><img src="/static/image/fish/ballfish.png"><div class="textbox" id="ball_ES"><b>볼락</b><br>낚시방법:루어 낚시<br>미끼:소프트 루어</div></div>
+            
+            <!-- 7~9월 동해남부 벵에돔,노래미,가자미,보리멸,우럭,붕장어,농어,볼락,숭어,졸복 -->
+            <!-- 벵에돔 -->
+            <div class="fish three_s" id="bangfish_ES"><img src="/static/image/fish/bangfish.png"><div class="textbox" id="bang_ES"><b>벵에돔</b><br>낚시방법:갯바위 밑밥 낚시<br>미끼:크릴</div></div>
+            <!-- 보리멸 -->
+            <div class="fish three_s" id="borifish_ES"><img src="/static/image/fish/borifish.png"><div class="textbox" id="bori_ES"><b>보리멸</b><br>낚시방법:원투 낚시<br>미끼:청갯지렁이</div></div>
+            
+            <!-- 10~12월 동해남부 감성돔,노래미,가자미,우럭,붕장어,고등어,숭어,졸복 -->
+            <!-- 감성돔 -->
+            <div class="fish four_s" id="gamfish_ES"><img src="/static/image/fish/gamfish.png"><div class="textbox" id="gam_ES"><b>감성돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
+            <!-- 고등어 -->
+            <div class="fish four_s" id="gofish_ES"><img src="/static/image/fish/gofish.png"><div class="textbox" id="go_ES"><b>고등어</b><br>낚시방법:찌 낚시<br>미끼:크릴새우</div></div>
+
+
+
+
+            <!-- 1~3월 남해서부 우럭,노래미  -->
+            <!-- 우럭 -->
+            <div class="fish one_s two_s three_s four_s" id="woofish_SW"><img src="/static/image/fish/woofish.png"><div class="textbox" id="woo_SW"><b>우럭</b><br>낚시방법:원투 찌 루어 낚시<br>미끼:갯지렁이,루어</div></div>
+            <!-- 놀래미 -->
+            <div class="fish one_s two_s three_s four_s" id="nallfish_SW"><img src="/static/image/fish/nallfish.png"><div class="textbox" id="nall_SW"><b>놀래미</b><br>낚시방법:원투 찌<br>미끼:갯지렁이</div></div>
+
+            <!-- 4~6월 남해서부 감성돔,학꽁치,우럭,노래미,붕장어,도다리 -->
+            <!-- 감성돔 -->
+            <div class="fish two_s three_s four_s" id="gamfish_SW"><img src="/static/image/fish/gamfish.png"><div class="textbox" id="gam_SW"><b>감성돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
+            <!-- 학꽁치 -->
+            <div class="fish two_s four_s" id="hackfish_SW"><img src="/static/image/fish/hackfish.png"><div class="textbox" id="hack_SW"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
+            <!-- 붕장어 -->
+            <div class="fish two_s three_s four_s" id="bongfish_SW"><img src="/static/image/fish/bongfish.png"><div class="textbox" id="bong_SW"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
+            <!-- 도다리 -->
+            <div class="fish two_s three_s" id="dofish_SW"><img src="/static/image/fish/dofish.png"><div class="textbox" id="do_SW"><b>도다리</b><br>낚시방법:원투 낚시<br>미끼:갯지렁이</div></div>
+
+            <!-- 7~9월 남해서부 감성돔, 숭어,깔다구,전갱이,우럭,노래미,붕장어,도다리,참돔,갈치,능성어,고등어 -->
+            <!-- 숭어 -->
+            <div class="fish three_s" id="soungfish_SW"><img src="/static/image/fish/soungfish.png"><div class="textbox" id="soung_SW"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
+            <!-- 갈치 -->
+            <div class="fish three_s four_s" id="gallfish_SW"><img src="/static/image/fish/gallfish.png"><div class="textbox" id="gall_SW"><b>갈치</b><br>낚시방법:선상,루어 낚시<br>미끼:루어,지렁이,스푼 등등</div></div>
+            <!-- 고등어 -->
+            <div class="fish three_s four_s" id="gofish_SW"><img src="/static/image/fish/gofish.png"><div class="textbox" id="go_SW"><b>고등어</b><br>낚시방법:찌 낚시<br>미끼:크릴새우</div></div>
+            <!-- 참돔 -->
+            <div class="fish three_s" id="chamfish_SW"><img src="/static/image/fish/chamfish.png"><div class="textbox" id="cham_SW"><b>참돔</b><br>낚시방법:선상 갯바위 낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
+            <!-- 전갱이 -->
+            <div class="fish three_s" id="junfish_SW"><img src="/static/image/fish/junfish.png"><div class="textbox" id="jun_SW"><b>전갱이</b><br>낚시방법:루어,찌 낚시<br>미끼:크릴새우,소프트웜</div></div>
+            <!-- 능성어 -->
+            <div class="fish three_s four_s" id="neongfish_SW"><img src="/static/image/fish/neongfish.png"><div class="textbox" id="neong_SW"><b>능성어</b><br>낚시방법:찌 낚시<br>미끼:크릴새우</div></div>
+
+            <!-- 10~12월 남해서부 감성돔,학꽁치,고등어,우럭,노래미,붕장어,갈치,능성어 -->
+
+
+            <!-- 1~3월 남해중부 감성돔,벵에돔,노래미,학꽁치,우럭,볼락,숭어 -->
+            <!-- 감성돔 -->
+            <div class="fish one_s two_s three_s four_s" id="gamfish_S"><img src="/static/image/fish/gamfish.png"><div class="textbox" id="gam_S"><b>감성돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
+            <!-- 벵에돔 -->
+            <div class="fish one_s two_s three_s four_s" id="bangfish_S"><img src="/static/image/fish/bangfish.png"><div class="textbox" id="bang_S"><b>벵에돔</b><br>낚시방법:갯바위 밑밥 낚시<br>미끼:크릴</div></div>
+            <!-- 놀래미 -->
+            <div class="fish one_s two_s three_s four_s" id="nallfish_S"><img src="/static/image/fish/nallfish.png"><div class="textbox" id="nall_S"><b>놀래미</b><br>낚시방법:원투 찌<br>미끼:갯지렁이</div></div>
+            <!-- 학꽁치 -->
+            <div class="fish one_s four_s" id="hackfish_S"><img src="/static/image/fish/hackfish.png"><div class="textbox" id="hack_S"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
+            <!-- 우럭 -->
+            <div class="fish one_s two_s three_s four_s" id="woofish_S"><img src="/static/image/fish/woofish.png"><div class="textbox" id="woo_S"><b>우럭</b><br>낚시방법:원투 찌 루어 낚시<br>미끼:갯지렁이,루어</div></div>
+            <!-- 볼락 -->
+            <div class="fish one_s two_s three_s four_s" id="ballfish_S"><img src="/static/image/fish/ballfish.png"><div class="textbox" id="ball_S"><b>볼락</b><br>낚시방법:루어 낚시<br>미끼:소프트 루어</div></div>
+            <!-- 숭어 -->
+            <div class="fish one_s two_s three_s four_s" id="soungfish_S"><img src="/static/image/fish/soungfish.png"><div class="textbox" id="soung_S"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
+
+            <!-- 4~6월 남해중부 감성돔,벵에돔,노래미,도다리,보리멸,우럭,붕장어,농어,볼락,숭어 -->
+            <!-- 도다리 -->
+            <div class="fish two_s three_s four_s" id="dofish_S"><img src="/static/image/fish/dofish.png"><div class="textbox" id="do_S"><b>도다리</b><br>낚시방법:원투 낚시<br>미끼:갯지렁이</div></div>
+            <!-- 보리멸 -->
+            <div class="fish two_s three_s four_s" id="borifish_S"><img src="/static/image/fish/borifish.png"><div class="textbox" id="bori_S"><b>보리멸</b><br>낚시방법:원투 낚시<br>미끼:청갯지렁이</div></div>
+            <!-- 붕장어 -->
+            <div class="fish two_s three_s four_s" id="bongfish_S"><img src="/static/image/fish/bongfish.png"><div class="textbox" id="bong_S"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
+            <!-- 농어 -->
+            <div class="fish two_s three_s four_s" id="nongfish_S"><img src="/static/image/fish/nongfish.png"><div class="textbox" id="nong_S"><b>농어</b><br>낚시방법:루어 선상<br>미끼:스푼 미노우,웜 루어</div></div>
+
+            <!-- 7~9월 남해중부 감성돔,벵에돔,노래미,도다리,보리멸,우럭,붕장어,농어,볼락,고등어,숭어,줄삼치 -->
+            <!-- 고등어 -->
+            <div class="fish three_s four_s" id="gofish_S"><img src="/static/image/fish/gofish.png"><div class="textbox" id="go_S"><b>고등어</b><br>낚시방법:찌 낚시<br>미끼:크릴새우</div></div>
+            <!-- 줄삼치 -->
+            <div class="fish three_s four_s" id="jullfish_S"><img src="/static/image/fish/jullfish.png"><div class="textbox" id="jull_S"><b>줄삼치</b><br>낚시방법:루어 선상 낚시<br>미끼:스푼 미노우 웜</div></div>
+
+            <!-- 10~12월 남해중부 감성돔,벵에돔,노래미,도다리,보리멸,학꽁치,우럭,붕장어,농어,볼락,고등어,숭어,줄삼치,참돔 -->
+            <!-- 참돔 -->
+            <div class="fish four_s" id="chamfish_S"><img src="/static/image/fish/chamfish.png"><div class="textbox" id="cham_S"><b>참돔</b><br>낚시방법:선상 갯바위 낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
+            
+            
+            
+            <!-- 1~3월 남해동부 노래미 학꽁치 볼락 -->
+            <!-- 놀래미 -->
+            <div class="fish one_s two_s three_s four_s" id="nallfish_SE"><img src="/static/image/fish/nallfish.png"><div class="textbox" id="nall_SE"><b>놀래미</b><br>낚시방법:원투 찌<br>미끼:갯지렁이</div></div>
+            <!-- 학꽁치 -->
+            <div class="fish one_s" id="hackfish_SE"><img src="/static/image/fish/hackfish.png"><div class="textbox" id="hack_SE"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
+            <!-- 볼락 -->
+            <div class="fish one_s four_s" id="ballfish_SE"><img src="/static/image/fish/ballfish.png"><div class="textbox" id="ball_SE"><b>볼락</b><br>낚시방법:루어 낚시<br>미끼:소프트 루어</div></div>
+
+            <!-- 4~6월 남해동부 감성돔,벵에돔,노래미,도다리,보리멸,붕장어,농어,고등어,숭어,참돔 -->
+            <!-- 감성돔 -->
+            <div class="fish two_s three_s four_s" id="gamfish_SE"><img src="/static/image/fish/gamfish.png"><div class="textbox" id="gam_SE"><b>감성돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
+            <!-- 벵에돔 -->
+            <div class="fish two_s three_s" id="bangfish_SE"><img src="/static/image/fish/bangfish.png"><div class="textbox" id="bang_SE"><b>벵에돔</b><br>낚시방법:갯바위 밑밥 낚시<br>미끼:크릴</div></div>
+            <!-- 도다리 -->
+            <div class="fish two_s three_s four_s" id="dofish_SE"><img src="/static/image/fish/dofish.png"><div class="textbox" id="do_SE"><b>도다리</b><br>낚시방법:원투 낚시<br>미끼:갯지렁이</div></div>
+            <!-- 보리멸 -->
+            <div class="fish two_s three_s four_s" id="borifish_SE"><img src="/static/image/fish/borifish.png"><div class="textbox" id="bori_SE"><b>보리멸</b><br>낚시방법:원투 낚시<br>미끼:청갯지렁이</div></div>
+            <!-- 붕장어 -->
+            <div class="fish two_s three_s four_s" id="bongfish_SE"><img src="/static/image/fish/bongfish.png"><div class="textbox" id="bong_SE"><b>붕장어</b><br>낚시방법:원투 찌<br>미끼:갯지렁이 오징어</div></div>
+            <!-- 농어 -->
+            <div class="fish two_s three_s" id="nongfish_SE"><img src="/static/image/fish/nongfish.png"><div class="textbox" id="nong_SE"><b>농어</b><br>낚시방법:루어 선상<br>미끼:스푼 미노우,웜 루어</div></div>
+            <!-- 고등어 -->
+            <div class="fish two_s three_s" id="gofish_SE"><img src="/static/image/fish/gofish.png"><div class="textbox" id="go_SE"><b>고등어</b><br>낚시방법:찌 낚시<br>미끼:크릴새우</div></div>
+            <!-- 숭어 -->
+            <div class="fish two_s three_s four_s" id="soungfish_SE"><img src="/static/image/fish/soungfish.png"><div class="textbox" id="soung_SE"><b>숭어</b><br>낚시방법:찌 낚시<br>미끼:밑밥 크릴새우</div></div>
+            <!-- 참돔 -->
+            <div class="fish two_s" id="chamfish_SE"><img src="/static/image/fish/chamfish.png"><div class="textbox" id="cham_SE"><b>참돔</b><br>낚시방법:선상 갯바위 낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
+
+            <!-- 7~9월 남해동부 감성돔,벵에돔,노래미,도다리,보리멸,붕장어,농어,고등어,숭어  -->
+            <!-- 10~12월 남해동부 감성돔,노래미,도다리,보리멸,붕장어,볼락,숭어  -->
+
+
+            <!-- 1~3월 제주도 벵에돔,농어,자리돔,학꽁치  -->
+            <!-- 벵에돔 -->
+            <div class="fish one_s two_s three_s four_s" id="bangfish_Z"><img src="/static/image/fish/bangfish.png"><div class="textbox" id="bang_Z"><b>벵에돔</b><br>낚시방법:갯바위 밑밥 낚시<br>미끼:크릴</div></div>
+            <!-- 농어 -->
+            <div class="fish one_s two_s three_s four_s" id="nongfish_Z"><img src="/static/image/fish/nongfish.png"><div class="textbox" id="nong_Z"><b>농어</b><br>낚시방법:루어 선상<br>미끼:스푼 미노우,웜 루어</div></div>
+            <!-- 자리돔 -->
+            <div class="fish one_s two_s three_s four_s" id="zafish_Z"><img src="/static/image/fish/zafish.png"><div class="textbox" id="nong_Z"><b>자리돔</b><br>낚시방법:찌 낚시<br>미끼:갯지렁이 크릴새우</div></div>
+            <!-- 학꽁치 -->
+            <div class="fish one_s" id="hackfish_Z"><img src="/static/image/fish/hackfish.png"><div class="textbox" id="hack_Z"><b>학꽁치</b><br>낚시방법:찌 낚시<br>미끼:곤쟁이 미끼</div></div>
+
+            <!-- 4~6월 제주도 벵에돔,감성돔,농어,독가시치,돌돔,자리돔,참돔,보리멸  -->
+            <!-- 감성돔 -->
+            <div class="fish two_s four_s" id="gamfish_Z"><img src="/static/image/fish/gamfish.png"><div class="textbox" id="gam_Z"><b>감성돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
+            <!-- 독가시치 -->
+            <div class="fish two_s four_s" id="dockfish_Z"><img src="/static/image/fish/dockfish.png"><div class="textbox" id="dock_Z"><b>독가시치</b><br>낚시방법:구멍 찌 낚시<br>미끼:떡밥 크릴 </div></div>
+            <!-- 돌돔 -->
+            <div class="fish two_s three_s" id="dollfish_Z"><img src="/static/image/fish/dollfish.png"><div class="textbox" id="doll_Z"><b>돌돔</b><br>낚시방법:갯바위 밑밥낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
+            <!-- 참돔 -->
+            <div class="fish two_s three_s four_s" id="chamfish_Z"><img src="/static/image/fish/chamfish.png"><div class="textbox" id="cham_Z"><b>참돔</b><br>낚시방법:선상 갯바위 낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>
+            <!-- 보리멸 -->
+            <div class="fish two_s three_s" id="borifish_Z"><img src="/static/image/fish/borifish.png"><div class="textbox" id="bori_Z"><b>보리멸</b><br>낚시방법:원투 낚시<br>미끼:청갯지렁이</div></div>
+
+            <!-- 7~9월 제주도 벵에돔,농어,오징어,한치,독가시치,자리돔,참돔,전갱이,보리멸,돌돔,벤자리 -->
+            <!-- 오징어 -->
+            <div class="fish three_s four_s" id="ofish_Z"><img src="/static/image/fish/ofish.png"><div class="textbox" id="o_Z"><b>오징어</b><br>낚시방법:선상낚시<br>미끼:에기</div></div>         
+            <!-- 한치 -->
+            <div class="fish three_s four_s" id="hanfish_Z"><img src="/static/image/fish/hanfish.png"><div class="textbox" id="han_Z"><b>한치</b><br>낚시방법:선상낚시<br>미끼:에기</div></div>        
+            <!-- 벤자리 -->
+            <div class="fish three_s" id="benfish_Z"><img src="/static/image/fish/benfish.png"><div class="textbox" id="ben_Z"><b>벤자리</b><br>낚시방법:갯바위 찌 낚시<br>미끼:게,홍합,보말속살,깐새우 등등</div></div>        
+
+            <!-- 10~12월 제주도 벵에돔,감성돔,농어,오징어,한치,부시리,독가시치,다금바리,자리돔,참돔 -->
+            <!-- 다금바리 -->
+            <div class="fish four_s" id="dafish_Z"><img src="/static/image/fish/dafish.png"><div class="textbox" id="da_Z"><b>다금바리(황제)</b><br>낚시방법:갯바위 선상낚시<br>미끼:꽁치,정어리,갑오징어,전어</div></div>       
+
+
+            <!-- <div class="fish" id="ballfish"><img src="/static/image/fish/ballfish.png"><div class="textbox" id="ball"><b>볼락</b><br>낚시방법:루어 낚시<br>미끼:소프트 루어</div></div>
+            <div class="fish" id="bangfish"><img src="/static/image/fish/bangfish.png"><div class="textbox" id="bang"><b>벵에돔(대물출현!!)</b><br>낚시방법:갯바위 밑밥 낚시<br>미끼:크릴</div></div> -->
+            
+        </div>
         
     </div>
 
-     
+    <%-include("footer.ejs")%>
 </body>
 <script>
     
     // text보여지게하는 함수
     $('.fish').hover(function(){
-        $(this).children(".textbox").css("display","block");
+        $(this).children(".textbox").fadeIn(500);
         console.log($(this).children(".textbox"));
     },function(){
         $(this).children(".textbox").css("display","none");
     })
         
+    // 시즌별 어종 나타내게 하기
+    $("select").change(function(){
+      var showValue =  $(this).val();
+      console.log(showValue); 
+      $(".fish").css("display","none");
+
+      $("."+showValue).fadeIn(1000);
+    })
+
+
     
 
 

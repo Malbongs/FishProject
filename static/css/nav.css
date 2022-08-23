@@ -1,7 +1,8 @@
 /* 네비 css */
 nav{
     position: fixed !important;
-    z-index: 2; /*네브바 펼쳤을 때 바디 내용이 가려지게끔 z-index 2로 변경하였습니다 */
+    top: 0;
+    z-index: 100; /*네브바 펼쳤을 때 바디 내용이 가려지게끔 z-index 100로 변경하였습니다 */
     width: 100%;
 }
 

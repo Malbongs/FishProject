@@ -15,8 +15,7 @@
 </head>
 
 <body>
-  <div class="body-wrap">
-
+  
 
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
@@ -24,7 +23,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div id="nav-content" class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link"   href="#one" onclick="change(this)">VISON</a>
@@ -47,7 +46,13 @@
           <li class="nav-item">
             <a class="nav-link"  href="/board">BOARD</a>
           </li>
+
+          
         </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
       </div>
     </div>
   </nav>
@@ -125,26 +130,32 @@
     </div>
   </div>
   
-  
 
-  </div>
   <%-include("footer.ejs")%>
 
 <script>
   // 클릭시 div 이동하는 함수 입니다.
   function change(obj){ 
     if(obj.id=="w"){
-      $("nav").removeClass("change")
-      $(".logoimg").attr("src","/static/image/logo.png");
+      $("nav").removeClass("change");
       }
       else{
-        $("nav").addClass("change")
-        $(".logoimg").attr("src","/static/image/logo1.png");
+        $("nav").addClass("change");
           }
     }
-
-
-   
+  // 스크롤 이벤트
+   $(function(){
+    var scrollval = 0;
+    $(window).scroll(function(event){
+      var scroll = $(this).scrollTop();
+      if (scroll >=700){
+        $("nav").addClass("change");
+      }else if($("nav").hasClass("change")){
+        $("nav").removeClass("change");
+      }
+      scrollval = scroll;
+    })
+   })
 
 
 
