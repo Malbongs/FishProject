@@ -268,9 +268,10 @@ p#title {
 .categories {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .categoriesInfo{
-  width:90px;
+  width:80px;
 }
 #home{
   margin-left:10px;
@@ -580,6 +581,6 @@ nav {
 .categoriesInfo a{
   margin-right: 0px;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 11px;
   display: inline-block;
 }
