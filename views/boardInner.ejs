@@ -107,6 +107,8 @@
   </div>
   <br>
 
+
+
   <!-- 공유 버튼 모달이 -->
   <div id="shareModal" class="modal" tabindex="-1">
     <div class="modal-dialog">
@@ -164,6 +166,16 @@
     </div>
   </div>
 
+  <!-- footer 호출 -->
+  <%-include("footer.ejs")%>
+
+  <!-- 위로 스크롤 -->
+  <div>
+    <a href="#" title="Back to Top" style="display:scroll; position:fixed; bottom:0px; right:10px;" onfocus='this.blur()'>
+      <img class="upImg" src="/static/image/board/up.png">
+    </a>
+  </div>
+
   <!-- 자바스크립트 -->
   <script>
     var commentCnt = 0;
@@ -209,13 +221,12 @@
       const text = document.createElement("span");
       const date = document.createElement("span");
       const removeBtn = document.createElement("button");
-      const removeImg = document.createElement("img");
 
       // 그리드 스타일 추가
       comment.className += 'row';
       nameTitle.className += 'col-11 col-lg-2 name';
       text.className += 'col-12 col-lg-6';
-      date.className += 'col-12 col-lg-3 date';
+      date.className += 'col-5 col-lg-3 date';
       removeBtn.className += 'col-1 removeBtn'
 
       // input 폼 초기화
@@ -227,8 +238,6 @@
       userName.innerText = name_value;
       text.innerText = text_value;
       date.innerText = now;
-      removeImg.src = '/static/image/rmvBtn.png'
-      removeBtn.appendChild(removeImg)
 
       // 등급뱃지 + 이름 합치기
       nameTitle.appendChild(badgeImg);
@@ -288,9 +297,23 @@
     $('.modal').on('hidden.bs.modal', function(e) {
       $('textarea').val('');
     });
+
+    // 페이지 맨위로 올라가기
+    $(".upImg").click(function(e) {
+      e.preventDefault();
+
+      $('html,body').animate({
+        scrollTop: 0
+      }, 10);
+
+      $(".upImg").animate({
+        'margin-bottom': '20px'
+      }, 400);
+      $(".upImg").animate({
+        'margin-bottom': '0px'
+      }, 400);
+    });
   </script>
-  <!-- footer 호출 -->
-  <%-include("footer.ejs")%>
 </body>
 
 </html>

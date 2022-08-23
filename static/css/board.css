@@ -11,15 +11,44 @@
     font-family: 'Pretendard-Regular';
 }
 
+.banner {
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.bannerText {
+    width: 1030px;
+    height: 200px;
+    background-image: url('https://media.istockphoto.com/vectors/vector-ocean-world-exotic-seascape-with-fish-seaweeds-and-corals-vector-id1407487133?b=1&k=20&m=1407487133&s=170667a&w=0&h=QPyMbPYKv5NNCkwPn84j-PVNs3ypYzlCpMDEClMrivQ=');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: right;
+    white-space: pre-line;
+    font-size: 45px;
+    padding-right: 10px;
+    border-radius: 10px;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
 .indexBoard {
     display: flex;
     flex-direction: column;
     background-color: white;
     border-radius: 12px;
-    width: 600px;
+    width: 500px;
     height: 95%;
     padding-bottom: 20px;
     margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.indexBoard:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .indexBoardTitle a,
@@ -55,7 +84,6 @@
     grid-template-columns: auto auto;
     grid-template-rows: auto;
     justify-content: center;
-    padding-top: 100px;
 }
 
 .indexBoardTitle {
@@ -86,6 +114,10 @@
     flex-direction: column;
     text-align: center;
     justify-content: space-evenly;
+}
+
+.imgPreview img {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .boardPreview>.imgPreview:hover {
@@ -127,11 +159,11 @@
 
 .chat {
     position: fixed;
-    bottom: 10px;
+    bottom: 70px;
     right: 10px;
 }
 
-.chat img {
+.chatImg {
     width: 70px;
     height: 70px;
 }
@@ -181,6 +213,11 @@
     animation-duration: 2.5s;
 }
 
+.upImg {
+    width: 100px;
+    height: 100px;
+}
+
 @keyframes alarm {
     0% {}
 
@@ -212,19 +249,48 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
     .main>.container {
         display: grid;
         grid-template-columns: auto;
         justify-content: center;
-        padding-top: 100px;
     }
 
     .indexBoard {
-        width: 100vw;
+        width: 90vw;
+    }
+
+    .indexBoardTitle {
+        background-color: #65AAB5;
+        width: 100%;
+    }
+
+    .indexBoardTitle a {
+        color: white;
+    }
+
+    .banner {
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .bannerText {
+        width: 90vw;
+        font-size: 35px;
     }
 
     .indexBoardText>.textLine {
         font-size: 2.5vw;
+    }
+
+    .upImg {
+        width: 70px;
+        height: 70px;
+    }
+
+    .chatImg {
+        width: 50px;
+        height: 50px;
     }
 }

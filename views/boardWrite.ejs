@@ -43,12 +43,12 @@
     <h4 class="writeTitle">내용
     </h4>
     <section class="boardList writeForm">
+      <img id="preview" style="width: 200px; height: auto;">
       <textarea class="form-control" type="text" placeholder="내용을 입력해주세요."></textarea>
     </section>
     <div class="articleBottom">
       <div class="attach">
         <input type="file" onchange="readURL(this);">
-        <img id="preview" />
       </div>
       <div class="writeBtn" style="margin-top: 5px;">
         <button type="button" class="btn btn-secondary submitBtn">작성</button>
@@ -79,6 +79,13 @@
     </div>
   </div>
 
+  <!-- 위로 스크롤 -->
+  <div>
+    <a href="#" title="Back to Top" style="display:scroll; position:fixed; bottom:0px; right:10px;" onfocus='this.blur()'>
+      <img class="upImg" src="/static/image/board/up.png">
+    </a>
+  </div>
+
   <!-- 스크립트 -->
   <script>
     // 작성하기 버튼
@@ -98,6 +105,22 @@
         document.getElementById('preview').src = "";
       }
     }
+
+    // 페이지 맨위로 올라가기
+    $(".upImg").click(function(e) {
+      e.preventDefault();
+
+      $('html,body').animate({
+        scrollTop: 0
+      }, 10);
+
+      $(".upImg").animate({
+        'margin-bottom': '20px'
+      }, 400);
+      $(".upImg").animate({
+        'margin-bottom': '0px'
+      }, 400);
+    });
   </script>
 </body>
 

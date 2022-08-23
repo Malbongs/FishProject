@@ -140,14 +140,17 @@ h1,
     width: 20px;
     height: 20px;
     border: none;
-    background-color: white;
+    background-color: transparent;
     align-items: flex-start;
     text-align: center;
 }
 
-.commentBox button img {
-    width: 1em;
-    height: 1em;
+.commentBox button {
+    background-image: url(/static/image/board/rmvBtn.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
 }
 
 .commentBox .name {
@@ -171,6 +174,8 @@ h1,
 }
 
 .writeForm {
+    display: flex;
+    flex-direction: column;
     height: 500px;
 }
 
@@ -233,14 +238,18 @@ h1,
     justify-content: space-between;
 }
 
+.upImg {
+    width: 100px;
+    height: 100px;
+}
 
-@media screen and (max-width : 1200px) {
+@media screen and (max-width : 1000px) {
 
 
     .article>.articleTop {
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        width: 90%;
     }
 
     .article>.boardList,
@@ -248,18 +257,18 @@ h1,
     .item {
         padding: 20px;
         background-color: white;
-        width: 100%;
+        width: 90%;
         border-radius: 12px;
     }
 
     .article .writeTitle {
-        width: 100%;
+        width: 90%;
         margin-bottom: 0px;
     }
 
     .boardCategory {
         justify-content: left;
-        width: 100%;
+        width: 90%;
         margin: 10px 0px 10px 0px;
     }
 
@@ -268,7 +277,12 @@ h1,
     }
 
     .articleBottom {
-        width: 100%;
+        width: 90%;
         justify-content: space-between;
+    }
+
+    .upImg {
+        width: 70px;
+        height: 70px;
     }
 }

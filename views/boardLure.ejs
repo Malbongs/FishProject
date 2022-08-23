@@ -57,7 +57,7 @@
           </tr>
         </thead>
         <tbody>
-          <% for(var i=1; i<20; i++) { %>
+          <% for(var i=1; i<51; i++) { %>
           <tr onclick="location.href='/boardInner'" style="cursor: pointer;">
             <td>
               <%=i%>
@@ -79,8 +79,15 @@
     <br>
 
   </div>
+
   <%-include("footer.ejs")%>
 
+  <!-- 위로 스크롤 -->
+  <div>
+    <a href="#" title="Back to Top" style="display:scroll; position:fixed; bottom:0px; right:10px;" onfocus='this.blur()'>
+      <img class="upImg" src="/static/image/board/up.png">
+    </a>
+  </div>
   <!-- dataTable -->
   <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
@@ -88,10 +95,30 @@
     $(document).ready(function() {
       $('#myTable').DataTable({
         info: false,
+        language: {
+          search: "검색"
+        },
         "dom": "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
           "<'row'<'col-sm-12'tr>>" +
-          "<'row'<'col-12'p>>",
+          "<'row'<'col-4'><'col-4'p><'col-4'>>",
+
       });
+    });
+
+    // 페이지 맨위로 올라가기
+    $(".upImg").click(function(e) {
+      e.preventDefault();
+
+      $('html,body').animate({
+        scrollTop: 0
+      }, 10);
+
+      $(".upImg").animate({
+        'margin-bottom': '20px'
+      }, 400);
+      $(".upImg").animate({
+        'margin-bottom': '0px'
+      }, 400);
     });
   </script>
 </body>
