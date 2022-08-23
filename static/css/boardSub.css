@@ -55,6 +55,11 @@ h1,
     color: black;
 }
 
+.articleTop>.back:hover,
+.articleTop>.write:hover {
+    background-color: rgb(224, 224, 224);
+}
+
 .item {
     display: flex;
     flex-wrap: wrap;
@@ -241,6 +246,67 @@ h1,
 .upImg {
     width: 100px;
     height: 100px;
+}
+
+/* 첨부파일 */
+.attach label {
+    display: inline-block;
+    padding: .5em .75em;
+    color: #fff;
+    font-size: inherit;
+    line-height: normal;
+    vertical-align: middle;
+    background-color: #65AAB5;
+    cursor: pointer;
+    border: 1px solid #65AAB5;
+    border-radius: .25em;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+}
+
+.attach label:hover {
+    background-color: #65AAB5;
+}
+
+.attach label:active {
+    background-color: #015871;
+}
+
+.attach input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* 페이지네이션 버튼 색깔 */
+#myTable_wrapper .page-link {
+    color: #65AAB5;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+#myTable_wrapper .disabled .page-link {
+    color: #ccc;
+}
+
+#myTable_wrapper .active .page-link {
+    z-index: 1;
+    color: white !important;
+    font-weight: bold;
+    background-color: #65AAB5 !important;
+    border-color: #ccc;
+}
+
+#myTable_wrapper .page-link:focus,
+#myTable_wrapper .page-link:hover {
+    color: white !important;
+    background-color: #65AAB5 !important;
+    border-color: #ccc;
 }
 
 @media screen and (max-width : 1000px) {

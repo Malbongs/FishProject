@@ -35,6 +35,10 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+.bannerText:hover {
+    opacity: 0.75;
+}
+
 .indexBoard {
     display: flex;
     flex-direction: column;
@@ -51,7 +55,11 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.indexBoardTitle a,
+.indexBoardTitle a {
+    text-decoration: none !important;
+    color: white;
+}
+
 .indexBoardText a {
     text-decoration: none !important;
     color: black;
@@ -90,11 +98,14 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    width: 90%;
+    background-color: #65AAB5;
+    width: 100%;
+    border-radius: 5px;
     height: 10%;
-    margin: 10px;
-    padding-left: 10px;
+    margin: 0;
     margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 
@@ -148,14 +159,6 @@
     opacity: 0;
     animation: fadein 1s 2s forwards;
 }
-
-/* .indexBoard:nth-child(3) {
-    opacity: 0;
-}
-
-.indexBoard:nth-child(4) {
-    opacity: 0;
-} */
 
 .chat {
     position: fixed;
@@ -263,6 +266,11 @@
     .indexBoardTitle {
         background-color: #65AAB5;
         width: 100%;
+        border-radius: 5px;
+        margin: 0;
+        margin-bottom: 10px;
+        padding-right: 5px;
+        padding-left: 10px;
     }
 
     .indexBoardTitle a {
