@@ -15,6 +15,8 @@ router.get("/:item/:id",(req,res)=>{
 router.get("/basket",(req,res)=>{
     res.render('basket');
 });
-
+router.get("/myhome",(req,res)=>{
+    res.render("myhome");
+});
 
 module.exports = router;

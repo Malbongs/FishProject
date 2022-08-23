@@ -1,0 +1,254 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAKDANG.COM - 마이홈</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/css/shop.css" />
+    <link rel="stylesheet" href="/static/css/footer.css" />
+    <style>
+      .myInfo {
+        margin-top: 20px;
+      }
+      .myInfo .col-12.col-md-6 {
+        margin-bottom: 100px;
+        text-align: center;
+      }
+      .myInfo .col-12.col-md-6 div {
+        background: linear-gradient(
+          to bottom,
+          rgb(230, 245, 250),
+          rgb(250, 240, 255)
+        );
+        display: inline-block;
+        width: 350px;
+        height: 400px;
+        background-color: rgb(250, 250, 250);
+        border-radius: 15px;
+      }
+      .myInfoTitle {
+        font-size: 25px;
+        font-weight: 300;
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 15px;
+      }
+      .infoDisplay {
+        position: relative;
+        overflow: scroll;
+      }
+      p {
+        word-wrap: break-word;
+      }
+      p.display {
+        background-color: rgb(255, 255, 255, 0.5);
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 30px;
+        text-align: left;
+        margin-left: 10px;
+        margin-right: 30px;
+
+        padding-top: 3px;
+        border-radius: 5px;
+        padding-left: 5px;
+      }
+      .update {
+        cursor: pointer;
+        position: absolute;
+        width: 40px;
+        top: 0px;
+        right: 5px;
+      }
+      #kakao {
+        margin-top: 20px;
+        border-radius: 5px;
+        height: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding-top: 3px;
+        background-color: rgb(253, 238, 11);
+        color: rgb(111, 88, 30);
+        font-weight: 600;
+      }
+      #shinhan {
+        margin-top: 20px;
+        border-radius: 5px;
+        height: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding-top: 3px;
+        background-color: navy;
+        color: white;
+        font-weight: 600;
+      }
+      #hyundai {
+        margin-top: 20px;
+        border-radius: 5px;
+        height: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding-top: 3px;
+        background-color: black;
+        color: white;
+        font-weight: 600;
+      }
+      #naver {
+        border-radius: 5px;
+        height: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 20px;
+        padding-top: 3px;
+        background: linear-gradient(
+          to right,
+          rgb(143, 254, 138),
+          rgb(0, 116, 194)
+        );
+        color: white;
+        font-weight: 600;
+      }
+      #coupon {
+        position: absolute;
+        width: 180px;
+        left: 80px;
+        bottom: 130px;
+      }
+      #nocoupon {
+        position: absolute;
+        top: 280px;
+        left: 75px;
+      }
+      #nocoupon span:nth-child(1) {
+        font-size: 20px;
+        font-weight: 600;
+      }
+      #nocoupon span:nth-child(3) {
+        font-size: 16px;
+        color: rgb(0, 0, 0, 0.4);
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <%-include("shopNav.ejs")%>
+    <div class="row myInfo">
+      <div class="col-12 col-md-6">
+        <div class="infoDisplay">
+          <img
+            class="update"
+            val="info"
+            src="/static/image/update.png"
+            alt=""
+          />
+
+          <h1 class="myInfoTitle">내정보</h1>
+          <hr
+            style="border-style: dotted; margin-top: 10px"
+            size="1"
+            width="100%"
+          />
+          <p class="display" id="name" val="우석우">이름 : 우석우</p>
+          <p class="display" id="phone" val="010-2504-5779">
+            전화번호 : 010-2504-5779
+          </p>
+
+          <p class="display" id="nickname" val="돌고래">닉네임 : 돌고래</p>
+          <p class="display" id="address" val="서울특별시 마포구 홍익로 11-13">
+            주소 : 서울특별시 마포구 홍익로 11-13
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="infoDisplay">
+          <img
+            class="update"
+            val="address"
+            src="/static/image/update.png"
+            alt=""
+          />
+          <div class="shippingAddress">
+            <h1 class="myInfoTitle">배송지 관리</h1>
+            <hr
+              style="border-style: dotted; margin-top: 10px"
+              size="1"
+              width="100%"
+            />
+            <p class="display" id="standard" val="돌고래">
+              기본 배송지 : 서울특별시 마포구 홍익로 11-13
+            </p>
+            <p class="display" id="workplace" val="돌고래">
+              직장 : 서울특별시 마포구 숭문 4길 6
+            </p>
+            <p class="display" id="address1" val="돌고래">
+              배송지1 : 울산광역시 중구 학성로 186 모아시티타워 903호
+            </p>
+            <p class="display" id="address1" val="돌고래">
+              배송지2 : 서울특별시 송파구 올림픽로 300
+            </p>
+            <p class="display" id="address1" val="돌고래">
+              배송지3 : 서울특별시 영등포구 63로 50
+            </p>
+            <p class="display" id="address1" val="돌고래">
+              배송지4 : 경기도 수원시 영통구 삼성로 129(매탄동)
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="infoDisplay">
+          <img class="update" val="pay" src="/static/image/update.png" alt="" />
+          <div class="pay">
+            <h1 class="myInfoTitle">결제정보 관리</h1>
+            <hr
+              style="border-style: dotted; margin-top: 10px"
+              size="1"
+              width="100%"
+            />
+            <p id="shinhan">신한카드 등록 됨</p>
+            <p id="hyundai">현대카드 등록 됨</p>
+            <p id="naver">NAVER PAY 등록 됨</p>
+            <p id="kakao">KAKAO PAY 등록 됨</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="infoDisplay">
+          <img
+            class="update"
+            val="coupon"
+            src="/static/image/update.png"
+            alt=""
+          />
+          <img id="coupon" src="/static/image/coupon.png" alt="" />
+          <p id="nocoupon">
+            <span>아직 등록된 쿠폰이 없어요.</span>
+            <br />
+            <span>쿠폰을 등록해 보세요!</span>
+          </p>
+          <div class="coupon">
+            <h1 class="myInfoTitle">내 쿠폰 관리</h1>
+            <hr
+              style="border-style: dotted; margin-top: 10px"
+              size="1"
+              width="100%"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <%-include("footer.ejs")%>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/static/js/handleBasket.js"></script>
+  </body>
+</html>

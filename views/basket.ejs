@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>장바구니</title>
+    <title>NAKDANG.COM - 장바구니</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -104,16 +104,32 @@
         background-color: rgb(250, 250, 250);
         border-radius: 10px;
       }
+      #order_price {
+        font-weight: 400;
+        display: inline-block;
+      }
+      #order {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      #order_price {
+        padding-top: 7px;
+        border-radius: 10px;
+        background-color: rgb(240, 240, 240);
+        width: 200px;
+        height: 40px;
+      }
     </style>
   </head>
   <body>
     <%-include("shopNav.ejs")%>
     <h1 class="category_shop">장바구니</h1>
-    <hr style="background-color: rgb(0, 0, 0, 0.05)" />
+
     <div class="row basket_list"></div>
     <div id="forEmpty"></div>
 
-    <div id="priceDisplay">
+    <div id="priceDisplay" style="display: none">
       <div id="total">
         <p></p>
         <p></p>
@@ -131,7 +147,7 @@
         <p></p>
       </div>
     </div>
-
+    <div id="order" style="display: none"><div id="order_price"></div></div>
     <%-include("footer.ejs")%>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
@@ -142,8 +158,24 @@
       if (handleEmpty()) {
         drawBasket();
         handleTotal();
+        handleOrder();
+      }
+      function handleOrder() {
+        const target = document.querySelector("#order");
+        if (target.style.display == "none") {
+          target.style.display = "block";
+        }
+        const totalPrice = document
+          .querySelector("#total")
+          .getAttribute("total");
+        document.querySelector("#order_price").innerText = `총 ${parseInt(
+          totalPrice
+        ).toLocaleString()}원 주문하기`;
       }
       function handleTotal() {
+        if (document.querySelector("#priceDisplay").style.display == "none") {
+          document.querySelector("#priceDisplay").style.display = "block";
+        }
         const divs = document.querySelectorAll(".information");
         console.log(divs);
         let total = 0;
@@ -169,6 +201,9 @@
           (parseInt(total) - parseInt(total / 10)).toLocaleString() + "원";
         document.querySelector("#payAmount p:nth-child(1)").innerText =
           "결제 금액";
+        document
+          .querySelector("#total")
+          .setAttribute("total", parseInt(total) - parseInt(total / 10));
       }
       function handleEmpty() {
         if (!window.localStorage.getItem("basket")) {
@@ -267,12 +302,16 @@
             }
             newArr.splice(target, 1);
             window.localStorage.setItem("basket", JSON.stringify(newArr));
+            handleBasketCount();
+
             div.remove();
             div2.remove();
             const div3 = document.querySelector("#priceDisplay");
             if (handleEmpty()) {
               handleTotal();
+              handleOrder();
             } else {
+              document.querySelector("#order").style.display = "none";
               div3.remove();
             }
           });
@@ -288,5 +327,6 @@
         });
       }
     </script>
+    <script src="/static/js/handleBasket.js"></script>
   </body>
 </html>

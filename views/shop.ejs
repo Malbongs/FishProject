@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>낚당몰.</title>
+    <title>NAKDANG.COM</title>
     <link rel="stylesheet" href="/static/css/shop.css" />
     <link rel="stylesheet" href="/static/css/footer.css" />
     <link
@@ -13,282 +13,58 @@
       crossorigin="anonymous"
     />
     <style>
-      @keyframes come {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      .for {
-        animation-name: to_white;
-        animation-duration: 1s;
-      }
-      @keyframes to_white {
-        from {
-          background-color: black;
-        }
-        to {
-          background-color: white;
-        }
-      }
-      .show {
-        animation-name: come;
-        animation-duration: 3s;
-      }
-      .no_show {
-        display: none;
-      }
-
-      nav {
-        position: fixed;
-        width: 100%;
-
-        z-index: 15;
-        height: 100px;
-      }
-      footer {
-        position: relative;
-        bottom: 0px;
-      }
-
-      .image {
-        position: fixed;
-        top: 110px;
-        z-index: 8;
-        height: 800px;
-        width: 100%;
-        transition: 1s ease-in-out;
-      }
-      .image footer {
-        z-index: 11;
-      }
-      .slide-in {
-        position: fixed;
-        z-index: 10;
-        width: 100%;
-        height: 100%;
-      }
-      .greetings {
-        z-index: 14;
-        width: 100%;
-        position: fixed;
-        top: 500px;
-        text-align: center;
-        color: white;
-        font-size: 40px;
-        font-weight: 800;
-      }
-      @keyframes slidein {
-        from {
-          top: 700px;
-          opacity: 0;
-        }
-        to {
-          top: 500px;
-          opacity: 1;
-        }
-      }
-      .greetings span:nth-child(2) {
-        font-weight: 300;
-        font-size: 30px;
-        letter-spacing: 3px;
-        background: linear-gradient(
-          to right,
-          rgb(169, 206, 236),
-          rgb(242, 185, 125)
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      .for_event {
-        animation-name: slidein;
-        animation-duration: 2s;
-      }
-      .test span {
-        font-size: 50px;
-        font-weight: 700;
-
-        background: linear-gradient(
-          to right,
-          rgb(224, 125, 141),
-          rgb(113, 113, 244)
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
       body {
-        background-color: black;
-        height: 6030px;
-      }
-      .test {
-        width: 100%;
-        font-weight: 500;
-
-        text-align: center;
-        z-index: 15;
-        position: fixed;
-        top: 300px;
-        font-size: 25px;
-      }
-
-      nav {
         background-color: white;
-        height: 110px;
-      }
-      .greetings span:nth-child(3) {
-        font-size: 20px;
-        font-weight: 300;
-      }
-      #ex {
-        width: 100%;
-        animation-name: come;
-        animation-duration: 3s;
-        position: fixed;
-        top: 330px;
-        z-index: 30;
-        text-align: center;
-      }
-      #ex1 {
-        position: relative;
-        display: inline-block;
-        width: 350px;
-        height: 300px;
-        border-radius: 10px;
-        background-image: url("/static/image/logistics.jpg");
-        background-size: cover;
-      }
-      #manu {
-        border-radius: 10px;
-        width: 100%;
-        height: 100%;
-      }
-      #ex1 p {
-        width: 240px;
-        margin-left: 20px;
-        text-align: left;
-        position: absolute;
-        color: white;
-        font-weight: 600;
-        font-size: 22px;
-        bottom: 1px;
-      }
-      #ex1 span {
-        animation-name: come;
-        animation-duration: 2s;
-        display: inline-block;
-        margin-top: 10px;
-        font-size: 20px;
-        font-weight: 100;
-        color: white;
-      }
-      .event {
-        animation-name: come;
-        animation-duration: 5s;
-        position: relative;
-        top: 5400px;
-        font-size: 50px;
-        font-weight: 600;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      .event_content {
-        position: relative;
-        top: 5400px;
-      }
-      .evnt {
-        text-align: center;
-      }
-      .ele {
-        position: relative;
-        animation-name: come;
-        animation-duration: 3s;
-        display: inline-block;
-        border-radius: 20px;
-        width: 300px;
-        height: 300px;
-        margin-bottom: 20px;
-        background-color: rgb(250, 250, 250);
-      }
-      .evnt img {
-        width: 50px;
-      }
-      .ele p {
-        font-size: 20px;
-        font-weight: 600;
-        text-align: center;
-        margin-left: 10px;
-        margin-right: 10px;
-      }
-      #event2 p {
-        background: linear-gradient(
-          to right,
-          rgb(0, 116, 194),
-          rgb(143, 254, 138)
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      #event1 p {
-        background: linear-gradient(
-          to right,
-          rgb(255, 250, 84),
-          rgb(237, 117, 71)
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      #event3 p {
-        background: linear-gradient(
-          to right,
-          rgb(40, 51, 47),
-          rgb(255, 255, 255)
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      #event4 p {
-        background: linear-gradient(
-          to right,
-          rgb(241, 66, 72),
-          rgb(236, 144, 142)
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      .btn {
-        position: absolute;
-        width: 20px;
-        top: 250px;
-        left: 250px;
+        height: 6030px;
       }
     </style>
   </head>
   <body>
-    <nav>
+    <nav id="main">
       <div class="upper-nav">
-        <a id="home" href="/" style="color: white; text-decoration: none"
-          >Home</a
-        >
         <a href="/shop" style="text-decoration: none"
-          ><p id="title">낚당몰.</p></a
+          ><p id="title">NAKDANG.COM</p></a
         >
-        <div class="icons">
+        <div id="show_bar">
+          <div class="dropdown">
+            <button
+              class="ropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              style="border: none; background-color: transparent"
+            >
+              <img src="/static/image/me.png" alt="" />
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/shop/myhome">MY홈</a></li>
+              <li><a class="dropdown-item" href="#">배송조회</a></li>
+              <li><a class="dropdown-item" href="#">고객센터</a></li>
+            </ul>
+          </div>
+
           <a href="/shop/basket"
-            ><img src="/static/image/shoppingBag.png" alt=""
+            ><img src="/static/image/shoppingCart.png" alt=""
           /></a>
+          <div class="basketCount"></div>
         </div>
       </div>
       <div class="categories">
-        <a href="/shop/fishingrod">낚시대</a>
-        <a href="/shop/bait">미끼</a>
-        <a href="/shop/equipment">공동장비</a>
+        <div class="categoriesInfo">
+          <a href="/">낚당홈</a>
+          <a href="/loginForm">로그인</a>
+        </div>
+        <div class="categoriesShow">
+          <a href="/shop/fishingrod">낚시대</a>
+          <a href="/shop/bait">미끼</a>
+          <a href="/shop/equipment">공동장비</a>
+        </div>
+        <div class="categoriesInfo"></div>
       </div>
     </nav>
     <div class="greetings for_event">
-      <span>낚당몰. <br /></span><span>Renewal <br /></span>
-      <span>더 알아보기 위해 스크롤</span>
+      <p>NAKDANG.COM</p>
+      <p><span>Renewal</span></p>
     </div>
     <div class="test">
       <span> 저렴하게. 색다르게. </span> <br />
@@ -344,6 +120,7 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      handleBasketCount();
       document.querySelector(".test").style.opacity = "0";
       location.reload = (event) => {
         window.scollY = "0";
@@ -488,7 +265,6 @@
           const body = document.querySelector("body");
           if (body.classList.contains("for")) {
             body.classList.remove("for");
-            body.style.backgroundColor = "black";
           }
           const display = document.querySelector("#ex");
           if (display.classList.contains("no_show")) {
@@ -537,6 +313,17 @@
           });
         }
       });
+      function handleBasketCount() {
+        const basketCount = document.querySelector(".basketCount");
+        const local = JSON.parse(window.localStorage.getItem("basket"));
+        if (!local) {
+          basketCount.innerText = "0";
+        } else if (local.length == 0) {
+          basketCount.innerText = "0";
+        } else {
+          basketCount.innerText = local.length;
+        }
+      }
     </script>
   </body>
 </html>

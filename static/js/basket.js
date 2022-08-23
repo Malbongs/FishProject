@@ -14,6 +14,6 @@ document.querySelector(".basket_page").addEventListener("click",(event)=>{
     const arr = JSON.parse(window.localStorage.getItem('basket'));
     arr.push(item);
     window.localStorage.setItem("basket",JSON .stringify(arr));
-
+    handleBasketCount();
     alert("상품이 성공적으로 장바구니에 담겼습니다!");
   });
