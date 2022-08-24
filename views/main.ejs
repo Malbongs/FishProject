@@ -8,9 +8,9 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>낚당!</title>
+    <title>NACKDANG</title>
     <!-- 타이틀 옆 아이콘 입니다! -->
-    <link href="/static/image/icon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="/static/image/logo.jpeg" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" href="/static/css/footer.css">
 </head>
 
@@ -19,8 +19,8 @@
 
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand"  href="#main"><img class="logoimg" src="/static/image/logo.png"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand"  href="#main"><img class="logoimg" src="/static/image/logo.jpeg"></a>
+      <button class="navbar-toggler" style="background-color: white !important;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -39,9 +39,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link"  href="/loginForm">LOGIN</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"  href="/joinForm">JOIN</a>
           </li>
           <li class="nav-item">
             <a class="nav-link"  href="/board">BOARD</a>
@@ -101,8 +98,9 @@
 
 
   <!-- 쇼핑몰 페이지 이동 -->
-  <div class="part3" id="three"> 
+  <div class="part3" id="three">
     <div class="shop">
+      <div class="NACK">NACKDANG.COM<img style="width:100px; height: 100px;" onclick="location.href='/shop'" src="/static/image/logo.jpeg"></div>
       <img src="/static/image/shop1.png" onclick="location.href='/shop'">
       <img src="/static/image/shop2.png" onclick="location.href='/shop'">
       <img src="/static/image/shop3.png" onclick="location.href='/shop'">
@@ -111,22 +109,22 @@
 
 
   <!-- MEDIA페이지 이동 -->
-  <div class="part4" id="four">
-
+  <div class="part4 row m-0" id="four">
+    <div class="background"></div>
+    <div class="background"></div>
     <div class="news" onclick="location.href='/media'">MEDIA</div>
-    <div class="videos">
-      <div class="media">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/yZ_QYbfHKGg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <div class="tag"><b>원투낚시 기초 강좌!</b><p>원투낚시 기초강좌를 시청하세요!</p></div>
-      </div>
-      <div class="media">
-        <a href="https://www.youtube.com/c/%EC%9E%85%EC%A7%88%EC%9D%98%EC%B6%94%EC%96%B5TV" target="_blank"><img style="width:100%; height: 100%;" src="/static/image/you.png"></a>
-        <div class="tag"><b>입질의 추억 유튜브!</b><p>수 많은 수산물 정보를 위해 클릭!</p></div>
-      </div>
-      <div class="media">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/GNK3ABNtmxA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <div class="tag"><b>휴가철 바가지 주의!</b><p>휴가철 수 많은 바가지 걱정 노! 바가지에 주의하세요!</p></div>
-      </div>
+    <div class="background"></div>
+    <div class="col-12 col-md-4">
+      <iframe width="100%" height="230px;" src="https://www.youtube.com/embed/yZ_QYbfHKGg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="tag"><b>원투낚시 기초 강좌!</b><p>원투낚시 기초강좌를 시청하세요!</p></div>
+    </div>
+    <div class="col-12 col-md-4">
+      <a href="https://www.youtube.com/c/%EC%9E%85%EC%A7%88%EC%9D%98%EC%B6%94%EC%96%B5TV" target="_blank"><img style="width:100%;" src="/static/image/you.png"></a>
+      <div class="tag"><b>입질의 추억 유튜브!</b><p>수 많은 수산물 정보를 위해 클릭!</p></div>
+    </div>
+    <div class="col-12 col-md-4">
+      <iframe width="100%" height="230px;" src="https://www.youtube.com/embed/GNK3ABNtmxA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="tag"><b>휴가철 바가지 주의!</b><p>휴가철 수 많은 바가지 걱정 노! 바가지에 주의하세요!</p></div>
     </div>
   </div>
   

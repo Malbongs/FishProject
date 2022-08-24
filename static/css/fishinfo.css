@@ -1,15 +1,40 @@
 
 @font-face {
-    font-family: 'HallymGothic-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
-    font-weight: 400;
+    font-family: "SUIT-Medium";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2")format("woff2");
+    font-weight: normal;
     font-style: normal;
-}
+  }
 
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)) ,url('/static/image/see.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url('/static/image/see.jpeg');
     background-size: cover;
 }
+
+.main{
+    display: none;
+    position: relative;
+    top: 200px;
+    left: 500px;
+    width: 600px;
+    font-size: 40px;
+    font-family: "SUIT-Medium";
+    align-items: center;
+    color: white;
+    
+    
+   
+}
+.sub{
+    display: none;
+    font-size: 25px;
+    color: white;
+    font-family: "SUIT-Medium";
+}
+
+
+
+
 .all{
     left: 150px;
     position: relative;
@@ -31,7 +56,7 @@ body{
     position: absolute;
     width: 50px;
     height: 50px;
-    border:5px double rgb(35, 161, 186);
+    border:5px double rgb(29, 28, 28);
     border-radius: 50px;
     background-color: white;
 }
@@ -47,11 +72,11 @@ body{
     top: -10px;
     display: none;
     font-size: 6px;
-    border:5px double rgb(35, 161, 186);
+    border:5px double rgb(29, 28, 28);
     background-color: white;
     width: 160px;
     height: 60px;
-    font-family:'HallymGothic-Regular' ;
+    font-family: "SUIT-Medium";
 }
 
  
@@ -683,8 +708,9 @@ select{
     width: 100px;
     height: 40px;
     font-size: 20px;
-    font-family: 'HallymGothic-Regular';
-    color: rgb(35, 161, 186);;
+    font-family: "SUIT-Medium";
+    color: white;
+    background-color: rgb(29, 28, 28);
     z-index: 50;
 
 }
