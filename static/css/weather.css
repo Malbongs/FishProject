@@ -16,7 +16,7 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 3%;
     margin: 0;
-    background-color: #153254;
+    background-color: rgb(29, 28, 28);
 }
 .wrapper header {
     color: white;
@@ -91,7 +91,7 @@ header i {
     color: white;
     font-size: 19px;
     padding: 0 15px;
-    background: #153254;
+    background: rgb(29, 28, 28);
 }
 .input-part button {
     color: black;

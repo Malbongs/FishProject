@@ -29,22 +29,22 @@
   <div class="article">
     <div class="articleTop">
       <a class="back" href="/board">
-        본문으로 </a>
+        〈 본문으로 </a>
       <a class="write" href="/boardWrite">
-        글쓰기
+        <img src="/static/image/board/pen.png" alt="" style="width: 25px; height: auto;">
+        작성하기
       </a>
     </div>
-    <br>
     <h1>루어낚시 게시판</h1>
-    <section class="boardList">
-      <span class="badge text-bg-light">공지</span>
+    <section class=" boardList">
+      <span class="badge text-bg" style="background-color: var(--bg-color); color: var(--main-color);">공지</span>
       공지사항
     </section>
     <div class="boardCategory">
-      <button type="button" class="btn btn-secondary">전체</button>
-      <button type="button" class="btn btn-secondary">일반</button>
-      <button type="button" class="btn btn-secondary">사진&영상</button>
-      <button type="button" class="btn btn-secondary">질문</button>
+      <button type="button" class="btn">전체</button>
+      <button type="button" class="btn">일반</button>
+      <button type="button" class="btn">사진&영상</button>
+      <button type="button" class="btn">질문</button>
     </div>
     <section class="boardList">
       <table id="myTable" class="table table-hover">
@@ -57,7 +57,7 @@
           </tr>
         </thead>
         <tbody>
-          <% for(var i=1; i<20; i++) { %>
+          <% for(var i=1; i<51; i++) { %>
           <tr onclick="location.href='/boardInner'" style="cursor: pointer;">
             <td>
               <%=i%>
@@ -79,8 +79,15 @@
     <br>
 
   </div>
+
   <%-include("footer.ejs")%>
 
+  <!-- 위로 스크롤 -->
+  <div class="pageUp">
+    <a href="#" title="Back to Top" style="display:scroll; position:fixed; bottom:10px; right:10px;" onfocus='this.blur()'>
+      <img class="upImg" src="/static/image/board/up.png">
+    </a>
+  </div>
   <!-- dataTable -->
   <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
@@ -88,10 +95,44 @@
     $(document).ready(function() {
       $('#myTable').DataTable({
         info: false,
-        "dom": "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+        autoWidth: false,
+        language: {
+          search: "검색"
+        },
+        "dom": "<'row'<'col-6'l><'col-6'f>>" +
           "<'row'<'col-sm-12'tr>>" +
-          "<'row'<'col-12'p>>",
+          "<'row'<'col-4'><'col-4'p><'col-4'>>",
+        "columns": [{
+            "width": "10%"
+          },
+          {
+            "width": "40%"
+          },
+          {
+            "width": "30%"
+          },
+          {
+            "width": "20%"
+          }
+        ]
+
       });
+    });
+
+    // 페이지 맨위로 올라가기
+    $(".upImg").click(function(e) {
+      e.preventDefault();
+
+      $('html,body').animate({
+        scrollTop: 0
+      }, 10);
+
+      $(".pageUp a").animate({
+        'margin-bottom': '20px'
+      }, 300);
+      $(".pageUp a").animate({
+        'margin-bottom': '0px'
+      }, 300);
     });
   </script>
 </body>

@@ -22,9 +22,9 @@
   <div class="article">
     <div class="articleTop">
       <a class="back" href="/boardLure">
-        목록으로 </a>
+        〈 목록으로 </a>
     </div>
-    <br>
+
     <div class="item">
       <div class="info">
         <div class="infoTitle">
@@ -69,7 +69,7 @@
         <div class="comment">
           <textarea class="form-control text" placeholder="댓글을 작성해주세요." style="width: 100%; height: 100px"></textarea>
           <div class="commentBtn" style="margin-top: 5px;">
-            <button type="button" class="btn btn-secondary submitBtn" onclick='submit(); return false;'>작성</button>
+            <button type="button" class="btn submitBtn" onclick='submit(); return false;'>작성</button>
           </div>
         </div>
       </div>
@@ -107,6 +107,8 @@
   </div>
   <br>
 
+
+
   <!-- 공유 버튼 모달이 -->
   <div id="shareModal" class="modal" tabindex="-1">
     <div class="modal-dialog">
@@ -128,8 +130,7 @@
           </div>
           <div class="urlCopy">
             <input style="width: 400px;" class="form-control-sm urlAddr" type="text" value="http://localhost:8080/boardInner" aria-label="Disabled input example" disabled readonly>
-            <button type="button" class="btn btn-secondary copyBtn">복사</button>
-
+            <button id="copyBtn" type="button" class="btn btn-secondary" onclick="copyClipboard(`http://101.101.209.110:8080/boardInner`)">복사</button>
           </div>
         </div>
       </div>
@@ -162,6 +163,16 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- footer 호출 -->
+  <%-include("footer.ejs")%>
+
+  <!-- 위로 스크롤 -->
+  <div class="pageUp">
+    <a href="#" title="Back to Top" style="display:scroll; position:fixed; bottom:10px; right:10px;" onfocus='this.blur()'>
+      <img class="upImg" src="/static/image/board/up.png">
+    </a>
   </div>
 
   <!-- 자바스크립트 -->
@@ -209,13 +220,12 @@
       const text = document.createElement("span");
       const date = document.createElement("span");
       const removeBtn = document.createElement("button");
-      const removeImg = document.createElement("img");
 
       // 그리드 스타일 추가
       comment.className += 'row';
       nameTitle.className += 'col-11 col-lg-2 name';
       text.className += 'col-12 col-lg-6';
-      date.className += 'col-12 col-lg-3 date';
+      date.className += 'col-10 col-lg-3 date';
       removeBtn.className += 'col-1 removeBtn'
 
       // input 폼 초기화
@@ -227,8 +237,6 @@
       userName.innerText = name_value;
       text.innerText = text_value;
       date.innerText = now;
-      removeImg.src = '/static/image/rmvBtn.png'
-      removeBtn.appendChild(removeImg)
 
       // 등급뱃지 + 이름 합치기
       nameTitle.appendChild(badgeImg);
@@ -260,19 +268,21 @@
     });
 
     // 공유 url 카피 함수
-    $('.copyBtn').click(function() {
-      const copyText = $(".urlAddr").val();
-      const textArea = document.createElement("textarea");
-      document.body.appendChild(textArea);
+    function copyClipboard(text) {
+      const copyText = document.createElement("textarea");
+      copyText.value = text;
 
-      textArea.innerText = copyText;
-
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-
-      alert("Copied!");
-    });
+      document.body.appendChild(copyText);
+      copyText.focus();
+      copyText.select();
+      try {
+        document.execCommand('copy');
+        alert("복사완료")
+      } catch (err) {
+        console.error('Unable to copy to clipboard', err);
+      }
+      document.body.removeChild(copyText);
+    };
 
     // 추천 버튼 함수
     $('#recommend').click(function() {
@@ -288,9 +298,23 @@
     $('.modal').on('hidden.bs.modal', function(e) {
       $('textarea').val('');
     });
+
+    // 페이지 맨위로 올라가기
+    $(".upImg").click(function(e) {
+      e.preventDefault();
+
+      $('html,body').animate({
+        scrollTop: 0
+      }, 10);
+
+      $(".pageUp a").animate({
+        'margin-bottom': '20px'
+      }, 300);
+      $(".pageUp a").animate({
+        'margin-bottom': '0px'
+      }, 300);
+    });
   </script>
-  <!-- footer 호출 -->
-  <%-include("footer.ejs")%>
 </body>
 
 </html>

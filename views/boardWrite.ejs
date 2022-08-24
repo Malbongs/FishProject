@@ -22,34 +22,33 @@
   <div class="article">
     <div class="articleTop">
       <a class="back" href="/boardLure">
-        뒤로가기 </a>
+        〈 뒤로가기 </a>
     </div>
-    <br>
     <section class="boardList">
       <span class="badge text-bg-light">카테고리</span>
       루어낚시게시판
     </section>
-    <br>
     <h4 class="writeTitle">제목</h4>
     <section class="boardList articleTitle">
       <input class="form-control titleForm" type="text" placeholder="제목을 입력해주세요">
     </section>
-    <br>
     <h4 class="writeTitle">작성자</h4>
     <section class="boardList articleWriter">
       <input class="form-control" type="text" placeholder="작성자를 입력해주세요">
     </section>
-    <br>
     <h4 class="writeTitle">내용
     </h4>
     <section class="boardList writeForm">
+      <img id="preview" style="width: 200px; height: auto;">
       <textarea class="form-control" type="text" placeholder="내용을 입력해주세요."></textarea>
     </section>
     <div class="articleBottom">
       <div class="attach">
-        <input type="file" onchange="readURL(this);">
-        <img id="preview" />
+        <label for="attachFile">첨부파일</label>
+        <input class="upload-name" value="" placeholder="">
+        <input id="attachFile" type="file" onchange="readURL(this);">
       </div>
+
       <div class="writeBtn" style="margin-top: 5px;">
         <button type="button" class="btn btn-secondary submitBtn">작성</button>
         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#cancelModal">
@@ -79,6 +78,13 @@
     </div>
   </div>
 
+  <!-- 위로 스크롤 -->
+  <div class="pageUp">
+    <a href="#" title="Back to Top" style="display:scroll; position:fixed; bottom:10px; right:10px;" onfocus='this.blur()'>
+      <img class="upImg" src="/static/image/board/up.png">
+    </a>
+  </div>
+
   <!-- 스크립트 -->
   <script>
     // 작성하기 버튼
@@ -98,6 +104,22 @@
         document.getElementById('preview').src = "";
       }
     }
+
+    // 페이지 맨위로 올라가기
+    $(".upImg").click(function(e) {
+      e.preventDefault();
+
+      $('html,body').animate({
+        scrollTop: 0
+      }, 10);
+
+      $(".pageUp a").animate({
+        'margin-bottom': '20px'
+      }, 300);
+      $(".pageUp a").animate({
+        'margin-bottom': '0px'
+      }, 300);
+    });
   </script>
 </body>
 

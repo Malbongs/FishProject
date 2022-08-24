@@ -2,26 +2,7 @@ body{
     margin: 0px;
 }
 
-.body-wrap {
-    min-height: 100vh;
-    position: relative;
 
-}
-/* scrollbar */
-/* .box{
-
-    overflow: auto;
-    word-break: break-all;
-}
-.box::-webkit-scrollbar{
-    width: 8px;
-}
-.box::-webkit-scrollbar-track{
-    background-color: aqua;
-}
-.box ::-webkit-scrollbar-thumb{
-    background-color: white;
-} */
 
 
 
@@ -29,26 +10,24 @@ body{
 nav{
     position: fixed !important;
     z-index: 1;
+    top: 0;
     width: 100%;
 }
 
 nav *{
-    font-size: 15px !important;
-    font-family: 'HallymGothic-Regular';
+    font-size: 17px !important;
+    font-family: "SUIT-Medium" !important;
     color: white !important;
 }
  
 .change{
-    background-color: white !important;
-}
-.change a{
-    color: black !important;
+    background-color: rgb(29, 28, 28);
 }
 
 .logoimg{
 
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 .logoFont{
     font-size: 50px;
@@ -57,7 +36,7 @@ nav *{
 .div1{ 
    
     width: 100%;
-    height: 800px;
+    height: 860px;
     animation-name: div1;
     animation-duration: 20s;
     animation-timing-function: ease;
@@ -85,8 +64,11 @@ nav *{
         }
     }
 
+
+
+
     .div2{
-        font-family: 'HallymGothic-Regular';
+        font-family: "SUIT-Medium";
         position: absolute;
         top:  350px;
         left: 45%;
@@ -104,7 +86,7 @@ nav *{
        
         width: 100%;
         height: 800px;
-        font-family: 'HallymGothic-Regular' !important;
+        font-family: "SUIT-Medium";
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url('/static/image/vison.jpeg');
         background-size: cover;
 
@@ -130,7 +112,7 @@ nav *{
     }
  
     list{
-        font-family: 'HallymGothic-Regular';
+        font-family: "SUIT-Medium";
         margin: 0 20px;
     }
 
@@ -141,9 +123,9 @@ nav *{
     /* 두번째 화면 */
     .part2{
         position: relative;
-       text-align: center;
+        text-align: center;
         width: 100%;
-        height: 800px;
+        height: 860px;
         background-image: url('/static/image/fish.jpeg');
         background-size: cover;
         z-index: 0;
@@ -168,7 +150,7 @@ nav *{
         border-radius: 3%;
         display: inline-block;
         margin-top: 45px;
-        width : 90%;
+        width : 80%;
         height : 80%;
         box-shadow: 5px 5px 5px;
        
@@ -182,26 +164,29 @@ nav *{
         
     }
 
+    .NACK{
+        font-family: "SUIT-Medium";
+        font-size: 80px;
+        font-weight: 2000;
+    }
+    
+
     .shop{
         display: inline-block;
-        margin-top: 100px;
+        margin-top: 150px;
         width: 90%;
-        height : 70%;
+        height : 100%;
         overflow: hidden;
     }
     .shop img{
-        padding: 10px;
+        padding: 15px;
         width: 100%;
-        height: 35%;
-
+        height: 25%;
     }
     .shop img:hover{
-
         cursor: pointer;
         transform: scale(1.2);
         transition: all 0.2s linear;
-       
-
     }
 
 
@@ -209,16 +194,15 @@ nav *{
     /* 네번째 화면 */
     .part4{
         width: 100%;
-        height: 600px;
      }
 
+    
      .news{
-        font-family: 'HallymGothic-Regular' ;
+        font-family: "SUIT-Medium";
         font-weight: 1000;
         color: black;
         font-size: 50px;
-        margin: 150px 30px;
-        position: absolute;
+        
 
      }
      .news:hover{
@@ -228,26 +212,20 @@ nav *{
 
      .videos{
         display: flex;
-        width: 100%;
-        height: 100%;
-        
+        padding: 10px; 
      }
-   
-    .media{
-        margin: 250px 30px;
-        width: 33%;
-        height: 40%;
-        background-color: white;
-        
+    .background{
+        width: 100px;
+        height: 100px;
     }
+
     
     
     .tag{
         margin-top: 10px;
-        font-family: 'HallymGothic-Regular' ;
+        font-family: "SUIT-Medium";
         color: black;
         font-size: 17px;
-        position: absolute;
     }   
 
     .tag p {
@@ -256,15 +234,18 @@ nav *{
     }
     /* 폰트 */
     @font-face {
-       
-            font-family: 'HallymGothic-Regular';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
-            font-weight: 400;
-            font-style: normal;
-        
-           
-            
+        font-family: 'Pretendard-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
     }
+    @font-face {
+        font-family: "SUIT-Medium";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2")
+          format("woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
 
     @media screen and (min-width: 100px) and (max-width:1024px) {
         .div1, .part1, .part2 {
