@@ -12,8 +12,12 @@
 <body>
     <!-- 네비바 인클루드 -->
     <%-include("nav.ejs")%>
+    
+    <div class="main">시즌 별 어종을<br>
+        <span class="sub">한 눈에 확인하고 정보까지</span>
+    </div>
 
-    <div class="fishinfo" style="margin-top: 76px;">
+    <div class="fishinfo" style="margin-top: 250px; margin-bottom: 100px;">
         <div class="all">
             <img class="map" src="/static/image/map.png">
 
@@ -358,7 +362,15 @@
     },function(){
         $(this).children(".textbox").css("display","none");
     })
-        
+    
+    // 글자 나타내기
+    $(document).ready(function(){
+        if($(".main").css("display") == "none"){
+            $(".main").fadeIn(1000);
+            $(".sub").fadeIn(3500);
+        }
+    })
+
     // 시즌별 어종 나타내게 하기
     $("select").change(function(){
       var showValue =  $(this).val();
