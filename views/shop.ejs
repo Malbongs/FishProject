@@ -15,11 +15,20 @@
     <style>
       body {
         background-color: white;
-        height: 6030px;
+        height: 8000px;
       }
     </style>
   </head>
   <body>
+    <script>
+      let arr = [];
+      for (let i = 100; i <= 300; i++) {
+        const image = document.createElement("img");
+        image.classList.add("fish");
+        image.setAttribute("src", "/static/image/fishes/" + `${i}.jpg`);
+        arr.push(image);
+      }
+    </script>
     <nav id="main">
       <div class="upper-nav">
         <a href="/shop" style="text-decoration: none"
@@ -51,8 +60,8 @@
       </div>
       <div class="categories">
         <div class="categoriesInfo">
-          <a href="/">낚당홈</a>
-          <a href="/loginForm">로그인</a>
+          <a href="">낚당홈</a>
+          <a href="">로그인</a>
         </div>
         <div class="categoriesShow">
           <a href="/shop/fishingrod">낚시대</a>
@@ -110,7 +119,7 @@
     </div>
 
     <img class="image" src="/static/image/shopBackground.jpeg" alt="" />
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
       history.scrollRestoration = "manual";
     </script>
@@ -120,6 +129,38 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      setInterval(() => {
+        if (document.querySelector(".dday")) {
+          const current = Date.now();
+          const date = new Date("September 1, 22 00:00:00");
+          const dday = date.getTime();
+          let sum = dday - current;
+          console.log(dday);
+          let day = parseInt(sum / (3600000 * 24));
+          sum -= day * 3600000 * 24;
+          let hour = parseInt(sum / 3600000);
+          sum -= hour * 3600000;
+          let minute = parseInt(sum / 60000);
+          sum -= minute * 60000;
+          let second = parseInt(sum / 1000);
+          sum -= second * 1000;
+          const milsec = parseInt(sum / 10);
+          const target = document.querySelector(".dday span");
+          if (day < 10) {
+            day = "0" + new String(day);
+          }
+          if (hour < 10) {
+            hour = "0" + new String(hour);
+          }
+          if (minute < 10) {
+            minute = "0" + new String(minute);
+          }
+          if (second < 10) {
+            second = "0" + new String(second);
+          }
+          target.innerText = `${day}:${hour}:${minute}:${second}`;
+        }
+      }, 1000);
       handleBasketCount();
       document.querySelector(".test").style.opacity = "0";
       location.reload = (event) => {
@@ -311,6 +352,72 @@
               ele.classList.remove("no_show");
             }
           });
+        }
+        if (scrollY <= 6050) {
+          if (document.querySelector(".fish")) {
+            const data = document.querySelectorAll(".fish");
+            data.forEach((ele) => {
+              ele.remove();
+            });
+          }
+        }
+        if (scrollY > 6050) {
+          if (!document.querySelector(".fish")) {
+            document
+              .querySelector("body")
+              .appendChild(arr[parseInt((scrollY - 6050) / 20) + 100]);
+          } else {
+            document
+              .querySelector("body")
+              .appendChild(arr[parseInt((scrollY - 6050) / 20) + 100]);
+            let brr = document.querySelectorAll(".fish");
+            if (brr.length >= 2) {
+              brr[0].remove();
+            }
+          }
+        }
+
+        if (scrollY <= 6060) {
+          if (document.querySelector(".intro")) {
+            document.querySelector(".intro").remove();
+          }
+        }
+        if (scrollY > 6060) {
+          if (!document.querySelector(".intro")) {
+            const intro = document.createElement("p");
+            const span = document.createElement("span");
+            const span2 = document.createElement("span");
+            span2.innerText = "OPEN 9월 2일 금";
+            span.innerText = "NAKDANG 수산몰 오픈 임박.";
+            intro.appendChild(span);
+            intro.appendChild(document.createElement("br"));
+            intro.appendChild(span2);
+            intro.classList.add("intro");
+
+            document.querySelector("body").appendChild(intro);
+          }
+        }
+        if (scrollY <= 6200) {
+          if (document.querySelector(".dday")) {
+            document.querySelector(".dday").remove();
+          }
+        }
+        if (scrollY > 6200) {
+          if (!document.querySelector(".dday")) {
+            const dday = document.createElement("div");
+            const span = document.createElement("span");
+            dday.classList.add("dday");
+            dday.appendChild(span);
+            document.querySelector("body").appendChild(dday);
+          }
+        }
+        if (scrollY > 6060 && scrollY <= 6560) {
+          const intro = document.querySelector(".intro");
+          intro.style.opacity = (scrollY - 6060) / 500;
+        }
+        if (scrollY > 6660) {
+          const intro = document.querySelector(".intro");
+          intro.style.opacity = 1;
         }
       });
       function handleBasketCount() {
