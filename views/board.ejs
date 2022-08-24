@@ -22,7 +22,7 @@
   <!-- 네비바 인클루드 입니다. -->
   <%-include("nav.ejs")%>
 
-  <a href="/main">
+  <a class="bannerWrap" href="/main">
     <div class="banner">
       <div class="bannerText">
         국내 최대 낚시 커뮤니티
@@ -45,7 +45,7 @@
         <div class="indexBoardText">
           <div class="textLine">
             <span class="badge text-bg-light">루낚게</span>
-            <a href="/boardInner"><span> 안녕하세요 오늘 가입했습니다 ㅎㅎ</span><span class="badge bg-secondary">N</span></a>
+            <a href="/boardInner"><span> 안녕하세요 오늘 가입했습니다 ㅎㅎ</span><span class="badge bg-secondary" style="width: 20px; height: 20px;">N</span></a>
             <span class="date">22. 08. 18.</span>
           </div>
         </div>
@@ -273,15 +273,15 @@
     </div>
 
     <!-- 페이지 맨위로 -->
-    <div>
-      <a href="#" title="Back to Top" style="display:scroll; position:fixed; bottom:0px; right:10px;" onfocus='this.blur()'>
+    <div class="pageUp">
+      <a href="#" title="Back to Top" style="display:scroll; position:fixed; bottom:10px; right:10px;" onfocus='this.blur()'>
         <img class="upImg" src="/static/image/board/up.png">
       </a>
     </div>
   </div>
 
   <!-- 채팅 모달 -->
-  <div class="modal fade modal-lg" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade modal-lg chatModal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -307,7 +307,7 @@
         </div>
         <div class="modal-footer">
           <div class="form-row inputForm">
-            <div class="col-1">
+            <div class="col-2 col-lg-1">
               <select class="form-control" name="" id="chatBg">
                 <option value="🐟">🐟</option>
                 <option value="🐠">🐠</option>
@@ -315,13 +315,13 @@
                 <option value="🐳">🐳</option>
               </select>
             </div>
-            <div class="col-2">
+            <div class="col-2 col-lg-2">
               <input id="nickName" class="form-control" placeholder="닉네임"></input>
             </div>
-            <div class="col-7">
+            <div class="col-6 col-lg-8">
               <input id="text" class="form-control" placeholder="내용"></input>
             </div>
-            <div class="col-2">
+            <div class="col-2 col-lg-1">
               <button type="button" class="btn btn-secondary submitBtn">전송</button>
             </div>
           </div>
@@ -394,12 +394,12 @@
         scrollTop: 0
       }, 10);
 
-      $(".upImg").animate({
+      $(".pageUp a").animate({
         'margin-bottom': '20px'
-      }, 400);
-      $(".upImg").animate({
+      }, 300);
+      $(".pageUp a").animate({
         'margin-bottom': '0px'
-      }, 400);
+      }, 300);
     });
   </script>
 </body>

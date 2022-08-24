@@ -5,6 +5,11 @@
     font-style: normal;
 }
 
+:root {
+    --main-color: rgb(53, 197, 240);
+    --bg-color: rgb(239, 251, 255);
+}
+
 * {
     font-family: 'Pretendard-Regular';
 }
@@ -29,7 +34,7 @@
 .article>.boardList,
 h1,
 .item {
-    padding: 20px;
+    padding: 15px;
     background-color: white;
     width: 70%;
     border-radius: 12px;
@@ -43,6 +48,7 @@ h1,
     display: flex;
     justify-content: space-between;
     width: 70%;
+    margin-bottom: 10px;
 }
 
 .articleTop>.back,
@@ -94,7 +100,7 @@ h1,
 
 .content {
     height: 400px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .listAndEdit {
@@ -109,7 +115,7 @@ h1,
     margin-left: 10px;
     margin-bottom: 10px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .newComment {
@@ -142,8 +148,8 @@ h1,
 
 
 .commentBox button {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border: none;
     background-color: transparent;
     align-items: flex-start;
@@ -220,12 +226,27 @@ h1,
     gap: 10px;
     width: 70%;
     margin: 10px 0px 10px 10px;
-    opacity: 0.4;
 }
 
 .boardCategory>button {
+    background-color: var(--bg-color);
+    border-color: var(--main-color);
+    color: var(--main-color);
     width: 100px;
     font-size: 13px;
+}
+
+.commentBtn .submitBtn {
+    background-color: var(--bg-color);
+    border-color: var(--main-color);
+    color: var(--main-color);
+}
+
+.boardCategory>button:hover,
+.commentBtn .submitBtn:hover {
+    background-color: var(--main-color);
+    border-color: var(--bg-color);
+    color: white
 }
 
 .writeTitle {
@@ -234,6 +255,7 @@ h1,
     color: gray;
     margin-left: 10px;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .articleBottom {
@@ -243,29 +265,43 @@ h1,
     justify-content: space-between;
 }
 
+.pageUp a {
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    bottom: 20px;
+}
+
 .upImg {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
+}
+
+.attach {
+    display: flex;
 }
 
 /* 첨부파일 */
 .attach label {
     display: inline-block;
     padding: .5em .75em;
+    width: 90px;
     color: #fff;
     font-size: inherit;
     line-height: normal;
     vertical-align: middle;
-    background-color: #65AAB5;
+    background-color: black;
     cursor: pointer;
-    border: 1px solid #65AAB5;
+    border: 1px solid black;
     border-radius: .25em;
     -webkit-transition: background-color 0.2s;
     transition: background-color 0.2s;
 }
 
 .attach label:hover {
-    background-color: #65AAB5;
+    background-color: black;
 }
 
 .attach label:active {
@@ -285,7 +321,7 @@ h1,
 
 /* 페이지네이션 버튼 색깔 */
 #myTable_wrapper .page-link {
-    color: #65AAB5;
+    color: black;
     background-color: #fff;
     border: 1px solid #ccc;
 }
@@ -298,14 +334,13 @@ h1,
     z-index: 1;
     color: white !important;
     font-weight: bold;
-    background-color: #65AAB5 !important;
+    background-color: var(--main-color) !important;
     border-color: #ccc;
 }
 
-#myTable_wrapper .page-link:focus,
 #myTable_wrapper .page-link:hover {
     color: white !important;
-    background-color: #65AAB5 !important;
+    background-color: var(--main-color) !important;
     border-color: #ccc;
 }
 
@@ -315,40 +350,91 @@ h1,
     .article>.articleTop {
         display: flex;
         justify-content: space-between;
-        width: 90%;
+        width: 95%;
+    }
+
+    .articleTop>.back,
+    .articleTop>.write {
+        font-size: 13px;
     }
 
     .article>.boardList,
-    h1,
+    .article>h1,
     .item {
-        padding: 20px;
+        padding: 15px;
         background-color: white;
-        width: 90%;
+        width: 95%;
         border-radius: 12px;
     }
 
+    .article>h1 {
+        font-size: 1.5em;
+        justify-content: space-between;
+    }
+
+    #myTable_wrapper td,
+    #myTable_wrapper div {
+        font-size: 13px;
+    }
+
+    #myTable_filter input {
+        width: 100px;
+    }
+
+    .dataTables_length {
+        text-align: left !important;
+    }
+
+    .dataTables_filter {
+        text-align: right !important;
+    }
+
     .article .writeTitle {
-        width: 90%;
+        width: 95%;
         margin-bottom: 0px;
+        font-size: 15px;
+    }
+
+    .boardList.articleTitle {
+        padding: 10px;
+        font-size: 10px;
     }
 
     .boardCategory {
         justify-content: left;
-        width: 90%;
+        width: 95%;
         margin: 10px 0px 10px 0px;
     }
 
     .boardCategory>button {
+        font-size: 10px;
         width: 25vw;
     }
 
     .articleBottom {
-        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
         justify-content: space-between;
     }
 
+    .attach input {
+        width: 100px;
+        border: none;
+        background-color: #EBEDF3;
+    }
+
+    .articleBottom .writeBtn {
+        width: 40%;
+    }
+
     .upImg {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .pageUp a {
+        width: 50px;
+        height: 50px;
     }
 }

@@ -24,22 +24,18 @@
       <a class="back" href="/boardLure">
         〈 뒤로가기 </a>
     </div>
-    <br>
     <section class="boardList">
       <span class="badge text-bg-light">카테고리</span>
       루어낚시게시판
     </section>
-    <br>
     <h4 class="writeTitle">제목</h4>
     <section class="boardList articleTitle">
       <input class="form-control titleForm" type="text" placeholder="제목을 입력해주세요">
     </section>
-    <br>
     <h4 class="writeTitle">작성자</h4>
     <section class="boardList articleWriter">
       <input class="form-control" type="text" placeholder="작성자를 입력해주세요">
     </section>
-    <br>
     <h4 class="writeTitle">내용
     </h4>
     <section class="boardList writeForm">
@@ -47,10 +43,9 @@
       <textarea class="form-control" type="text" placeholder="내용을 입력해주세요."></textarea>
     </section>
     <div class="articleBottom">
-
       <div class="attach">
-        <label for="attachFile">파일찾기</label>
-        <input class="upload-name" value="첨부파일" placeholder="첨부파일">
+        <label for="attachFile">첨부파일</label>
+        <input class="upload-name" value="" placeholder="">
         <input id="attachFile" type="file" onchange="readURL(this);">
       </div>
 
@@ -84,8 +79,8 @@
   </div>
 
   <!-- 위로 스크롤 -->
-  <div>
-    <a href="#" title="Back to Top" style="display:scroll; position:fixed; bottom:0px; right:10px;" onfocus='this.blur()'>
+  <div class="pageUp">
+    <a href="#" title="Back to Top" style="display:scroll; position:fixed; bottom:10px; right:10px;" onfocus='this.blur()'>
       <img class="upImg" src="/static/image/board/up.png">
     </a>
   </div>
@@ -118,12 +113,12 @@
         scrollTop: 0
       }, 10);
 
-      $(".upImg").animate({
+      $(".pageUp a").animate({
         'margin-bottom': '20px'
-      }, 400);
-      $(".upImg").animate({
+      }, 300);
+      $(".pageUp a").animate({
         'margin-bottom': '0px'
-      }, 400);
+      }, 300);
     });
   </script>
 </body>

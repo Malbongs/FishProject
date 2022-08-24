@@ -35,17 +35,16 @@
         작성하기
       </a>
     </div>
-    <br>
     <h1>루어낚시 게시판</h1>
     <section class=" boardList">
-      <span class="badge text-bg-light">공지</span>
+      <span class="badge text-bg" style="background-color: var(--bg-color); color: var(--main-color);">공지</span>
       공지사항
     </section>
     <div class="boardCategory">
-      <button type="button" class="btn btn-secondary">전체</button>
-      <button type="button" class="btn btn-secondary">일반</button>
-      <button type="button" class="btn btn-secondary">사진&영상</button>
-      <button type="button" class="btn btn-secondary">질문</button>
+      <button type="button" class="btn">전체</button>
+      <button type="button" class="btn">일반</button>
+      <button type="button" class="btn">사진&영상</button>
+      <button type="button" class="btn">질문</button>
     </div>
     <section class="boardList">
       <table id="myTable" class="table table-hover">
@@ -84,8 +83,8 @@
   <%-include("footer.ejs")%>
 
   <!-- 위로 스크롤 -->
-  <div>
-    <a href="#" title="Back to Top" style="display:scroll; position:fixed; bottom:0px; right:10px;" onfocus='this.blur()'>
+  <div class="pageUp">
+    <a href="#" title="Back to Top" style="display:scroll; position:fixed; bottom:10px; right:10px;" onfocus='this.blur()'>
       <img class="upImg" src="/static/image/board/up.png">
     </a>
   </div>
@@ -96,12 +95,26 @@
     $(document).ready(function() {
       $('#myTable').DataTable({
         info: false,
+        autoWidth: false,
         language: {
           search: "검색"
         },
-        "dom": "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+        "dom": "<'row'<'col-6'l><'col-6'f>>" +
           "<'row'<'col-sm-12'tr>>" +
           "<'row'<'col-4'><'col-4'p><'col-4'>>",
+        "columns": [{
+            "width": "10%"
+          },
+          {
+            "width": "40%"
+          },
+          {
+            "width": "30%"
+          },
+          {
+            "width": "20%"
+          }
+        ]
 
       });
     });
@@ -114,12 +127,12 @@
         scrollTop: 0
       }, 10);
 
-      $(".upImg").animate({
+      $(".pageUp a").animate({
         'margin-bottom': '20px'
-      }, 400);
-      $(".upImg").animate({
+      }, 300);
+      $(".pageUp a").animate({
         'margin-bottom': '0px'
-      }, 400);
+      }, 300);
     });
   </script>
 </body>
