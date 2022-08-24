@@ -19,23 +19,23 @@
 
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" id="w" onclick="change(this)" href="#main"><img class="logoimg" src="/static/image/logo.png"></a>
+      <a class="navbar-brand" id="w"  href="#main"><img class="logoimg" src="/static/image/logo.png"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link"   href="#one" onclick="change(this)">VISON</a>
+            <a class="nav-link"   href="#one">VISON</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="#two" onclick="change(this)">FISH</a>
+            <a class="nav-link"  href="#two">FISH</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="#three" onclick="change(this)">SHOP</a>
+            <a class="nav-link"  href="#three">SHOP</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="#four" onclick="change(this)">MEDIA</a>
+            <a class="nav-link"  href="#four">MEDIA</a>
           </li>
           <li class="nav-item">
             <a class="nav-link"  href="/loginForm">LOGIN</a>
@@ -134,15 +134,7 @@
   <%-include("footer.ejs")%>
 
 <script>
-  // 클릭시 div 이동하는 함수 입니다.
-  function change(obj){ 
-    if(obj.id=="w"){
-      $("nav").removeClass("change");
-      }
-      else{
-        $("nav").addClass("change");
-          }
-    }
+
   // 스크롤 이벤트
    $(function(){
     var scrollval = 0;
