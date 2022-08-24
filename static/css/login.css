@@ -26,7 +26,7 @@ html, body {
     font-size: 20px;
     font-weight: 900;
     margin-bottom: 25px;
-    color: #65AAB5;
+    color: black;
 }
 .idDiv {
     display: flex;
@@ -38,7 +38,7 @@ html, body {
     font-size: 11px;
     margin-left: 8px;
     padding: 0;
-    background-color: #65AAB5;
+    background-color: black;
     border: none;
     border-radius: 5px;
     color: white;
@@ -49,7 +49,7 @@ html, body {
 .input {
     height: 54px;
     width: 100%;
-    border: 1px solid #65AAB5;
+    border: 1px solid black;
     border-radius: 5px;
     margin-bottom: 5px;
 }
@@ -64,34 +64,34 @@ html, body {
 }
 .signupBtn {
     margin-top: 20px;
-    background-color: #65AAB5;
+    background-color: black;
     margin-bottom: 10px;
     color: white;
 }
 .signupBtn:hover {
     background-color: transparent;
-    color: #65AAB5;
-    border: 1px solid #65AAB5;
+    color: black;
+    border: 1px solid black;
 }
 .loginBtn {
     margin-top: 20px;
-    background-color: #65AAB5;
+    background-color: black;
     margin-bottom: 10px;
     color: white;
 }
 .loginBtn:hover {
     background-color: transparent;
-    color: #65AAB5;
-    border: 1px solid #65AAB5;
+    color: black;
+    border: 1px solid black;
 }
 .joinBtn {
     background-color: transparent;
     margin-bottom: 10px;
-    border: 1px solid #65AAB5;
-    color: #65AAB5;
+    border: 1px solid black;
+    color: black;
 }
 .joinBtn:hover {
-    background-color: #65AAB5;
+    background-color: black;
     color: white;
     border: none;
 }
