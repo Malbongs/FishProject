@@ -5,10 +5,18 @@
     font-style: normal;
 }
 
+:root {
+    --main-color: rgb(53, 197, 240);
+    --bg-color: rgb(239, 251, 255);
+}
 
 
 * {
     font-family: 'Pretendard-Regular';
+}
+
+.bannerWrap {
+    text-decoration: none !important;
 }
 
 .banner {
@@ -22,7 +30,7 @@
 .bannerText {
     width: 1030px;
     height: 200px;
-    background-image: url('https://media.istockphoto.com/vectors/vector-ocean-world-exotic-seascape-with-fish-seaweeds-and-corals-vector-id1407487133?b=1&k=20&m=1407487133&s=170667a&w=0&h=QPyMbPYKv5NNCkwPn84j-PVNs3ypYzlCpMDEClMrivQ=');
+    background-image: url(/static/image/board/bannerImg.png);
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
@@ -57,7 +65,7 @@
 
 .indexBoardTitle a {
     text-decoration: none !important;
-    color: white;
+    color: black;
 }
 
 .indexBoardText a {
@@ -98,7 +106,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    background-color: #65AAB5;
+    background-color: rgb(239, 251, 255);
     width: 100%;
     border-radius: 5px;
     height: 10%;
@@ -160,15 +168,9 @@
     animation: fadein 1s 2s forwards;
 }
 
-.chat {
-    position: fixed;
-    bottom: 70px;
-    right: 10px;
-}
-
 .chatImg {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
 }
 
 .chatLine {
@@ -179,6 +181,20 @@
 .chat>.chatIcon {
     background-color: transparent;
     border: none;
+}
+
+.chat {
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    animation-name: alarm;
+    animation-iteration-count: infinite;
+    animation-duration: 2.5s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .chat .chatCnt {
@@ -210,15 +226,17 @@
     font-weight: bold;
 }
 
-.chat {
-    animation-name: alarm;
-    animation-iteration-count: infinite;
-    animation-duration: 2.5s;
+.pageUp a {
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .upImg {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
 }
 
 @keyframes alarm {
@@ -260,11 +278,11 @@
     }
 
     .indexBoard {
-        width: 90vw;
+        width: 95vw;
     }
 
     .indexBoardTitle {
-        background-color: #65AAB5;
+        background-color: rgb(239, 251, 255);
         width: 100%;
         border-radius: 5px;
         margin: 0;
@@ -274,7 +292,12 @@
     }
 
     .indexBoardTitle a {
-        color: white;
+        font-size: 20px;
+        color: black;
+    }
+
+    .indexBoardTitle .more a {
+        font-size: 15px;
     }
 
     .banner {
@@ -284,21 +307,52 @@
     }
 
     .bannerText {
-        width: 90vw;
-        font-size: 35px;
+        width: 95vw;
+        font-size: 30px;
     }
 
     .indexBoardText>.textLine {
-        font-size: 2.5vw;
+        font-size: 3vw;
+    }
+
+    .imgTitle {
+        font-size: 4vw;
+        padding-top: 5px;
     }
 
     .upImg {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .pageUp a {
+        width: 50px;
+        height: 50px;
     }
 
     .chatImg {
         width: 50px;
         height: 50px;
+    }
+
+    .chat {
+        width: 50px;
+        height: 50px;
+        bottom: 60px;
+    }
+
+    .chatModal,
+    .chatModal input,
+    .chatModal select,
+    .submitBtn {
+        font-size: 10px;
+    }
+
+    .chatModal .modal-footer {
+        padding: 0px;
+    }
+
+    .chatModal .modal-header {
+        padding: 10px;
     }
 }
