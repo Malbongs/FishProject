@@ -11,7 +11,31 @@
 }
 
 body {
-    color: black;
+    color: white;
+    background-color: black;
+}
+.banner {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    background-image: url("/static/image/deepocean.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.banner::before {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    content: " ";
+    background: linear-gradient(to bottom, transparent, black);
+}
+.banner-info {
+    width: 40%;
+    margin-left: 80px;
+    z-index: 1;
 }
 
 .slider {
@@ -32,7 +56,7 @@ body {
 }
 
 .subcontainer {
-    width: 85% !important;
+    width: 100% !important;
     margin: auto;
 }
 
@@ -46,14 +70,15 @@ body {
     border-bottom: 3px solid black;
 }
 .controller h2 {
-    color: black;
+    /* color: black; */
     font-size: 1.3em !important;
     font-weight: bolder !important;
     margin-bottom: 0 !important;
 }
 
 .controls-1 i, .controls-2 i, .controls-3 i, .controls-4 i{
-    color: black;
+    /* color: black; */
+    color: white;
     font-size: 1.3rem;
 }
 
@@ -64,7 +89,8 @@ body {
     outline: none;
     transition: 0.7s ease-in-out;
     border: none;
-    background-color: white;
+    background-color: transparent;
+    /* background-color: white; */
 }
 
 .slide-img {
