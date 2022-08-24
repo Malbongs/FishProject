@@ -21,7 +21,7 @@ body {
 }
 
 .slide h3 {
-    font-size: 1.17em !important;
+    font-size: 1em !important;
 }
 
 .container {
@@ -41,19 +41,20 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 50px;
-    padding: 0 15px 10px 15px;
-    border-bottom: 3px solid #65AAB5;
+    padding: 10px 15px 10px 15px;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
 }
 .controller h2 {
-    color: #65AAB5;
-    font-size: 1.5em !important;
+    color: black;
+    font-size: 1.3em !important;
     font-weight: bolder !important;
     margin-bottom: 0 !important;
 }
 
 .controls-1 i, .controls-2 i, .controls-3 i, .controls-4 i{
-    color: #65AAB5;
-    font-size: 1rem;
+    color: black;
+    font-size: 1.3rem;
 }
 
 .previous-1, .next-1, .previous-2, .next-2, .previous-3, .next-3, .previous-4, .next-4{
@@ -62,7 +63,7 @@ body {
     cursor: pointer;
     outline: none;
     transition: 0.7s ease-in-out;
-    border: 3px solid #65AAB5;
+    border: none;
     background-color: white;
 }
 
@@ -101,7 +102,10 @@ body {
     opacity: 1;
     transform: scale(1);
 }
-
+.slide div:nth-child(2) p {
+    font-size: 12px;
+    color: grey;
+}
 .img-1 {
     background-image: url("/static/image/onetwo1.png");
 }
