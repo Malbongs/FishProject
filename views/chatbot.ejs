@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/chatbot.css">
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- 토글러 묶음 -->
+  <div class="toggler">
+
+    <!-- 문의 -->
+    <div class="chat">
+      <button class="chatIcon" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <img class="chatImg" src="/static/image/blacklogo.png" alt="">
+      </button>
+    </div>
+  </div>
+
+  <!-- 문의 모달 -->
+  <div class="modal fade modal-lg chatModal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">실시간 문의</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body chatForm">
+          <div class="chatLine">
+            <div class="chatBg">🐳</div>
+            <div class="chatUser">낚당봇</div>
+            <div class="chatText">실시간 문의를 받기 위해 노력 중입니다</div>
+          </div>
+
+          <div class="chatLine">
+            <div class="chatBg">🐳</div>
+            <div class="chatUser">낚당봇</div>
+            <div class="chatText">모르는 내용이 많으니 이해해 주세요!</div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <div class="form-row inputForm">
+            <div class="col-2 col-lg-1">
+            </div>
+            <div class="col-2 col-lg-2">
+              <input id="nickName" class="form-control" placeholder="닉네임"></input>
+            </div>
+            <div class="col-6 col-lg-8">
+              <input id="text" class="form-control" placeholder="내용"></input>
+            </div>
+
+            <div class="col-2 col-lg-1">
+              <button type="button" class="btn btn-secondary submitBtn">문의</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+      // 채팅 입력 기능
+      $(".submitBtn").click(function() {
+        var  text = $("#text").val();
+        console.log(text);
+        var nickName = $("#nickName").val();
+        console.log(nickName);
+        var subtext = text.substr(0,2);
+        console.log(subtext);
+
+      // 입력값 유효성 체크
+      if (nickName == "") {
+        alert("닉네임을 입력해주세요.");
+      } else if (text == "") {
+        alert("내용을 입력해주세요.");
+      }else if ( subtext == "안녕"){
+        $(".chatForm").append(`<div class="chatLine">
+            <div class="chatBg">😀</div>
+            <div class="chatUser">${nickName}</div>
+            <div class="chatText">${text}</div>
+          </div>`)
+        $(".chatForm").append(`<div class="chatLine">
+            <div class="chatBg">🐳</div>
+            <div class="chatUser">낚당봇</div>
+            <div class="chatText">${nickName}님 안녕하세요!</div>
+          </div>`)
+      }else if(subtext == "쇼핑"){
+        $(".chatForm").append(`<div class="chatLine">
+            <div class="chatBg">😀</div>
+            <div class="chatUser">${nickName}</div>
+            <div class="chatText">${text}</div>
+          </div>`)
+        $(".chatForm").append(`<div class="chatLine">
+            <div class="chatBg">🐳</div>
+            <div class="chatUser">낚당봇</div>
+            <div class="chatText"><a href="/shop">NAKDANG.COM</a>으로 이동할게요!</div>
+          </div>`)
+      }else if(subtext == "게시"){
+        $(".chatForm").append(`<div class="chatLine">
+            <div class="chatBg">😀</div>
+            <div class="chatUser">${nickName}</div>
+            <div class="chatText">${text}</div>
+          </div>`)
+        $(".chatForm").append(`<div class="chatLine">
+            <div class="chatBg">🐳</div>
+            <div class="chatUser">낚당봇</div>
+            <div class="chatText"><a href="/board">자유게시판</a>으로 이동할게요!</div>
+          </div>`)
+      }
+      else if(subtext == "정보"){
+        $(".chatForm").append(`<div class="chatLine">
+            <div class="chatBg">😀</div>
+            <div class="chatUser">${nickName}</div>
+            <div class="chatText">${text}</div>
+          </div>`)
+        $(".chatForm").append(`<div class="chatLine">
+            <div class="chatBg">🐳</div>
+            <div class="chatUser">낚당봇</div>
+            <div class="chatText"><a href="/fishinfo">월별 정보</a>으로 이동할게요!</div>
+          </div>`)
+      }
+      else if(subtext == "제작"){
+        $(".chatForm").append(`<div class="chatLine">
+            <div class="chatBg">😀</div>
+            <div class="chatUser">${nickName}</div>
+            <div class="chatText">${text}</div>
+          </div>`)
+        $(".chatForm").append(`<div class="chatLine">
+            <div class="chatBg">🐳</div>
+            <div class="chatUser">낚당봇</div>
+            <div class="chatText">2조 최준현 우석우 최고은 정지웅 분들이 만들었어요!</div>
+          </div>`)
+      }
+      else{
+        $(".chatForm").append(`<div class="chatLine">
+            <div class="chatBg">😀</div>
+            <div class="chatUser">${nickName}</div>
+            <div class="chatText">${text}</div>
+          </div>`)
+        $(".chatForm").append(`<div class="chatLine">
+            <div class="chatBg">🐳</div>
+            <div class="chatUser">낚당봇</div>
+            <div class="chatText">${nickName}님 제가 모르는 내용이예요ㅠㅠ</div>
+          </div>`)
+      }
+    });
+</script>
+
+
+</body>
+</html>
