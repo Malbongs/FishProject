@@ -69,7 +69,7 @@
               <img style="width: 20px; height: 20px;" src="/static/image/board/lev6.png" alt="">
               관리자
             </td>
-            <td>08. 16</td>
+            <td>8. 16</td>
           </tr>
           <% } %>
         </tbody>
@@ -85,17 +85,48 @@
   <!-- 위로 스크롤 -->
   <div class="pageUp">
     <a href="#" title="Back to Top" style="display:scroll; position:fixed; bottom:10px; right:10px;" onfocus='this.blur()'>
+      <div class="upText">TOP</div>
       <img class="upImg" src="/static/image/board/up.png">
     </a>
   </div>
+
   <!-- dataTable -->
   <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
   <script>
+    // 게시글 작성 후 제목, 작성자, 날짜 가져오기
+    if (localStorage.getItem('title')) {
+      var titleData = localStorage.getItem('title')
+    }
+    if (localStorage.getItem('writer')) {
+      var writerData = localStorage.getItem('writer')
+    }
+    if (localStorage.getItem('today')) {
+      var dayData = localStorage.getItem('today')
+    }
+
+    // 테이블 가져오기
+    const table = document.querySelector('table');
+    // 행 추가
+    const tr_01 = table.insertRow();
+
+    // 셀 추가
+    const td_01 = tr_01.insertCell(0);
+    td_01.textContent = '51'
+    const td_02 = tr_01.insertCell(1);
+    td_02.textContent = titleData
+    const td_03 = tr_01.insertCell(2);
+    td_03.innerHTML = "<img src = '/static/image/board/lev4.png' style = 'width:20px; height:20px'> " + writerData
+    const td_04 = tr_01.insertCell(3);
+    td_04.textContent = dayData
+
     $(document).ready(function() {
       $('#myTable').DataTable({
         info: false,
         autoWidth: false,
+        order: [
+          [0, 'desc']
+        ],
         language: {
           search: "검색"
         },
@@ -114,11 +145,19 @@
           {
             "width": "20%"
           }
-        ]
+        ],
+        initComplete: function() {
+          if (localStorage.getItem('searchText')) {
+            var searchData = localStorage.getItem('searchText');
+            console.log(searchData);
+          }
+          $('#myTable_filter input').val(searchData);
+          $('#myTable_filter input').trigger("input");
+          localStorage.removeItem('searchText');
+        }
 
       });
     });
-
     // 페이지 맨위로 올라가기
     $(".upImg").click(function(e) {
       e.preventDefault();
@@ -134,6 +173,16 @@
         'margin-bottom': '0px'
       }, 300);
     });
+
+    // setTimeout(function() {
+    //   if (localStorage.getItem('searchText')) {
+    //     var searchData = localStorage.getItem('searchText');
+    //     console.log(searchData);
+    //   }
+    //   $('#myTable_filter input').val(searchData);
+    //   $('#myTable_filter input').trigger("input");
+    //   localStorage.removeItem('searchText');
+    // }, 500)
   </script>
 </body>
 
