@@ -12,29 +12,27 @@
 }
 
 .wrapper {
-    width: 20%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 100%;
     border-radius: 3%;
     margin: 0;
-    background-color: rgb(29, 28, 28);
+    background-color: transparent;
 }
 .wrapper header {
     color: white;
     font-size: 21px;
     font-weight: 500;
-    padding: 16px 15px;
+    padding: 16px 0px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid white;
 }
 header i {
+    color: black;
     cursor: pointer;
     font-size: 0px;
     margin-right: 8px;
 }
 .wrapper.active header i {
     font-size: 30px;
-    margin-left: 5px;
 }
 .wrapper .input-part {
     margin: 20px 25px 30px;
@@ -88,10 +86,10 @@ header i {
 }
 .separator::before{
     content: 'or';
-    color: white;
+    color: black;
     font-size: 19px;
     padding: 0 15px;
-    background: rgb(29, 28, 28);
+    background: transparent;
 }
 .input-part button {
     color: black;
@@ -112,7 +110,7 @@ header i {
     max-width: 125px;
 }
 .weather-part .temp {
-    color: white;
+    color: black;
     display: flex;
     font-size: 72px;
     font-weight: 500;
@@ -133,7 +131,7 @@ header i {
 .weather-part .location {
     display: flex;
     align-items: center;
-    color: white;
+    color: black;
     font-size: 21px;
     margin-bottom: 30px;
 }
@@ -145,7 +143,7 @@ header i {
     width: 100%;
     display: flex;
     align-items: center;
-    border-top: 1px solid white;
+    border-top: 1px solid black;
     justify-content: space-between;
 }
 .bottom-details .column {
@@ -156,21 +154,20 @@ header i {
     align-items: center;
 }
 .column i {
-    color: white;
+    color: black;
     font-size: 40px;
     padding-right: 10px;
 }
 .column.humidity {
-    border-left: 1px solid white;
+    border-left: 1px solid black;
 }
 .details {
-    color: white;
+    color: black;
     padding-top: 10px;
 }
 .details .temp, .humidity span {
     font-size: 18px;
     font-weight: 500;
-    /* margin-top: -3px; */
 }
 .details .temp .deg {
     margin: 0;
@@ -178,16 +175,6 @@ header i {
     padding: 0 2px 0 1px
 }
 .details p {
-    color: white;
+    color: black;
     font-size: 14px;
-}
-
-@media screen and (min-width: 100px) and (max-width:1024px) {
-    .wrapper {
-        width: 50%;
-        margin: auto;
-        padding-bottom: 10px;
-        margin-bottom: 10px;
-    }
-
 }

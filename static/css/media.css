@@ -7,9 +7,7 @@
 * {
     font-family: 'HallymGothic-Regular';
     margin: 0;
-
 }
-
 body {
     color: white;
     background-color: black;
@@ -37,7 +35,12 @@ body {
     margin-left: 80px;
     z-index: 1;
 }
-
+.engTitle {
+    animation: fadein 3s;
+}
+.korTitle {
+    animation: fadein 5s;
+}
 .slider {
     display: flex;
     justify-content: center;
@@ -66,8 +69,6 @@ body {
     align-items: center;
     height: 50px;
     padding: 10px 15px 10px 15px;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
 }
 .controller h2 {
     /* color: black; */
@@ -97,17 +98,18 @@ body {
     width: 100%;
     height: 230px;
     background-position: center;
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+    margin-bottom: 10px;
 } 
 
 .slide-img:hover {
-    box-shadow: 0 0 0 230px rgba(0, 0, 0, 0.9) inset;
+    box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.9) inset;
 }
 
 .slide-img a {
@@ -196,5 +198,14 @@ body {
 @media(max-width:1600px) {
     .container {
         width: 100%;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

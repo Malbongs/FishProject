@@ -87,7 +87,6 @@
 
   <!-- 월별 낚시 정보로 이동 -->
   <div class="part2" id="two">
-    <%-include("weather.ejs")%>
     <div class="box2">
       <div class="box3">
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rA04czNV7GI?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -128,6 +127,28 @@
     </div>
   </div>
   
+  <!-- Button trigger modal -->
+<button type="button" class="weather" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <img src="/static/image/weather.png" class="weatherIcon">
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="width: 400px;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">날 씨</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%-include("weather.ejs")%>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <%-include("footer.ejs")%>
 
