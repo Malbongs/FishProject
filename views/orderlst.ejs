@@ -172,9 +172,9 @@
             box.appendChild(one);
           });
           const showPrice = document.createElement("div");
-          showPrice.innerText = `결제금액 : ${
-            total * (0.9).toLocaleString()
-          }원`;
+          showPrice.innerText = `결제금액 : ${parseInt(
+            total * 0.9
+          ).toLocaleString()}원`;
           showPrice.classList.add("totalPrice");
           div1.appendChild(showPrice);
           div1.appendChild(box);
