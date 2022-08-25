@@ -101,7 +101,11 @@
       #priceDisplay {
         margin-left: 100px;
         margin-right: 100px;
-        background-color: rgb(250, 250, 250);
+        background: linear-gradient(
+          to right,
+          rgb(250, 250, 255),
+          rgb(255, 250, 250)
+        );
         border-radius: 10px;
       }
       #order_price {
@@ -109,6 +113,7 @@
         display: inline-block;
       }
       #order {
+        cursor: pointer;
         margin-top: 20px;
         margin-bottom: 20px;
         text-align: center;
@@ -116,7 +121,11 @@
       #order_price {
         padding-top: 7px;
         border-radius: 10px;
-        background-color: rgb(240, 240, 240);
+        background: linear-gradient(
+          to right,
+          rgb(250, 250, 255),
+          rgb(255, 250, 250)
+        );
         width: 200px;
         height: 40px;
       }
@@ -326,6 +335,13 @@
           document.querySelector(".row").appendChild(div2);
         });
       }
+      document.querySelector("#order").addEventListener("click", (event) => {
+        window.localStorage.setItem(
+          "order",
+          JSON.stringify(JSON.parse(window.localStorage.getItem("basket")))
+        );
+        window.location = "/shop/order";
+      });
     </script>
     <script src="/static/js/handleBasket.js"></script>
   </body>
