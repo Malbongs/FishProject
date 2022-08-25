@@ -7,15 +7,15 @@ nav{
 }
 
 nav *{
-    font-size: 17px !important;
+    font-size: 15px !important;
     font-family: "SUIT-Medium" !important;
-    color: white !important;
+    color: black !important;
 }
 
 .logoimg{
 
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 40px;
 }
 
 @font-face {
