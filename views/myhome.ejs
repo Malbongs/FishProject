@@ -29,7 +29,7 @@
           rgb(250, 240, 255)
         );
         display: inline-block;
-        width: 350px;
+        width: 330px;
         height: 400px;
         background-color: rgb(250, 250, 250);
         border-radius: 15px;
@@ -141,8 +141,9 @@
   </head>
   <body>
     <%-include("shopNav.ejs")%>
+    <h1 class="category_shop">마이홈</h1>
     <div class="row myInfo">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6 col-xl-4">
         <div class="infoDisplay">
           <img
             class="update"
@@ -168,7 +169,7 @@
           </p>
         </div>
       </div>
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6 col-xl-4">
         <div class="infoDisplay">
           <img
             class="update"
@@ -204,7 +205,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6 col-xl-4">
         <div class="infoDisplay">
           <img class="update" val="pay" src="/static/image/update.png" alt="" />
           <div class="pay">
@@ -221,7 +222,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6 col-xl-4">
         <div class="infoDisplay">
           <img
             class="update"
@@ -247,6 +248,7 @@
       </div>
     </div>
     <%-include("footer.ejs")%>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"

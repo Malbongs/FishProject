@@ -7,7 +7,7 @@ document.querySelector(".basket_page").addEventListener("click",(event)=>{
       alert("정상적이지 않은 입력값 입니다.");
       return;
     }
-    const item = {id,title,price,howMany};
+    const item = {id,title,price,howMany,"from":'true'};
     if (!window.localStorage.getItem("basket")){
       window.localStorage.setItem("basket",JSON.stringify([]));
     }
