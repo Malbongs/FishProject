@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>NACKDANG</title>
     <!-- 타이틀 옆 아이콘 입니다! -->
-    <link href="/static/image/logo.jpeg" rel="shortcut icon" type="image/x-icon">
+    <link href="/static/image/title.png" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" href="/static/css/footer.css">
 </head>
 
@@ -19,8 +19,8 @@
 
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand"  href="#main"><img class="logoimg" src="/static/image/logo.jpeg"></a>
-      <button class="navbar-toggler" style="background-color: white !important;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand"  href="#main"><img class="logoimg" src="/static/image/whitelogo.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -41,20 +41,21 @@
             <a class="nav-link"  href="/loginForm">LOGIN</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="/board">BOARD</a>
+            <a class="nav-link"  href="/board">COMMUNITY</a>
           </li>
 
           
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="color: black !important;">
+          <button type="button" class="btn btn-success">Search</button>
         </form>
       </div>
     </div>
   </nav>
   
-
+  <!-- 챗봇 인클루드 -->
+  <%-include("chatbot.ejs")%>
 
   <div class="div1" id="main">
     <div class="div2">
@@ -87,12 +88,12 @@
 
   <!-- 월별 낚시 정보로 이동 -->
   <div class="part2" id="two">
-    <%-include("weather.ejs")%>
-    <div class="box2">
-      <div class="box3">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rA04czNV7GI?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <button type="button" class="btn btn-outline-dark" onclick="location.href='/fishinfo'">월별 낚시 정보 바로가기</button>
-      </div>
+    <a href="https://www.youtube.com/c/%EB%8F%84%EC%8B%9C%EC%96%B4%EB%B6%80Grrr" target="_blank">
+      <img class="dosi" src="/static/image/dosi.png">
+    </a>
+    <div class="contentbox">
+      <iframe  width="854px" height="480px" src="https://www.youtube.com/embed/rA04czNV7GI?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <img class="seson" src="/static/image/seson.png" onclick="location.href='/fishinfo'">
     </div>
   </div>
 
@@ -100,10 +101,10 @@
   <!-- 쇼핑몰 페이지 이동 -->
   <div class="part3" id="three">
     <div class="shop">
-      <div class="NACK">NACKDANG.COM<img style="width:100px; height: 100px;" onclick="location.href='/shop'" src="/static/image/logo.jpeg"></div>
-      <img src="/static/image/shop1.png" onclick="location.href='/shop'">
-      <img src="/static/image/shop2.png" onclick="location.href='/shop'">
-      <img src="/static/image/shop3.png" onclick="location.href='/shop'">
+      <div class="NACK">NACKDANG.COM<img style="width:100px; height: 100px;" onclick="location.href='/shop'" src="/static/image/title.png"></div>
+      <img class="shopimg" src="/static/image/shop1.png" onclick="location.href='/shop'">
+      <img class="shopimg" src="/static/image/shop2.png" onclick="location.href='/shop'">
+      <img class="shopimg" src="/static/image/shop3.png" onclick="location.href='/shop'">
     </div>
   </div>
 
@@ -113,7 +114,6 @@
     <div class="background"></div>
     <div class="background"></div>
     <div class="news" onclick="location.href='/media'">MEDIA</div>
-    <div class="background"></div>
     <div class="col-12 col-md-4">
       <iframe width="100%" height="230px;" src="https://www.youtube.com/embed/yZ_QYbfHKGg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <div class="tag"><b>원투낚시 기초 강좌!</b><p>원투낚시 기초강좌를 시청하세요!</p></div>
@@ -140,8 +140,11 @@
       var scroll = $(this).scrollTop();
       if (scroll >=700){
         $("nav").addClass("change");
+        $(".logoimg").attr("src","/static/image/blacklogo.png");
+
       }else if($("nav").hasClass("change")){
         $("nav").removeClass("change");
+        $(".logoimg").attr("src","/static/image/whitelogo.png");
       }
       scrollval = scroll;
     })

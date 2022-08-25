@@ -15,28 +15,38 @@ nav{
 }
 
 nav *{
-    font-size: 17px !important;
+    font-size: 15px !important;
     font-family: "SUIT-Medium" !important;
     color: white !important;
 }
  
 .change{
-    background-color: rgb(29, 28, 28);
+    background-color: white;
+}
+.change a{ 
+    color: black !important;
 }
 
 .logoimg{
 
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 40px;
 }
-.logoFont{
-    font-size: 50px;
+
+.seson{
+   
+    width: 200px;
+    height: 200px;
+}
+.seson:hover{
+    cursor: pointer;
+    
 }
 /* 메인페이지 */
 .div1{ 
    
     width: 100%;
-    height: 860px;
+    height: 850px;
     animation-name: div1;
     animation-duration: 20s;
     animation-timing-function: ease;
@@ -85,7 +95,7 @@ nav *{
     .part1{
        
         width: 100%;
-        height: 800px;
+        height: 850px;
         font-family: "SUIT-Medium";
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url('/static/image/vison.jpeg');
         background-size: cover;
@@ -96,7 +106,7 @@ nav *{
     h1{
         font-weight: bold;
         position: relative;
-        top: 100px;
+        top: 180px;
         text-align: center;
         color: white;
         font-size: 80px;
@@ -105,7 +115,7 @@ nav *{
     .vison{
         
         position:relative;
-        top: 300px;
+        top: 400px;
         text-align: center;
         color: white;
         font-size: 30px;
@@ -122,45 +132,33 @@ nav *{
    
     /* 두번째 화면 */
     .part2{
-        position: relative;
-        text-align: center;
+        position: relative; 
         width: 100%;
         height: 860px;
-        background-image: url('/static/image/fish.jpeg');
-        background-size: cover;
-        z-index: 0;
-        display: flex; 
-        justify-content: space-evenly; 
+        text-align: center;
+    }
+
+    .contentbox{
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-
-        
+        padding: 5%;
     }
-
-    .box2{ 
-        border-radius: 3%;
-        /* display: inline-block; */
-        width : 70%;
-        height : 60%;
-        background-color: white;
-        box-shadow: 5px 5px 5px;
-       
+    .dosi{
+        margin-top: 30px;
+        width: 450px;
     }
-
-    .box3{ 
-        border-radius: 3%;
-        display: inline-block;
-        margin-top: 45px;
-        width : 80%;
-        height : 80%;
-        box-shadow: 5px 5px 5px;
-       
+    .dosi:hover{
+        cursor: pointer;
     }
-
+    .seson:hover{
+        cursor: pointer;
+    }
     /* 세번째 화면 */
     .part3{
         text-align: center;
         width: 100%;
-        height: 800px;
+        height: 850px;
         
     }
 
@@ -170,6 +168,9 @@ nav *{
         font-weight: 2000;
     }
     
+    .NACK img:hover{
+        cursor: pointer;
+    }
 
     .shop{
         display: inline-block;
@@ -181,9 +182,9 @@ nav *{
     .shop img{
         padding: 15px;
         width: 100%;
-        height: 25%;
+        height: 20%;
     }
-    .shop img:hover{
+    .shop .shopimg:hover{
         cursor: pointer;
         transform: scale(1.2);
         transition: all 0.2s linear;
@@ -197,7 +198,9 @@ nav *{
      }
 
     
-     .news{
+     .news{ 
+        margin-top: 150px;
+        margin-bottom: 50px;
         font-family: "SUIT-Medium";
         font-weight: 1000;
         color: black;
@@ -214,10 +217,6 @@ nav *{
         display: flex;
         padding: 10px; 
      }
-    .background{
-        width: 100px;
-        height: 100px;
-    }
 
     
     

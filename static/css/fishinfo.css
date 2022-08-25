@@ -19,11 +19,7 @@ body{
     width: 600px;
     font-size: 40px;
     font-family: "SUIT-Medium";
-    align-items: center;
     color: white;
-    
-    
-   
 }
 .sub{
     display: none;
@@ -707,10 +703,8 @@ select{
     top: 100px;
     width: 100px;
     height: 40px;
-    font-size: 20px;
+    font-size: 15px;
     font-family: "SUIT-Medium";
-    color: white;
-    background-color: rgb(29, 28, 28);
     z-index: 50;
 
 }
