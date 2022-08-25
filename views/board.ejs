@@ -24,6 +24,82 @@
   <!-- 네비바 인클루드 입니다. -->
   <%-include("nav.ejs")%>
 
+  <div class="rankWrap" data-aos="fade-down" data-aos-anchor-placement="top-bottom">
+    <div class="indexBoard">
+      <div class="rankTitle">
+        <h3>실시간검색어</h3>
+        <span>가장 많이 검색된 키워드 🐳</span>
+        <span>22. 8. 25.(목) 오후 15:18</span>
+        </dul>
+        <div class="rankWord">
+          <ol class="rankList">
+
+            <li>
+              <div class="rankNum">1</div>
+              <a class="rankText" id="rankText" href="/boardLure">꿀팁</a>
+              <span style="color: red;">▲</span>
+            </li>
+
+            <li>
+              <div class="rankNum">2</div>
+              <a class="rankText" id="rankText" href="/boardLure">찌 낚시</a>
+              <span style="color: red;">▲</span>
+            </li>
+
+            <li>
+              <div class="rankNum">3</div>
+              <a class="rankText" id="rankText" href="/boardLure">오늘 날씨</a>
+              <span style="color: red;">▲</span>
+            </li>
+
+            <li>
+              <div class="rankNum">4</div>
+              <a class="rankText" id="rankText" href="/boardLure">선상 낚시</a>
+              <span style="color: red;">▲</span>
+            </li>
+
+            <li>
+              <div class="rankNum">5</div>
+              <a class="rankText" id="rankText" href="/boardLure">루어 낚시</a>
+              <span style="color: red;">▲</span>
+            </li>
+
+            <li>
+              <div class="rankNum">6</div>
+              <a class="rankText" id="rankText" href="/boardLure">낚싯대 추천</a>
+              <span style="color: blue;">▼</span>
+            </li>
+
+            <li>
+              <div class="rankNum">7</div>
+              <a class="rankText" id="rankText" href="/boardLure">횟집 추천</a>
+              <span style="color: blue;">▼</span>
+            </li>
+
+            <li>
+              <div class="rankNum">8</div>
+              <a class="rankText" id="rankText" href="/boardLure">원투 낚시</a>
+              <span style="color: blue;">▼</span>
+            </li>
+
+            <li>
+              <div class="rankNum">9</div>
+              <a class="rankText" id="rankText" href="/boardLure">낚시터 추천</a>
+              <span style="color: blue;">▼</span>
+            </li>
+
+            <li>
+              <div class="rankNum">10</div>
+              <a class="rankText" id="rankText" href="/boardLure">가을 낚시</a>
+              <span style="color: blue;">▼</span>
+            </li>
+
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <a class="bannerWrap" href="/main">
     <div class="banner">
       <div class="bannerText">
@@ -40,8 +116,8 @@
       <!--전체게시글 -->
       <div class="indexBoard" data-aos="fade-up">
         <div class="indexBoardTitle">
-          <h3><a href="/boardInner">전체게시글</a></h3>
-          <div class="more"><a href="#">더보기</a></div>
+          <h3><a href="/boardLure">전체게시글</a></h3>
+          <div class="more"><a href="/boardLure">더보기</a></div>
         </div>
         <% for(i=0; i<4; i++) { %>
         <div class="indexBoardText">
@@ -277,6 +353,7 @@
     <!-- 페이지 맨위로 -->
     <div class="pageUp">
       <a href="#" title="Back to Top" style="display:scroll; position:fixed; bottom:10px; right:10px;" onfocus='this.blur()'>
+        <div class="upText">TOP</div>
         <img class="upImg" src="/static/image/board/up.png">
       </a>
     </div>
@@ -402,6 +479,12 @@
       $(".pageUp a").animate({
         'margin-bottom': '0px'
       }, 300);
+    });
+
+    // 실시간 검색어 기능
+    $(".rankText").click(function() {
+      var searchText = $(this).text();
+      localStorage.setItem('searchText', searchText);
     });
   </script>
 </body>

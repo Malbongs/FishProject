@@ -31,11 +31,11 @@
     </section>
     <h4 class="writeTitle">제목</h4>
     <section class="boardList articleTitle">
-      <input class="form-control titleForm" type="text" placeholder="제목을 입력해주세요">
+      <input id="title" class="form-control titleForm" type="text" placeholder="제목을 입력해주세요">
     </section>
     <h4 class="writeTitle">작성자</h4>
     <section class="boardList articleWriter">
-      <input class="form-control" type="text" placeholder="작성자를 입력해주세요">
+      <input id="writer" class="form-control" type="text" placeholder="작성자를 입력해주세요">
     </section>
     <h4 class="writeTitle">내용
     </h4>
@@ -51,7 +51,7 @@
       </div>
 
       <div class="writeBtn" style="margin-top: 5px;">
-        <button type="button" class="btn btn-secondary submitBtn">작성</button>
+        <button type="button" class="btn submitBtn">작성</button>
         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#cancelModal">
           취소</button>
       </div>
@@ -82,6 +82,7 @@
   <!-- 위로 스크롤 -->
   <div class="pageUp">
     <a href="#" title="Back to Top" style="display:scroll; position:fixed; bottom:10px; right:10px;" onfocus='this.blur()'>
+      <div class="upText">TOP</div>
       <img class="upImg" src="/static/image/board/up.png">
     </a>
   </div>
@@ -90,7 +91,19 @@
   <script>
     // 작성하기 버튼
     $(".submitBtn").click(function() {
-      alert("준비중입니다.")
+      alert("작성이 완료되었습니다.");
+
+      var dt = new Date();
+      var today = (dt.getMonth() + 1) + '. ' + dt.getDate();
+
+      titleText = $('#title').val();
+      writerText = $('#writer').val();
+
+      localStorage.setItem('title', titleText);
+      localStorage.setItem('writer', writerText);
+      localStorage.setItem('today', today);
+
+      location.href = "boardLure"
     });
 
     // 첨부파일 버튼
