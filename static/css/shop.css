@@ -745,8 +745,8 @@ p.intro span:nth-child(3){
 .spons span{
   background: linear-gradient(
     to right,
-    rgb(65, 41, 101),
-    rgb(236, 144, 142)
+    rgb(240, 240, 250),
+    rgb(240, 240, 230)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
