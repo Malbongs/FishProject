@@ -647,4 +647,107 @@ p.intro span:nth-child(3){
   position: fixed;
   top:500px;
 }
+.pic{
+  animation-name:come;
+  animation-duration: 1s;
+  position:fixed;
+  top:90px;
+  height:800px;
+  width: 100%;
+  background-image: url("/static/image/ground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.fishmallbox{
+  display:flex;
+  justify-content: center;
+  z-index: 99;
+  width: 100%;
+  height:300px;
+  position:fixed;
+  top:-280px;
+}
+.fbox{
+  width: 150px;
+  height:150px;
+  border-radius: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(255,255,255,0.3);
+}
+.fishmallbox2{
+  display:flex;
+  justify-content: center;
+  z-index: 99;
+  width: 100%;
+  height:300px;
+  position:fixed;
+  top:-280px;
+}
+.fbox2{
+  padding-top: 30px;
+  padding-left: 30px;
+  width: 150px;
+  height:150px;
+  border-radius: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: rgb(255,255,255,0.3);
+}
+.fishmallbox3{
+  display:flex;
+  justify-content: center;
+  z-index: 99;
+  width: 100%;
+  height:300px;
+  position:fixed;
+  top:-280px;
+}
+.fbox3{
+  width: 150px;
+  height:150px;
+  border-radius: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(255,255,255,0.3);
+}
+.fishmallbox4{
+  display:flex;
+  justify-content: center;
+  z-index: 99;
+  width: 100%;
+  height:300px;
+  position:fixed;
+  top:-280px;
+}
+.fbox4{
+  width: 150px;
+  height:150px;
+  border-radius: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(255,255,255,0.3);
+}
+.spons{
+  font-weight: 700;
+  animation-name:come;
+  animation-duration: 3s;
   
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+  position:fixed;
+  top:150px;
+  
+}
+.spons span{
+  background: linear-gradient(
+    to right,
+    rgb(240, 240, 250),
+    rgb(240, 240, 230)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

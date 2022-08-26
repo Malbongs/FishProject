@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="/static/css/shop.css" />
     <link rel="stylesheet" href="/static/css/footer.css" />
     <!-- 타이틀 옆 아이콘 입니다! -->
-    <link href="/static/image/title.png" rel="shortcut icon" type="image/x-icon">
+    <link
+      href="/static/image/title.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,7 +21,7 @@
     <style>
       body {
         background-color: white;
-        height: 8000px;
+        height: 12000px;
       }
     </style>
   </head>
@@ -31,7 +35,7 @@
         arr.push(image);
       }
     </script>
-    <nav id="main">
+    <nav id="main" style="z-index: 100">
       <div class="upper-nav">
         <a href="/shop" style="text-decoration: none"
           ><p id="title">NAKDANG.COM</p></a
@@ -364,7 +368,7 @@
             });
           }
         }
-        if (scrollY > 6050) {
+        if (scrollY > 6050 && scrollY < 7800) {
           if (!document.querySelector(".fish")) {
             document
               .querySelector("body")
@@ -385,7 +389,7 @@
             document.querySelector(".intro").remove();
           }
         }
-        if (scrollY > 6060) {
+        if (scrollY > 6060 && scrollY < 7800) {
           if (!document.querySelector(".intro")) {
             const intro = document.createElement("p");
             const span = document.createElement("span");
@@ -418,11 +422,245 @@
           const intro = document.querySelector(".intro");
           intro.style.opacity = (scrollY - 6060) / 500;
         }
-        if (scrollY > 6660) {
+        if (scrollY > 6660 && scrollY < 7800) {
           const intro = document.querySelector(".intro");
           intro.style.opacity = 1;
         }
+        if (scrollY > 7800) {
+          if (document.querySelectorAll(".fish")) {
+            document.querySelectorAll(".fish").forEach((ele) => {
+              ele.remove();
+            });
+            if (document.querySelector(".intro")) {
+              document.querySelector(".intro").remove();
+            }
+          }
+        }
+        if (scrollY <= 7800) {
+          if (document.querySelector(".pic")) {
+            document.querySelector(".pic").remove();
+          }
+          if (document.querySelector(".fishmallbox")) {
+            document.querySelector(".fishmallbox").remove();
+          }
+          if (document.querySelector(".fishmallbox2")) {
+            document.querySelector(".fishmallbox2").remove();
+          }
+          if (document.querySelector(".fishmallbox3")) {
+            document.querySelector(".fishmallbox3").remove();
+          }
+          if (document.querySelector(".fishmallbox4")) {
+            document.querySelector(".fishmallbox4").remove();
+          }
+        }
+        if (scrollY > 7800) {
+          if (!document.querySelector(".pic")) {
+            const pic = document.createElement("div");
+            pic.classList.add("pic");
+            document.body.appendChild(pic);
+          }
+          if (!document.querySelector(".fishmallbox2")) {
+            const dupbox = document.createElement("div");
+            dupbox.classList.add("fishmallbox2");
+            const fbox2 = document.createElement("div");
+            fbox2.classList.add("fbox2");
+
+            dupbox.appendChild(fbox2);
+            document.body.appendChild(dupbox);
+          }
+          if (!document.querySelector(".fishmallbox")) {
+            const mallbox = document.createElement("div");
+            mallbox.classList.add("fishmallbox");
+            const fbox = document.createElement("div");
+
+            fbox.classList.add("fbox");
+
+            mallbox.appendChild(fbox);
+
+            document.body.appendChild(mallbox);
+          }
+          if (!document.querySelector(".fishmallbox3")) {
+            const mallbox = document.createElement("div");
+            mallbox.classList.add("fishmallbox3");
+            const fbox = document.createElement("div");
+
+            fbox.classList.add("fbox3");
+
+            mallbox.appendChild(fbox);
+
+            document.body.appendChild(mallbox);
+          }
+          if (!document.querySelector(".fishmallbox4")) {
+            const mallbox = document.createElement("div");
+            mallbox.classList.add("fishmallbox4");
+            const fbox = document.createElement("div");
+
+            fbox.classList.add("fbox4");
+
+            mallbox.appendChild(fbox);
+
+            document.body.appendChild(mallbox);
+          }
+        }
+        if (scrollY < 7800) {
+          if (document.querySelector(".dday")) {
+            if (document.querySelector(".dday").style.top != "500px") {
+              document.querySelector(".dday").style.top = "500px";
+            }
+          }
+        }
+        if (scrollY > 7800 && scrollY < 8500) {
+          if (document.querySelector(".fishmallbox")) {
+            const temp = document.querySelector(".fishmallbox");
+            temp.style.top =
+              new String(-280 + parseInt((480 * (scrollY - 7800)) / 700)) +
+              "px";
+          }
+          if (document.querySelector(".fishmallbox2")) {
+            const temp = document.querySelector(".fishmallbox2");
+            temp.style.top =
+              new String(-280 + parseInt((480 * (scrollY - 7800)) / 700)) +
+              "px";
+          }
+          if (document.querySelector(".fishmallbox3")) {
+            const temp = document.querySelector(".fishmallbox3");
+            temp.style.top =
+              new String(-280 + parseInt((480 * (scrollY - 7800)) / 700)) +
+              "px";
+          }
+          if (document.querySelector(".fishmallbox4")) {
+            const temp = document.querySelector(".fishmallbox4");
+            temp.style.top =
+              new String(-280 + parseInt((480 * (scrollY - 7800)) / 700)) +
+              "px";
+          }
+          const ddbox = document.querySelector(".dday");
+          ddbox.style.top =
+            new String(500 + parseInt((200 * (scrollY - 7800)) / 700)) + "px";
+        }
+        if (scrollY > 8500) {
+          if (document.querySelector(".fishmallbox").style.top != "220px") {
+            document.querySelector(".fishmallbox").style.top = "220px";
+          }
+          if (document.querySelector(".fishmallbox3").style.top != "220px") {
+            document.querySelector(".fishmallbox3").style.top = "220px";
+          }
+          if (document.querySelector(".dday").style.top != "700px") {
+            document.querySelector(".dday").style.top = "700px";
+          }
+        }
+        if (scrollY > 8500 && scrollY < 9200) {
+          const dup = document.querySelector(".fishmallbox2");
+          dup.style.top = `${220 + (200 * parseInt(scrollY - 8500)) / 700}px`;
+        }
+        if (scrollY > 8500 && scrollY < 9200) {
+          const dup = document.querySelector(".fishmallbox4");
+          dup.style.top = `${220 + (200 * parseInt(scrollY - 8500)) / 700}px`;
+        }
+        if (scrollY > 9200) {
+          const dup = document.querySelector(".fishmallbox2");
+          if (dup.style.top != "420px") {
+            dup.style.top = "420px";
+          }
+        }
+        if (scrollY > 9200) {
+          const dup = document.querySelector(".fishmallbox4");
+          if (dup.style.top != "420px") {
+            dup.style.top = "420px";
+          }
+        }
+        if (scrollY < 9200) {
+          const one = document.querySelector(".fbox");
+          if (one) {
+            if (one.style.marginLeft != "0px") {
+              one.style.marginLeft = "0px";
+            }
+          }
+        }
+        if (scrollY < 9200) {
+          if (document.querySelector(".fbox")) {
+            document.querySelector(".fbox").style.marginLeft = "0px";
+          }
+          if (document.querySelector(".fbox2")) {
+            document.querySelector(".fbox2").style.marginLeft = "0px";
+          }
+          if (document.querySelector(".fbox3")) {
+            document.querySelector(".fbox3").style.marginRight = "0px";
+          }
+          if (document.querySelector(".fbox4")) {
+            document.querySelector(".fbox4").style.marginRight = "0px";
+          }
+        }
+        if (scrollY > 9200 && scrollY < 9500) {
+          const one = document.querySelector(".fbox");
+          one.style.marginLeft =
+            `${parseInt((200 * (scrollY - 9200)) / 300)}` + "px";
+          const two = document.querySelector(".fbox2");
+          two.style.marginLeft =
+            `${parseInt((200 * (scrollY - 9200)) / 300)}` + "px";
+          const three = document.querySelector(".fbox3");
+          three.style.marginRight =
+            `${parseInt((200 * (scrollY - 9200)) / 300)}` + "px";
+          const four = document.querySelector(".fbox4");
+          four.style.marginRight =
+            `${parseInt((200 * (scrollY - 9200)) / 300)}` + "px";
+        }
+        if (scrollY < 9500) {
+          if (document.querySelector(".spons")) {
+            document.querySelector(".spons").remove();
+          }
+        }
+        if (scrollY < 9500) {
+          const one = document.querySelector(".fbox");
+          if (one.style.backgroundImage) {
+            one.style.backgroundImage = "";
+          }
+          const two = document.querySelector(".fbox2");
+          if (two.style.backgroundImage) {
+            two.style.backgroundImage = "";
+          }
+          const three = document.querySelector(".fbox3");
+          if (three.style.backgroundImage) {
+            three.style.backgroundImage = "";
+          }
+          const four = document.querySelector(".fbox4");
+          if (four.style.backgroundImage) {
+            four.style.backgroundImage = "";
+          }
+        }
+        if (scrollY > 9500) {
+          const one = document.querySelector(".fbox");
+          if (!one.style.backgroundImage) {
+            one.style.backgroundImage = "url('/static/image/codingon.jpg')";
+          }
+
+          one.style.marginLeft = `200` + "px";
+          const two = document.querySelector(".fbox2");
+          two.style.marginLeft = `200` + "px";
+          if (!two.style.backgroundImage) {
+            two.style.backgroundImage = "url('/static/image/ssg.jpg')";
+          }
+          const three = document.querySelector(".fbox3");
+          three.style.marginRight = `200` + "px";
+          if (!three.style.backgroundImage) {
+            three.style.backgroundImage = "url('/static/image/naver.jpg')";
+          }
+          const four = document.querySelector(".fbox4");
+          four.style.marginRight = `200` + "px";
+          if (!four.style.backgroundImage) {
+            four.style.backgroundImage = "url('/static/image/kakao.jpg')";
+          }
+          if (!document.querySelector(".spons")) {
+            const span = document.createElement("span");
+            const spon = document.createElement("div");
+            spon.classList.add("spons");
+            span.innerText = "NAKDANG.COM의 파트너.";
+            spon.appendChild(span);
+            document.body.appendChild(spon);
+          }
+        }
       });
+
       function handleBasketCount() {
         const basketCount = document.querySelector(".basketCount");
         const local = JSON.parse(window.localStorage.getItem("basket"));
