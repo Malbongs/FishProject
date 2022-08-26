@@ -1,10 +1,12 @@
 .chatImg {
-width: 50px;
-height: 50px;
+
+width: 100%;
+height: 100%;
+z-index: -10;
 }
 
 .chatLine {
-display: flex;
+display: flex !important;
 gap: 5px;
 }
 
@@ -15,16 +17,14 @@ border: none;
 
 .chat {
 position: fixed;
-bottom: 80px;
-right: 15px;
-background-color: white;
+bottom: 120px;
+right: 20px;
+background-color:white;
 width: 60px;
 height: 60px;
 border-radius: 30px;
-animation-name: alarm;
-animation-iteration-count: infinite;
-animation-duration: 2.5s;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+text-align: center;
 }
 
 .inputForm {
@@ -41,4 +41,10 @@ border: none;
 
 .chatForm .chatUser {
 font-weight: bold;
+}
+.chatForm{
+    display: block !important;
+}
+.r{
+    justify-content: flex-end;
 }

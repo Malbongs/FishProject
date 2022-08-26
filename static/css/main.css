@@ -258,8 +258,6 @@ nav *{
     }
     .modal-body {
         display: flex;
-        justify-content: center;
-        align-items: center;
     }
     @keyframes alarm {
         0% {}
@@ -295,7 +293,7 @@ nav *{
         font-style: normal;
       }
 
-    @media screen and (min-width: 100px) and (max-width:1024px) {
+    @media screen and (min-width: 100px) and (max-width:450px) {
         .div1, .part1, .part2 {
             background-size: cover;
             background-repeat: no-repeat;
@@ -306,16 +304,13 @@ nav *{
             align-items: center;
             flex-direction: column;
         }
-        .box2 {
+        .contentbox {
             margin: auto;
             height: 38%;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px 0;
-        }
-        .box3 {
-            margin: auto;
         }
 
     }
