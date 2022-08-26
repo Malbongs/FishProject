@@ -17,6 +17,7 @@ function showPrice() {
   function drawStar() {
     document.querySelectorAll("div.star_page").forEach((ele) => {
       const count = ele.getAttribute("val");
+      console.log(count);
       for (let i = 0; i < parseInt(count); i++) {
         ele.innerHTML += "<img src=\"/static/image/star1.jpg\">";
       }
