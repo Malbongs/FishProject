@@ -17,19 +17,75 @@
     font-family: 'Pretendard-Regular';
 }
 
-.rankWrap {
+.allWrap {
+    margin: 0;
+}
+
+.sideWrap {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    gap: 10px;
+    margin: 0;
+}
+
+.centerWrap {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.loginWrap {
     z-index: 99;
-    position: fixed;
-    width: 18%;
+    height: 210px;
+    display: flex;
+}
+
+.loginWrap .loginTitle h3 {
+    font-size: 14px;
+    text-align: center;
+}
+
+.loginWrap .indexBoard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.loginAndRegister {
+    display: flex;
+    gap: 5px;
+}
+
+.loginBtn {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    width: 78px;
+    font-size: 14px;
+}
+
+.loginBtn:hover {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+}
+
+.rankWrap .indexBoard {
+    padding: 10px;
+    margin: 0;
+}
+
+.rankWrap {
+    z-index: 98;
+    width: 100%;
     height: auto;
-    padding-top: 200px;
     display: flex;
     justify-content: left;
 }
 
-.rankWrap .indexBoard {
-    padding: 5px;
-}
 
 .rankWrap .rankTitle {
     display: flex;
@@ -39,12 +95,12 @@
 .rankTitle h3 {
     font-weight: bold;
     text-align: center;
-    font-size: 2vw;
+    font-size: 20px;
 }
 
 .rankTitle span {
     text-align: center;
-    font-size: 1vw;
+    font-size: 11px;
 }
 
 .rankWrap .rankList {
@@ -59,14 +115,14 @@
     padding: 3px;
     border-radius: 3px;
     text-align: center;
-    width: 1vw;
-    height: 1.2vw;
-    font-size: 0.5vw;
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
 }
 
 .rankList #rankText {
     padding-left: 10px;
-    font-size: 1vw;
+    font-size: 14px;
 }
 
 .rankList a {
@@ -76,11 +132,48 @@
 
 .rankList>li {
     display: flex;
-    margin: 10px 0px;
+    margin: 5px 0px;
 }
+
+.sideBannerWrap {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.sideBannerWrap:hover {
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#sideBannerImg {
+    width: 100%;
+    height: auto;
+}
+
+.sideBannerText {
+    white-space: pre-line;
+    z-index: 99;
+    position: absolute;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+
+    background: linear-gradient(to right,
+            rgb(224, 125, 141),
+            rgb(113, 113, 244));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 
 .bannerWrap {
     text-decoration: none !important;
+    width: 100%;
 }
 
 .banner {
@@ -92,11 +185,11 @@
 }
 
 .bannerText {
-    width: 1030px;
+    width: 97%;
     height: 200px;
     background-image: url(/static/image/board/bannerImg.png);
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
     color: var(--background-color);
     text-align: right;
     white-space: pre-line;
@@ -116,10 +209,9 @@
     flex-direction: column;
     background-color: white;
     border-radius: 12px;
-    width: 500px;
+    width: 100%;
     height: 95%;
     padding-bottom: 20px;
-    margin: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
@@ -159,12 +251,16 @@
     transform: scale(1.2);
 }
 
-.main>.container {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
-    justify-content: center;
+.centerWrap .container {
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
 }
+
+.container .indexBoard {
+    margin-bottom: 10px;
+}
+
 
 .indexBoardTitle {
     display: flex;
@@ -176,6 +272,7 @@
     height: 10%;
     margin: 0;
     margin-bottom: 20px;
+    padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -186,6 +283,7 @@
     justify-content: space-between;
     width: 95%;
     margin-left: 5px;
+    font-size: 12px;
 }
 
 .indexBoardText .date {
@@ -197,6 +295,12 @@
     flex-direction: column;
     text-align: center;
     justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+}
+
+.imgPreview>.imgTitle {
+    font-size: 12px;
 }
 
 .imgPreview img {
@@ -348,19 +452,60 @@
     }
 }
 
+#sideBannerImg {
+    animation: changeBanner;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    border-radius: 10px;
+}
+
+@keyframes changeBanner {
+    0% {
+        content: url(/static/image/board/sideBannerStart.png);
+    }
+
+    30% {
+        content: url(/static/image/board/sideBanner1.png);
+        font-size: 0px;
+    }
+
+    40% {
+        content: url(/static/image/board/sideBanner2.png);
+    }
+
+    50% {
+        content: url(/static/image/board/sideBanner3.png);
+    }
+
+    60% {
+        content: url(/static/image/board/sideBanner4.png);
+    }
+
+    100% {
+        content: url(/static/image/board/sideBannerEnd.png);
+    }
+}
+
 @media screen and (max-width: 1000px) {
-    .rankWrap {
+
+    .sideWrap {
         display: none;
     }
 
-    .main>.container {
-        display: grid;
-        grid-template-columns: auto;
-        justify-content: center;
+    .boardWrap {
+        padding: 0;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .main {
+        margin: 0;
     }
 
     .indexBoard {
-        width: 95vw;
+        width: 100%;
     }
 
     .indexBoardTitle {
@@ -374,12 +519,12 @@
     }
 
     .indexBoardTitle a {
-        font-size: 20px;
+        font-size: 16px;
         color: #ededed;
     }
 
     .indexBoardTitle .more a {
-        font-size: 15px;
+        font-size: 11px;
     }
 
     .banner {
@@ -398,7 +543,7 @@
     }
 
     .imgTitle {
-        font-size: 4vw;
+        font-size: 3vw;
         padding-top: 5px;
     }
 
