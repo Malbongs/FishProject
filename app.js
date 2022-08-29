@@ -6,7 +6,7 @@ app.set("view engine", "ejs"); //html 파일 불러오기
 
 app.use("/static", express.static(__dirname + "/static")); // 접근하기 위해서  /static/img/panda.jpeg
 
-const port = 8080; //8080번 포트로 연결
+const port = 80; //8080번 포트로 연결
 //ip:8000/
 app.get("/", (req, res) => {//다음 주소를 정해주는 문자열 req(request약자)클라이언트가 사버에게    res(restuns)서버가 클라이언트한테 보내는 응답
     res.render("main");
