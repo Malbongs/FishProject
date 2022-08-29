@@ -528,6 +528,13 @@
       location.href('loginForm');
     };
 
+    $(document).ready(function(){
+        $("#text").keydown(function(key){
+          if(key.keyCode ==  13){
+            $(".submitBtn").click();
+          }
+        })
+      })
     // 배너 이미지 바꾸기
     // document.getElementById("sideBannerImg").src = "/static/image/board/sideBanner1.jpeg";
     // document.getElementById("sideBannerImg").src = "/static/image/board/sideBanner2.jpeg";
