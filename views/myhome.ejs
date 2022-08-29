@@ -11,7 +11,11 @@
       crossorigin="anonymous"
     />
     <!-- 타이틀 옆 아이콘 입니다! -->
-    <link href="/static/image/title.png" rel="shortcut icon" type="image/x-icon">
+    <link
+      href="/static/image/title.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="/static/css/shop.css" />
     <link rel="stylesheet" href="/static/css/footer.css" />
     <style>
@@ -124,15 +128,23 @@
         bottom: 130px;
       }
       #nocoupon {
+        text-align: center;
         position: absolute;
         top: 280px;
-        left: 75px;
       }
       #nocoupon span:nth-child(1) {
+        width: 330px;
+
+        display: block;
         font-size: 20px;
         font-weight: 600;
+        text-align: center;
       }
-      #nocoupon span:nth-child(3) {
+      #nocoupon span:nth-child(2) {
+        width: 330px;
+        display: block;
+        text-align: center;
+
         font-size: 16px;
         color: rgb(0, 0, 0, 0.4);
         font-weight: 400;
@@ -233,7 +245,6 @@
           <img id="coupon" src="/static/image/coupon.png" alt="" />
           <p id="nocoupon">
             <span>아직 등록된 쿠폰이 없어요.</span>
-            <br />
             <span>쿠폰을 등록해 보세요!</span>
           </p>
           <div class="coupon">
