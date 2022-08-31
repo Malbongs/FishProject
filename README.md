@@ -1,12 +1,10 @@
-# 프로젝트 이름
+# 낚당!
 
 <p align="center">
   <br>
-  <img src="/static/images/blacklogo">
+  <img src="/static/image/blacklogo.png">
   <br>
 </p>
-
-목차
 
 ## 프로젝트 소개
 
@@ -22,7 +20,7 @@ GIF Images
 
 ## 기술 스택
 
-| JavaScript | TypeScript |  React   |  Node   |
+| JavaScript | Node.js |  jQuery   |  git   |
 | :--------: | :--------: | :------: | :-----: |
 |   ![js]    |   ![ts]    | ![react] | ![node] |
 
