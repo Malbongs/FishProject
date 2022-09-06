@@ -158,7 +158,7 @@ nav *{
     .part3{
         text-align: center;
         width: 100%;
-        height: 850px;
+        min-height: 850px;
         
     }
 
