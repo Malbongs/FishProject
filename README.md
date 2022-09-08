@@ -2,7 +2,7 @@
 
 <p align="center">
   <br>
-  <img src="/static/image/blacklogo.png">
+  <img width="100%" alt="스크린샷 2022-09-07 18 58 53" src="https://user-images.githubusercontent.com/99636339/189087370-325486fc-e876-4d2a-a7ad-829c0a81c9c9.png">
   <br>
 </p>
 
