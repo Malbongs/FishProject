@@ -30,7 +30,17 @@ GIF Images
 <img src ="https://img.shields.io/badge/express-000000.svg?&style=for-the-badge&logo=Express&logoColor=white"/>
 <img src ="https://img.shields.io/badge/Git-F05032.svg?&style=for-the-badge&logo=Git&logoColor=white"/><br>
 <img src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/>
-</div>
+</div><br>
+
+## 초기 모델링
+<p align="center">
+<img width="711" alt="스크린샷 2022-09-08 18 42 37" src="https://user-images.githubusercontent.com/99636339/189090496-e7643e80-a935-4787-8f7f-4353fc82fcca.png">
+</p><br>
+
+## 사이트 맵
+<p align="center">
+<img width="702" alt="스크린샷 2022-09-08 18 42 54" src="https://user-images.githubusercontent.com/99636339/189090617-5439025e-a74d-41d3-aa75-0f4c49bf3336.png">
+</p><br>
 
 ## 구현 기능
 
