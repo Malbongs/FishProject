@@ -1,22 +1,26 @@
-# 낚당!
+# [낚당] 웹 프론트 팀 프로젝트
 
 <p align="center">
-  <br>
   <img width="100%" alt="스크린샷 2022-09-07 18 58 53" src="https://user-images.githubusercontent.com/99636339/189087370-325486fc-e876-4d2a-a7ad-829c0a81c9c9.png">
-  <br>
-</p>
+</p><br>
 
-## 프로젝트 소개
+## 🐠 프로젝트 소개
+낚시인들을 위한 낚시 커뮤니티, 쇼핑몰, 시즌 별 어종 정보, 위치 별 날씨 정보등을 서비스하는 웹사이트를 제작하였습니다.
 
-<p align="justify">
-프로젝트 개요/동기
-</p>
+<br>
 
-<p align="center">
-GIF Images
-</p>
+## 🕰️ 개발 기간
+* 22.08.16일 - 22.08.26일
 
-## 💻기술 스택💻
+### 🧑‍🤝‍🧑 멤버 구성
+ - 팀장  : 최준현 - 메인 페이지 전체, 월별 정보, 네비, 푸터, 인스타, 페이스북, 챗봇 디자인 운영 제작
+ - 팀원1 : 우석우 - 전체 쇼핑몰 페이지 디자인, 장바구니 시스템, 배송 정보, 카테고리 운영 제작
+ - 팀원2 : 정지웅 - 전체 커뮤니티 게시판 디자인, 커뮤니티 카테고리별 시스템, 채팅 기능, 광고 운영 제작
+ - 팀원3 : 최고은 - 로그인, 회원가입, 미디어 페이지 제작 및 디자인, 위치 별 날씨 정보 운영 제작
+
+<br>
+
+## 💻 기술 스택
 <div>
 <img src ="https://img.shields.io/badge/JS-F7DF1E.svg?&style=for-the-badge&logo=JavaScript&logoColor=white"/>
 <img src ="https://img.shields.io/badge/Figma-F24E1E.svg?&style=for-the-badge&logo=Figma&logoColor=white"/>
@@ -32,43 +36,30 @@ GIF Images
 <img src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/>
 </div><br>
 
-## 초기 모델링
+## 🎨 초기 모델링
 <p align="center">
-<img width="711" alt="스크린샷 2022-09-08 18 42 37" src="https://user-images.githubusercontent.com/99636339/189090496-e7643e80-a935-4787-8f7f-4353fc82fcca.png">
+<img width="100%" alt="스크린샷 2022-09-08 18 42 37" src="https://user-images.githubusercontent.com/99636339/189090496-e7643e80-a935-4787-8f7f-4353fc82fcca.png">
 </p><br>
 
-## 사이트 맵
+## 🧭 사이트 맵
 <p align="center">
-<img width="702" alt="스크린샷 2022-09-08 18 42 54" src="https://user-images.githubusercontent.com/99636339/189090617-5439025e-a74d-41d3-aa75-0f4c49bf3336.png">
+<img width="100%" alt="스크린샷 2022-09-08 18 42 54" src="https://user-images.githubusercontent.com/99636339/189090617-5439025e-a74d-41d3-aa75-0f4c49bf3336.png">
 </p><br>
 
-## 구현 기능
+## 📌 주요 기능
+#### 로그인 / 회원가입 페이지
+- 정규표현식을 이용하여 조건에 맞는 이메일, 비밀번호를 입력받게 하였습니다.
 
-### 기능 1
+#### 메인 페이지
+- 날씨 위젯 : OpenWeather에서 제공하는 Open API를 사용해 대표적인 낚시 도시 세곳(태안, 여수, 삼척)의 날씨와 현재위치 날씨까지 나타내도록 하였습니다.
+#### 커뮤니티 페이지
 
-### 기능 2
+#### 미디어 페이지
+- tiny slider 라이브러리를 사용해 multi carousel 뷰를 완성하였습니다.
 
-### 기능 3
-
-### 기능 4
+#### 쇼핑몰 페이지
 
 <br>
 
-## 배운 점 & 아쉬운 점
+## 🔗 링크
 
-<p align="justify">
-
-</p>
-
-<br>
-
-## 라이센스
-
-MIT &copy; [NoHack](mailto:lbjp114@gmail.com)
-
-<!-- Stack Icon Refernces -->
-
-[js]: /images/stack/javascript.svg
-[ts]: /images/stack/typescript.svg
-[react]: /images/stack/react.svg
-[node]: /images/stack/node.svg
