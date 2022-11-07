@@ -104,8 +104,14 @@ AI를 활용한 챗봇이 아닙니다.(Js를 사용한 페이지 이동서비�
 시즌별 어종 정보
 ------------
 <img width="600" alt="스크린샷 2022-09-08 16 20 53" src="https://user-images.githubusercontent.com/99636339/200245709-3ef828f7-e2d6-4fec-bec6-2ee1f6040968.png">
-selectbox
+selectbox에 onclick event 사용 하여 해당 시즌에 일치 하는 어종 정보들의 css display-block으로 변경<br>
+해당 되지 않는 다면 display-none
 
+Footer
+------------
+<img width="1425" alt="스크린샷 2022-09-08 16 24 46" src="https://user-images.githubusercontent.com/99636339/200246335-16df2707-748b-4aac-ab65-18db6831201b.png">
+bootstrap5를 사용하여 footer 제작<br>
+Grid를 이용한 배치
 
 
 ## 🔗 링크
