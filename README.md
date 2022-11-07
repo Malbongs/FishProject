@@ -50,7 +50,9 @@ Screenshot
 ==========
 
 ## 📌 본인 구현 기능
-#### 메인 페이지
+
+메인 페이지
+--------
 
 <img width="200" alt="스크린샷 2022-11-07 15 44 27" src="https://user-images.githubusercontent.com/99636339/200242590-f080f309-df40-402a-9d92-4d363374930c.png"><br>
 
@@ -66,14 +68,13 @@ animation적용 하여 5개의 background-img를 animaition-iteration-count:infi
 메인 페이지2
 ---------
 <img width="600" alt="스크린샷 2022-09-08 15 54 30" src="https://user-images.githubusercontent.com/99636339/200243338-22192e33-d592-461e-a2d8-ff1c4850ba47.png">
+스크롤 event를 생성하여 scroll 의 길이가 700이상이면 nav에게 addClass적용하여 로고,nav배경 색 변경
+
+메인 페이지3
+---------
+<img width="600" alt="스크린샷 2022-09-08 15 58 31" src="https://user-images.githubusercontent.com/99636339/200243973-668a4ccb-7b44-47dc-9cda-1dcb8682b0a2.png">
 
 
-#### 미디어 페이지
-- tiny slider 라이브러리를 사용해 multi carousel 뷰를 완성하였습니다.
-
-#### 쇼핑몰 페이지
-
-<br>
 
 ## 🔗 링크
 - **웹 URL** - <a href="http://118.67.143.8/">낚당! 으로 이동</a>
