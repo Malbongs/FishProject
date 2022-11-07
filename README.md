@@ -86,7 +86,7 @@ img 클릭시 shop 페이지로 href
 
 메인 페이지5
 ---------
-<img width="1358" alt="스크린샷 2022-09-08 16 05 50" src="https://user-images.githubusercontent.com/99636339/200244665-4a5a67a1-a2fd-4f14-822d-cb4208258b88.png">
+<img width="600" alt="스크린샷 2022-09-08 16 05 50" src="https://user-images.githubusercontent.com/99636339/200244665-4a5a67a1-a2fd-4f14-822d-cb4208258b88.png">
 bootstrap을 이용한 Grid 사용으로 반응형 페이지 제작<br>
 Media 클릭시 낚시 정보가 모여있는 Media페이지로 href
 
@@ -98,8 +98,13 @@ AI를 활용한 챗봇이 아닙니다.(Js를 사용한 페이지 이동서비�
 
 시즌별 어종 정보
 ------------
-<img width="1192" alt="스크린샷 2022-09-08 16 17 14" src="https://user-images.githubusercontent.com/99636339/200245447-45d8802e-4df0-42da-96d7-c1168bf9c93f.png">
-시즌을 선택하지 
+<img width="600" alt="스크린샷 2022-09-08 16 17 14" src="https://user-images.githubusercontent.com/99636339/200245447-45d8802e-4df0-42da-96d7-c1168bf9c93f.png">
+시즌을 선택하지 않았다면 어종 정보를 모두 display-none처리
+
+시즌별 어종 정보
+------------
+<img width="600" alt="스크린샷 2022-09-08 16 20 53" src="https://user-images.githubusercontent.com/99636339/200245709-3ef828f7-e2d6-4fec-bec6-2ee1f6040968.png">
+selectbox
 
 
 
