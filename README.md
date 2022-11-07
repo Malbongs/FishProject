@@ -46,15 +46,28 @@
 <img width="100%" alt="스크린샷 2022-09-08 18 42 54" src="https://user-images.githubusercontent.com/99636339/189090617-5439025e-a74d-41d3-aa75-0f4c49bf3336.png">
 </p><br>
 
-## 📌 본인 구현 기능
-#### 로그인 / 회원가입 페이지
-- 정규표현식을 이용하여 조건에 맞는 이메일, 비밀번호를 입력받게 하였습니다.
+Screenshot
+==========
 
+## 📌 본인 구현 기능
 #### 메인 페이지
-- 날씨 위젯 : OpenWeather에서 제공하는 Open API를 사용해 대표적인 낚시 도시 세곳(태안, 여수, 삼척)의 날씨와 현재위치 날씨까지 나타내도록 하였습니다.
-#### 커뮤니티 페이지
-- DataTable.js 활용하여 게시판 페이지네이션 및 게시글 검색 기능을 구현하였습니다.
-- AOS.js 라이브러리 활용 페이지 스크롤 애니메이션 효과를 적용하였습니다.
+
+<img width="200" alt="스크린샷 2022-11-07 15 44 27" src="https://user-images.githubusercontent.com/99636339/200242590-f080f309-df40-402a-9d92-4d363374930c.png"><br>
+
+총 5개의 화면으로 나누어 구성
+
+메인 페이지1
+---------
+
+<img width="600" alt="스크린샷 2022-09-06 18 54 26" src="https://user-images.githubusercontent.com/99636339/200242762-f7bcdc66-ab58-4960-92b2-c20c171a5272.png">
+animation적용 하여 5개의 background-img를 animaition-iteration-count:infinite를 적용하여 변경함
+
+
+메인 페이지2
+---------
+<img width="600" alt="스크린샷 2022-09-08 15 54 30" src="https://user-images.githubusercontent.com/99636339/200243338-22192e33-d592-461e-a2d8-ff1c4850ba47.png">
+
+
 #### 미디어 페이지
 - tiny slider 라이브러리를 사용해 multi carousel 뷰를 완성하였습니다.
 
